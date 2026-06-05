@@ -1,0 +1,49 @@
+---
+format: 
+  pdf: 
+    papersize: letter
+    documentclass: article
+    lang: es-CR
+    titlepage: true
+    toc: true
+    toc-title: "Índice"
+    toccolor: "black"
+    fontsize: "11pt"
+    mainfont: Times New Roman
+    urlcolor: "blue"
+    number-sections: true
+    margin-left: "2.54cm"
+    margin-right: "2.54cm"
+    margin-top: "2.54cm"
+    margin-bottom: "2.54cm"
+    header-includes:
+      - \usepackage{indentfirst}
+      - \setlength{\parindent}{1.27cm}
+      - \usepackage{longtable}
+      - \usepackage{array}
+      - \renewcommand{\arraystretch}{1.5}
+      - \setlength{\tabcolsep}{8pt}
+    include-before-body: Portada.tex
+---
+
+```{=latex}
+\setcounter{page}{1}
+```
+
+\newpage
+
+# Análisis estadístico (Sebas)
+
+# Sección metodológic
+
+# Resultados obtenidos
+
+# Resultados del análisis de sensibilidad (Jean Carlo)
+
+# Proceso de reducción del costo (Alexandra)
+
+# Análisis comparativo (Alexandra)
+
+# Conclusiones (Alexandra)
+
+# Recomendaciones (Alexandra)
