@@ -34,13 +34,46 @@ format:
 
 # Análisis estadístico (Sebas)
 
-# Sección metodológic
+# Sección metodológica
 
 # Resultados obtenidos
 
 # Resultados del análisis de sensibilidad (Jean Carlo)
 
-# Proceso de reducción del costo (Alexandra)
+# Proceso de reducción del costo
+
+Como parte de la inmersión en posibles escenarios del acontecer actuarial, el proyecto plantea la necesidad de reducir el costo del plan de beneficios a empleados en una magnitud del 10%. Dado que los beneficios abordados contemplan elementos fundamentales en la vida de los trabajadores y sus familiares: la pensión de retiro por vejez y el seguro por concepto de fallecimiento; resulta imprescindible manejar el proceso de reducción de costos con suma cautela, considerando en todo momento el impacto real que las decisiones tomadas tendrán sobre la realidad de las personas correspondientes.
+
+En primera instancia, previo a definir el conjunto de medidas por aplicar, es preciso analizar los costos actuariales asociados al plan de beneficios a empleados, con tal de identificar los rubros que representan la mayor carga en el costo total reportado. A partir de las estimaciones realizadas en el libro de Excel, se detalla el valor presente del costo actuarial:
+
+```{=latex}
+\begin{center}
+```
+
+**Tabla 1**
+
+*Costo actuarial de los beneficios a empleados*
+
+```{=latex}
+\end{center}
+```
+
+|  |  |  |
+|:--:|:--:|:--:|
+| **Beneficio** | **Costo actuarial** | **Porcentaje sobre el costo total** |
+| Seguro de vida para empleados activos | ₡25 429 225.79 | 0.16% |
+| **Beneficio** | **Costo actuarial** | **Porcentaje sobre el costo total** |
+| Seguro de vida para empleados pensionados | ₡216 333 836.40 | 1.35% |
+| **Beneficio** | **Costo actuarial** | **Porcentaje sobre el costo total** |
+| Anualidades de las pensiones por vejez | ₡15 293 673 250.90 | 95.20% |
+| **Beneficio** | **Costo actuarial** | **Porcentaje sobre el costo total** |
+| Suma única de reconocimiento | ₡529 153 943.49 | 3.29% |
+| **Beneficio** | **Costo actuarial** | **Porcentaje sobre el costo total** |
+| *Total reportado* | *₡16 064 590 256.58* | *100%* |
+
+En vista de que el costo actuarial asociado a los beneficios a empleados representa un monto de ₡16 064 590 256.58, la reducción que se pretende efectuar tiene un valor de ₡1 606 459 025.66. Además, se identifica que los tres rubros con mayor participación en el costo total son las anualidades de las pensiones por vejez con un 95.20%, la suma única de reconocimiento con un 3.29% y el seguro de vida para empleados pensionados con un 1.35%. Es posible percatarse de que un porcentaje cercano a la totalidad del costo reportado se concentra en las anualidades de las pensiones por vejez, los demás beneficios solo reúnen un 4.8% del costo total, de manera que el mayor porcentaje de reducción deberá aplicarse al primer ámbito mencionado.
+
+Posterior a la consideración del escenario anterior, se decidió emprender reducciones en dos beneficios particulares: las pensiones por vejez y la suma única de reconocimiento. Se excluyó el seguro de vida puesto que el costo actuarial derivado de su extensión es considerablemente bajo, de manera que no resulta esencial disminuir dicho monto con tal de alcanzar el porcentaje objetivo. Las metodología detrás del proceso de reducción en cada rubro responde a consideraciones distintas, de forma que se procede a detallar a continuación el procedimiento trazado.
 
 # Análisis comparativo (Alexandra)
 
