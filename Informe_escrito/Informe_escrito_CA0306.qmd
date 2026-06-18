@@ -32,7 +32,80 @@ format:
 
 \newpage
 
-# Análisis estadístico (Sebas)
+# Análisis estadístico
+
+El análisis estadísitico inicial permite caracterizar la estructura demográfica y económica de la población considerada en el modelo de este proyecto. Para este propósito, se analizron dos grupos prinicipales: empleados activos y pensionados. En ambos casos se revisaron variables demográficas, tales como sexo, edad y esperanza de vida, así como variables financieras como salario mensual, masa salarial, monto de pensión mensual y pensión anual estimada. Esta caracterización es necesaria porque los costos actuariales futuros dependen de la edad, sexo, superviviencia, mortalidad y beneficios asociados a cada grupo. 
+
+## Población de empleados activos
+
+La población de empleados activos está conformada por 224 personas. De este total, 115 corresponden a mujeres y 109 a hombres, por lo que es una distribución relativamente equilibrada por sexo. Las mujeres representan el 51,34% de la población activa, mientras que los hombres representan el 48,66%. Esta separación es importante para el modelo porque se utiliza edades de jubilación diferenciadas según sexo, considerando 63 años para mujeres y 65 años para hombres.
+
+En términos de edad, la población activa presenta una edad promedio total de 36,82 años. Al separar por sexo, las mujeres tienen una edad promedio de 37,29 años, mientras que los hombres presentan una edad promedio de 36,33 años. La edad mínima observada en la población activa es de 22 años y la edad máxima es de 62 años. Esta estructura indica que la población activa es relativamente joven, aunque ya existen algunos empleados cercanos a la edad de jubilación, especialmente dentro del grupo masculino, donde se observa la edad máxima de 62 años.
+
+La antigüedad promedio total de los empleados activos es de 5,36 años. Las mujeres presentan una antigüedad promedio de 5,97 años, mientras que los hombres muestran una antigüedad promedio de 4,72 años. Esta variable es importante porque la antigüedad laboral puede incidir en los beneficios futuros, especialmente en aquellos relacionados con jubilación, beneficios por muerte o pagos acumulados. En general, la antigüedad promedio relativamente baja sugiere que una parte importante de la población activa aún se encuentra en etapas tempranas o intermedias de permanencia laboral.
+
+Desde el punto de vista salarial, el salario mensual promedio total de los empleados activos es de aproximadamente ₡1.026.165,85. Al separar por sexo, el salario mensual promedio de las mujeres es de aproximadamente ₡1.088.808,49, mientras que el de los hombres es de aproximadamente ₡960.074,99. Esta diferencia implica que, dentro de la población analizada, el salario promedio femenino es superior al masculino. La masa salarial anual calculada por el modelo constituye un insumo fundamental para las etapas posteriores del proyecto, especialmente para el cálculo de primas, beneficios y costos actuariales asociados a la población activa.
+
+La esperanza de vida promedio de los empleados activos, estimada a partir de la tabla de mortalidad SP-2015, es de 50,54 años adicionales. Al separar por sexo, las mujeres presentan una esperanza de vida promedio de 52,31 años, mientras que los hombres presentan una esperanza de vida promedio de 48,67 años. Este resultado es coherente con el comportamiento demográfico esperado, dado que las mujeres suelen presentar mayor supervivencia esperada que los hombres. La esperanza de vida es una variable central en el modelo, ya que permite aproximar el horizonte temporal durante el cual pueden ocurrir contingencias como muerte, permanencia en estado activo o transición hacia la jubilación.
+
+```{=latex}
+\begin{table}[H]
+\centering
+\caption{Resumen estadístico de empleados activos}
+\begin{tabular}{lccc}
+\hline
+Indicador & Femenino & Masculino & Total \
+\hline
+Cantidad & 115 & 109 & 224 \
+Edad promedio & 37,29 & 36,33 & 36,82 \
+Edad mínima & 24 & 22 & 22 \
+Edad máxima & 58 & 62 & 62 \
+Antigüedad promedio & 5,97 & 4,72 & 5,36 \
+Salario mensual promedio & \textcolonmonetary 1.088.808,49 & \textcolonmonetary 960.074,99 & \textcolonmonetary 1.026.165,85 \
+Esperanza de vida promedio & 52,31 & 48,67 & 50,54 \
+\hline
+\end{tabular}
+\end{table}
+```
+## Población de pensionados
+
+La población de pensionados está conformada por 165 personas. De este total, 91 son mujeres y 74 son hombres. Las mujeres representan aproximadamente el 55,15% de la población pensionada, mientras que los hombres representan el 44,85%. En comparación con la población activa, la población pensionada presenta una mayor participación relativa de mujeres, lo cual es consistente con su mayor esperanza de vida promedio.
+
+La edad promedio total de los pensionados es de 72,85 años. Las mujeres pensionadas presentan una edad promedio de 72,92 años, mientras que los hombres pensionados presentan una edad promedio de 72,76 años. La edad mínima observada entre pensionados es de 57 años y la edad máxima es de 97 años. En el caso de las mujeres, las edades se ubican entre 57 y 92 años, mientras que en los hombres se observan edades entre 61 y 97 años. Esta estructura muestra una población pensionada de edad avanzada, por lo que la mortalidad esperada tiene un peso más relevante que en la población activa.
+
+En cuanto a los montos de pensión, la pensión mensual promedio total es de aproximadamente ₡195.965,58. Las mujeres presentan una pensión mensual promedio de aproximadamente ₡187.979,87, mientras que los hombres presentan una pensión mensual promedio de aproximadamente ₡205.785,84. Esto indica que, dentro de la población pensionada, los hombres reciben en promedio una pensión mensual superior a la de las mujeres. La obligación anual estimada por pensiones, considerando los pagos anuales del modelo, asciende aproximadamente a ₡420.346.166,50.
+
+La esperanza de vida promedio de los pensionados es de 15,94 años adicionales. Al separar por sexo, las mujeres pensionadas tienen una esperanza de vida promedio de 15,71 años, mientras que los hombres pensionados presentan una esperanza de vida promedio de 16,22 años. Aunque en la población activa las mujeres muestran mayor esperanza de vida, en la población pensionada la diferencia observada puede variar por la composición específica de edades, supervivencia previa y distribución del grupo analizado. Por esta razón, la esperanza de vida de pensionados debe interpretarse de forma conjunta con la edad actual de cada persona y no únicamente como una comparación directa entre sexos.
+
+```{=latex}
+\begin{table}[H]
+\centering
+\caption{Resumen estadístico de pensionados}
+\begin{tabular}{lccc}
+\hline
+Indicador & Femenino & Masculino & Total \
+\hline
+Cantidad & 91 & 74 & 165 \
+Edad promedio & 72,92 & 72,76 & 72,85 \
+Edad mínima & 57 & 61 & 57 \
+Edad máxima & 92 & 97 & 97 \
+Pensión mensual promedio & \textcolonmonetary 187.979,87 & \textcolonmonetary 205.785,84 & \textcolonmonetary 195.965,58 \
+Pensión anual total estimada & \textcolonmonetary 222.380.185,95 & \textcolonmonetary 197.965.980,55 & \textcolonmonetary 420.346.166,50 \
+Esperanza de vida promedio & 15,71 & 16,22 & 15,94 \
+\hline
+\end{tabular}
+\end{table}
+```
+
+## Comparación entre empleados activos y pensionados
+
+Al comparar ambas poblaciones, se observa una diferencia demográfica marcada. Los empleados activos tienen una edad promedio de 36,82 años, mientras que los pensionados presentan una edad promedio de 72,85 años. Esta diferencia refleja que los empleados activos tienen un horizonte de permanencia y exposición mucho más amplio antes de alcanzar la jubilación, mientras que los pensionados se encuentran en una etapa donde el principal riesgo actuarial está asociado a la supervivencia y a la duración de los pagos de pensión.
+
+La esperanza de vida también presenta diferencias importantes entre ambos grupos. En los activos, la esperanza de vida promedio adicional es de 50,54 años, mientras que en los pensionados es de 15,94 años. Esta diferencia es esperada, dado que los pensionados ya se encuentran en edades más avanzadas. Desde el punto de vista actuarial, esto implica que los activos requieren un modelo de transición que considere permanencia laboral, muerte y jubilación, mientras que los pensionados requieren un modelo enfocado principalmente en supervivencia, mortalidad y continuidad de pagos.
+
+En términos financieros, la población activa se relaciona principalmente con salarios, masa salarial y beneficios futuros, mientras que la población pensionada se asocia con obligaciones de pago ya existentes. Por ello, ambos grupos tienen naturalezas distintas dentro del modelo: los activos representan obligaciones contingentes futuras que dependen de su transición entre estados, mientras que los pensionados representan flujos de pago actuales que deben proyectarse según mortalidad, inflación, anualidades y aguinaldo.
+
+En conjunto, el análisis estadístico muestra que la base de datos es demográficamente consistente: la población activa es más joven, tiene una esperanza de vida mayor y se encuentra expuesta a eventos futuros de muerte y jubilación; por su parte, la población pensionada es de mayor edad, presenta una esperanza de vida menor y concentra el análisis en la duración esperada de los pagos de pensión. Esta caracterización inicial permite justificar las metodologías diferenciadas aplicadas posteriormente para empleados activos y pensionados.
 
 # Sección metodológica
 
