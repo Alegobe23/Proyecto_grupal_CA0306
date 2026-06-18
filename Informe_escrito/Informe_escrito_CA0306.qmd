@@ -39,7 +39,7 @@ format:
 # Resultados obtenidos
 
 # Resultados del análisis de sensibilidad (Jean Carlo)
-
+hgg
 # Proceso de reducción del costo
 
 Como parte de la inmersión en posibles escenarios del acontecer actuarial, el proyecto plantea la necesidad de reducir el costo del plan de beneficios a empleados en una magnitud del 10%. Dado que los beneficios abordados contemplan elementos fundamentales en la vida de los trabajadores y sus familiares: la pensión de retiro por vejez y el seguro por concepto de fallecimiento; resulta imprescindible manejar el proceso de reducción de costos con suma cautela, considerando en todo momento el impacto real que las decisiones tomadas tendrán sobre la realidad de las personas correspondientes.
