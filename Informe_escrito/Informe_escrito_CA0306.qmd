@@ -167,18 +167,62 @@ Los mecanismos aplicados repercuten en dos elementos: el periodo por el que las 
 \end{center}
 ```
 
-|                       |                        |                            |
-|:---------------------:|:----------------------:|:--------------------------:|
-| **Esperanza de vida** |  **Empleados activos** | **Empleados pensionados**  |
-|       *Mujeres*       |         51.81          |           15.71            |
-| **Esperanza de vida** | **Empleados activos**  | **Empleados pensionados**  |
-|       *Hombres*       |         48.17          |           16.22            |
-| **Esperanza de vida** | **Empleados activos**  | **Empleados pensionados**  |
-|       *General*       |         50.04          |           15.94            |
+|                       |                       |                           |
+|:---------------------:|:---------------------:|:-------------------------:|
+| **Esperanza de vida** | **Empleados activos** | **Empleados pensionados** |
+|       *Mujeres*       |         51.81         |           15.71           |
+| **Esperanza de vida** | **Empleados activos** | **Empleados pensionados** |
+|       *Hombres*       |         48.17         |           16.22           |
+| **Esperanza de vida** | **Empleados activos** | **Empleados pensionados** |
+|       *General*       |         50.04         |           15.94           |
 
 En segundo lugar, se optó por una rebaja de 1.5 puntos porcentuales del porcentaje salarial sobre el cual se calculan las pensiones, aplicada a cada tramo de antigüedad. Si bien, tal medida impacta de forma negativa los ingresos percibidos por las personas pensionadas para satisfacer sus necesidades, se procuró que la reducción se hiciera por el menor porcentaje posible. Además, la decisión de reducir el porcentaje de los tramos en igual medida, no solo responde a un sentido de igualdad, sino que también procura preservar el incentivo a los empleados de permanecer en condición de activos por periodos más extensos; lo cual representa el escenario contrario al caso en que se decidiera aplicar una reducción regida por la equidad, disminuyendo en mayor medida los porcentajes más altos y en menor medida los porcentajes más pequeños: los sujetos tras percibir que las pensiones con porcentajes elevados reciben los mayores impactos de las medidas reduccionistas, abandonarían la motivación de mantenerse como empleados activos por el lapso más prolongado, con el objetivo de acceder a pensiones mejores pagadas. La tabla extendida a continuación muestra los porcentajes actualizados posterior a la aplicación de la alternativa planteada.
 
-## Reducción del costo actuarial de la suma única de reconocimiento
+\begin{center}
+
+**Tabla**
+
+*Actualización de los porcentajes sobre los cuales se calcula la pensión por vejez*
+
+\end{center}
+
+|  |  |  |
+|:--:|:--:|:--:|
+| **Años de antigüedad** | **Porcentaje  anterior** | **Porcentaje actualizado** |
+| 0 - 10 | 0% | 0% |
+| **Años de antigüedad** | **Porcentaje  anterior** | **Porcentaje actualizado** |
+| 10 - 20 | 45% | 43.5% |
+| **Años de antigüedad** | **Porcentaje  anterior** | **Porcentaje actualizado** |
+| 20 - 30 | 65% | 63.5% |
+| **Años de antigüedad** | **Porcentaje  anterior** | **Porcentaje actualizado** |
+| 30 - 40 | 85% | 83.5% |
+| **Años de antigüedad** | **Porcentaje  anterior** | **Porcentaje actualizado** |
+| Más de 40 | 100% | 98.5% |
+
+De acuerdo con la Organización Internacional del Trabajo (OIT), en enero de 2024 el salario mínimo de Costa Rica se fijó en ₡358 609.5. Al emplear dicha cifra para calcular los nuevos montos asociados a la pensión por vejez se obtiene lo siguiente:
+
+\begin{center}
+
+**Tabla**
+
+*Cálculo de los nuevos montos asociados a la pensión por vejez a partir del salario mínimo*
+
+\end{center}
+
+|  |  |  |
+|:--:|:--:|:--:|
+| **Años de antigüedad** | **Porcentaje  anterior** | **Porcentaje actualizado** |
+| 0 - 10 | ₡0 | ₡0 |
+| **Años de antigüedad** | **Porcentaje  anterior** | **Porcentaje actualizado** |
+| 10 - 20 | ₡161 374.275 | ₡155 995.1325 |
+| **Años de antigüedad** | **Porcentaje  anterior** | **Porcentaje actualizado** |
+| 20 - 30 | ₡233 096.175 | ₡227 717.0325 |
+| **Años de antigüedad** | **Porcentaje  anterior** | **Porcentaje actualizado** |
+| 30 - 40 | ₡304 818.075 | ₡299 438.9325 |
+| **Años de antigüedad** | **Porcentaje  anterior** | **Porcentaje actualizado** |
+| Más de 40 | ₡358 609.5 | ₡353 230.3575 |
+
+Un empleado cuyo último salario reportado fue el salario mínimo, es decir ₡358 609.5, enfrenta una reducción de ₡5 379.1425 en cada tramo de antigüedad.
 
 # Análisis comparativo (Alexandra)
 
