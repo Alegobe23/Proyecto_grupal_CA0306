@@ -1,0 +1,207 @@
+---
+title: "Descripción del código implementado"
+format: 
+  pdf: 
+    papersize: letter
+    documentclass: article
+    lang: es-CR
+    titlepage: true
+    toc: true
+    toc-title: "Índice"
+    toccolor: "black"
+    fontsize: "11pt"
+    mainfont: Times New Roman
+    urlcolor: "blue"
+    number-sections: true
+    margin-left: "2.54cm"
+    margin-right: "2.54cm"
+    margin-top: "2.54cm"
+    margin-bottom: "2.54cm"
+editor: visual
+---
+
+# Descripción general de la programación en VBA
+
+El modelo actuarial fue desarrollado en Excel mediante módulos de Visual Basic for Applications, organizados de acuerdo con los incisos solicitados en el proyecto. En el archivo de Excel, las hojas identificadas con letras corresponden directamente a los incisos del trabajo. Por ejemplo, las hojas asociadas con los incisos a), b), c), etc., contienen los resultados principales de cada estimación solicitada.
+
+Además, se utilizaron hojas auxiliares identificadas con números. Estas hojas no representan incisos adicionales, sino que sirven para llevar un orden lógico dentro del modelo, almacenar cálculos intermedios, bases depuradas, agrupaciones por edad y sexo, o resultados que luego son utilizados por otros módulos. Esta estructura permite que el archivo sea más ordenado, facilita la revisión de los cálculos y evita mezclar salidas finales con insumos auxiliares.
+
+La programación se dividió en módulos demográficos, financieros, actuariales y de consolidación. Los módulos demográficos proyectan la población de activos y pensionados, así como las muertes esperadas. Los módulos financieros calculan los flujos esperados de beneficios. Finalmente, los módulos actuariales descuentan dichos flujos y consolidan el costo total del plan.
+
+```{r, message=FALSE, warning=FALSE, echo=FALSE}
+library(knitr)
+library(kableExtra)
+
+tabla_modulos <- data.frame(
+  Inciso = c(
+    "a)",
+    "b)",
+    "c)",
+    "d)",
+    "e)",
+    "f)",
+    "g)",
+    "h)",
+    "i)",
+    "j)",
+    "k)",
+    "l)",
+    "Análisis de sensibilidad"
+  ),
+  `Estimación solicitada` = c(
+    "Proyección demográfica anual de empleados activos",
+    "Proyección demográfica anual de pensionados",
+    "Muertes de empleados activos",
+    "Muertes de pensionados",
+    "Proyección financiera de beneficios de muerte de activos",
+    "Proyección financiera de beneficios de muerte de pensionados",
+    "Proyección financiera de anualidades",
+    "Esperanza de vida individual y promedio",
+    "Costo actuarial de cada beneficio",
+    "Costo actuarial total de los beneficios otorgados",
+    "Prima anual por edad y sexo según masa salarial",
+    "Prima media nivelada para toda la población",
+    "Variación de tasa de descuento e incremento salarial"
+  ),
+  `Módulos principales relacionados` = c(
+    "Limpiar_Activos, Control_Resumen_Activos, Proyecciones_Activos",
+    "Funciones_Pensionados, Proyecciones_Pensionados",
+    "Proyecciones_Activos, proy_finan_MuerteActivos",
+    "Proyecciones_Pensionados, proy_finan_MuertePensionados",
+    "proy_finan_MuerteActivos",
+    "proy_finan_MuertePensionados",
+    "Costo_pension_grupos",
+    "Esperanza_Activos, Funciones_mortalidad",
+    "lump_sum, cost_act_ben, Cálculo_Seguro_Vida, Costo_pension_grupos, CrearCostoLumpSum_Grupo",
+    "cost_act_total",
+    "Cálculo_de_Prima_por_Grupo",
+    "CalcularPrimaMediaNivelada",
+    "Sensibilidad_Costos"
+  ),
+  check.names = FALSE
+)
+
+kable(
+  tabla_modulos,
+  format = "latex",
+  booktabs = TRUE,
+  caption = "Resumen de módulos VBA según inciso del proyecto"
+) %>%
+  kable_styling(
+    latex_options = c("hold_position", "scale_down"),
+    position = "center",
+    font_size = 8
+  )
+```
+
+## Módulos auxiliares generales
+
+Antes de describir los módulos por inciso, es importante mencionar que el modelo utiliza varios módulos auxiliares que contienen funciones reutilizables. Estos módulos no corresponden a un inciso específico, sino que sirven como apoyo para distintas partes del cálculo.
+
+El módulo Funciones_beneficios contiene las funciones que implementan las reglas principales del plan de beneficios. La función PorcentajePension devuelve el porcentaje del último salario que corresponde como pensión, de acuerdo con los años de antigüedad acumulados al retiro. La función MultiploLumpSum determina el número de salarios que corresponde como suma única de reconocimiento. Por último, la función BeneficioMuerte devuelve el monto del seguro de vida, que es de ₡5 millones para empleados activos y de ₡3 millones para pensionados.
+
+El módulo Funciones_demográficas contiene funciones de apoyo para los cálculos de edad, antigüedad y edad de jubilación. La función AniosCompletos calcula los años cumplidos entre dos fechas, considerando si la persona ya cumplió años dentro del año correspondiente. Esta función se utiliza para calcular tanto la edad al corte como la antigüedad. La función EdadJubilacion asigna la edad de retiro según el sexo: 65 años para hombres y 63 años para mujeres.
+
+El módulo Funciones_financieras agrupa las funciones matemáticas y financieras utilizadas en el modelo. La función CrecimientoNominal combina la inflación y el incremento real de salarios en una sola tasa nominal. La función SalarioProyectado estima el salario futuro de un empleado. La función LumpSum calcula el monto del pago único al cumplir 60 años. Finalmente, las funciones FactorDescuento y ValorPresente permiten traer los flujos futuros a valor presente usando la tasa de descuento del modelo.
+
+El módulo Funciones_mortalidad se encarga del uso de la tabla de mortalidad dinámica SP-2015. Este módulo carga la tabla en memoria mediante un diccionario, lo que permite consultar rápidamente las probabilidades de muerte por sexo, edad y año. La función ObtenerQx busca la probabilidad de muerte correspondiente, mientras que ObtenerEx calcula la esperanza de vida a partir de las probabilidades de supervivencia acumuladas. También incluye la opción RecargarTablaSupen, que permite actualizar la información si la tabla es modificada dentro del archivo.
+
+## Punto 1. Estimaciones
+
+### Inciso a): Proyección demográfica anual de empleados activos
+
+El módulo Limpiar_Activos se encarga de organizar y depurar la base inicial de empleados activos. A partir de la hoja original de empleados, genera una base limpia con las variables necesarias para el modelo demográfico y actuarial. Calcula la edad al corte, la antigüedad, la edad de jubilación según sexo, los años restantes hasta jubilación, el salario anual con aguinaldo y las variables iniciales de mortalidad y esperanza de vida. También valida la consistencia de los datos, como fechas, sexo, salario y estado del registro dentro del modelo.
+
+El módulo Control_Resumen_Activos genera las tablas de control de calidad y el resumen estadístico de la población activa. Verifica que la cantidad total de empleados coincida con la base limpia, que no existan registros inválidos, que la población por sexo esté correctamente clasificada y que las variables de mortalidad y esperanza de vida no estén vacías o en cero. Además, resume los principales indicadores demográficos y salariales, como cantidad de empleados, edad promedio, edad mínima, edad máxima, antigüedad promedio, salario mensual promedio, masa salarial anual con aguinaldo y esperanza de vida promedio por sexo y total.
+
+El módulo Proyecciones_Activos realiza la proyección demográfica anual de los empleados activos. Para cada año proyectado, calcula la cantidad esperada de activos al inicio, las muertes esperadas, las jubilaciones esperadas y los activos al cierre del periodo. La proyección se realiza separando la población por sexo y considerando la edad de jubilación correspondiente: 63 años para mujeres y 65 años para hombres. La transición demográfica se modela mediante tres posibles estados: permanencia como activo, salida por muerte o salida por jubilación.
+
+El módulo Graficos_Activos genera los gráficos correspondientes a la población activa. A partir de las tablas de resumen, esperanza de vida y proyección demográfica, construye visualizaciones para mostrar la distribución de empleados por sexo, la esperanza de vida promedio, la distribución por grupos de edad, la evolución anual de activos al cierre, las muertes esperadas y las jubilaciones esperadas. Estos gráficos facilitan la interpretación de los resultados y sirven como insumo para el informe y la presentación final.
+
+### Inciso b): Proyección demográfica anual de pensionados
+
+El módulo Funciones_Pensionados calcula la pensión anual de cada pensionado al corte. Lee la fecha de corte desde la hoja de parámetros, recorre cada pensionado y multiplica la pensión mensual por 13 para obtener la pensión anual, incluyendo los 12 pagos mensuales ordinarios más el aguinaldo. El resultado se escribe en la columna correspondiente de la hoja base de pensionados, sin modificar otras variables ya calculadas como edad, sexo codificado y probabilidad de muerte.
+
+El módulo Proyecciones_Pensionados realiza la proyección demográfica de los pensionados desde el año base hasta el último año considerado en el modelo. La macro ProyeccionPensionados calcula cuántos pensionados se espera que permanezcan vivos cada año, separando hombres y mujeres. Para ello, utiliza la tabla SP-2015 y calcula la probabilidad de supervivencia acumulada mediante productos sucesivos de $(1-q_x)$. Estas probabilidades se suman por sexo y se escriben en la hoja Proyección Pensionados.
+
+### Inciso c): Proyección demográfica anual de muertes de empleados activos
+
+La estimación de muertes de empleados activos se obtiene dentro del módulo Proyecciones_Activos. Este módulo calcula, para cada año proyectado, las muertes esperadas de la población activa separadas por sexo. Estas muertes se derivan de la combinación entre la cantidad esperada de empleados expuestos y las probabilidades de mortalidad correspondientes de la tabla SP-2015.
+
+Estos resultados se utilizan posteriormente como insumo del módulo proy_finan_MuerteActivos, el cual convierte las muertes esperadas en flujos financieros asociados al seguro de vida de empleados activos.
+
+### Inciso d): Proyección demográfica anual de muertes de pensionados
+
+La proyección de muertes de pensionados se calcula en el módulo Proyecciones_Pensionados. Después de obtener la cantidad esperada de pensionados vivos por año, la macro MuertesPensionados calcula las muertes esperadas como la diferencia entre los vivos de un año y los vivos del año siguiente. El cálculo se realiza de forma separada para hombres y mujeres, y los resultados se escriben en la misma hoja de proyección de pensionados.
+
+Este procedimiento permite utilizar directamente las muertes esperadas como base para el cálculo financiero del beneficio por muerte de pensionados.
+
+### Inciso e): Proyección financiera anual de beneficios de muerte de empleados activos
+
+El módulo proy_finan_MuerteActivos corresponde al cálculo financiero del beneficio por muerte de empleados activos. Utiliza como insumo la hoja de proyección demográfica de activos, específicamente las muertes esperadas separadas por sexo. A partir de esas muertes, aplica la suma asegurada correspondiente a empleados activos, equivalente a ₡5 millones, para obtener el flujo nominal esperado de cada año.
+
+Luego, cada flujo se descuenta a valor presente mediante la tasa de descuento establecida en la hoja de parámetros. Como resultado, el módulo genera una hoja con la proyección anual de pagos por muerte de activos, incluyendo muertes esperadas, beneficio unitario, flujo nominal esperado y valor presente actuarial.
+
+### Inciso f): Proyección financiera anual de beneficios de muerte de pensionados
+
+El módulo proy_finan_MuertePensionados corresponde al cálculo financiero del beneficio por muerte de pensionados. Este módulo toma como base la proyección demográfica de pensionados y las muertes esperadas de esa población. Para cada año proyectado, multiplica las muertes esperadas por la suma asegurada aplicable a pensionados, equivalente a ₡3 millones, ya que el beneficio disminuye una vez alcanzada la edad de jubilación.
+
+Posteriormente, calcula el valor presente de los pagos esperados mediante la tasa de descuento del modelo. La hoja de salida muestra la proyección anual del beneficio por muerte de pensionados, el flujo esperado nominal y el costo actuarial en valor presente.
+
+### Inciso g): Proyección financiera anual de pagos de anualidades
+
+El módulo Costo_pension_grupos calcula el costo de las anualidades asociadas a pensionados actuales y a nuevos jubilados. Para pensionados actuales, utiliza la distribución por edad, sexo y pensión mensual. La pensión mensual promedio se convierte en pensión anual multiplicando por 13, para incluir el aguinaldo. Luego se calcula el valor presente de la anualidad mediante una función que incorpora inflación proyectada, tasa de descuento, probabilidades de supervivencia y un periodo cierto de 5 años.
+
+Para los nuevos jubilados provenientes de la población activa, el módulo utiliza el salario promedio mensual, la edad, el sexo y la antigüedad esperada. Primero proyecta el salario hasta la edad de jubilación correspondiente. Luego calcula la antigüedad al retiro y aplica el porcentaje de pensión según los años de servicio. Finalmente, estima la pensión anual proyectada, calcula el valor presente de la anualidad y multiplica el costo unitario por la cantidad de miembros del grupo.
+
+Como salida, el módulo genera hojas con el costo de anualidades para pensionados actuales y para nuevos jubilados. Estas hojas incluyen información como grupo, edad, sexo, pensión o salario promedio, cantidad de miembros, antigüedad promedio, costo unitario y costo total.
+
+### Inciso h): Estimación de esperanza de vida individual y promedio
+
+El módulo Esperanza_Activos calcula y presenta la esperanza de vida de cada empleado activo. Utiliza la edad al corte y la esperanza de vida obtenida a partir de la tabla SP-2015 para estimar la edad esperada de fallecimiento de cada persona. También genera un resumen agregado con la esperanza de vida promedio total, la esperanza de vida promedio de mujeres y la esperanza de vida promedio de hombres.
+
+Esta información permite caracterizar demográficamente la población activa y sirve como insumo para el análisis actuarial posterior. Además, se complementa con el módulo Funciones_mortalidad, que calcula la esperanza de vida mediante probabilidades de supervivencia acumuladas.
+
+### Inciso i): Costo actuarial de cada uno de los beneficios
+
+El módulo lump_sum calcula la suma única de reconocimiento para los empleados activos que cumplen con las condiciones del beneficio. Este módulo toma la información de la hoja de empleados activos limpios, los parámetros financieros del modelo y la tabla de mortalidad SP-2015. Para cada empleado, determina si el beneficio aplica al cumplir 60 años, proyecta el salario hasta esa edad considerando inflación e incremento real salarial, calcula la antigüedad esperada al momento del pago y asigna el múltiplo de salarios correspondiente. Además, incorpora la probabilidad de supervivencia hasta los 60 años y descuenta el flujo esperado a valor presente. Como resultado, genera una hoja llamada lump_sum con el detalle individual del cálculo y con los totales de costo nominal y costo actuarial en valor presente.
+
+El módulo Cálculo_Seguro_Vida estima el costo actuarial del seguro de vida por grupos de edad y sexo. Toma como insumo las hojas de Excel con la distribución de edades y sexos de activos y pensionados. Para cada edad única, llama a la función ValorSeguro, que estima el valor presente del beneficio asegurado considerando probabilidades de mortalidad y supervivencia, edad de jubilación, beneficio asegurado y tasa de descuento. Luego cuenta cuántas personas hay en cada edad y multiplica el costo unitario por el número de miembros, obteniendo así el costo actuarial agregado por grupo de edad y sexo.
+
+El módulo CrearCostoLumpSum_Grupo utiliza la hoja de grupos de edad y sexo de activos y la cruza con la hoja lump_sum, donde se registran los costos individuales de cada persona. Para cada grupo, calcula la suma total de costos asociados al Lump Sum y genera una hoja llamada Costos Lump Sum, con columnas de grupo, edad, sexo y costo Lump Sum.
+
+El módulo cost_act_ben consolida el costo actuarial de cada beneficio del plan. Para ello, busca las hojas fuente de los beneficios ya calculados, como beneficio por muerte de empleados activos, beneficio por muerte de pensionados, anualidades y Lump Sum. De cada hoja extrae el costo nominal esperado y el costo actuarial en valor presente. Si algún beneficio todavía no ha sido calculado, el módulo lo deja marcado como pendiente. La salida se presenta en la hoja i_costos_actuariales, donde se muestra el costo por beneficio, la hoja fuente utilizada, la participación de cada beneficio sobre el costo total y una observación sobre el estado del cálculo.
+
+### Inciso j): Costo actuarial total de los beneficios otorgados
+
+El módulo cost_act_total utiliza como insumo la hoja generada por cost_act_ben, es decir, i_costos_actuariales. Su función es sumar los costos actuariales de los beneficios disponibles para obtener el costo actuarial total del plan.
+
+Además, genera un resumen general con el costo nominal total, el costo actuarial total en valor presente, la cantidad de beneficios incluidos y la cantidad de beneficios pendientes o por revisar. La hoja resultante se llama j_costo_actuarial_total y permite identificar si el total calculado es definitivo o provisional, dependiendo de si todos los beneficios del plan ya fueron incorporados.
+
+### Inciso k): Prima anual por edad y sexo según la masa salarial
+
+El módulo Cálculo_de_Prima_por_Grupo calcula la prima anual por grupo de edad y sexo. Toma como insumo las tablas de costos actuariales ya calculadas para activos y pensionados, junto con la información de masa salarial anual en las hojas de grupos de edad y sexo.
+
+Para cada grupo, el módulo obtiene el costo anual de beneficios y la masa salarial anual correspondiente. Luego calcula la prima anual como:
+
+$$
+\text{Prima anual} =
+\frac{\text{Costo anual de beneficios del grupo}}
+{\text{Masa salarial anual del grupo}}
+$$
+
+Como resultado, genera dos hojas: k1. Primas grupo Activos y k2. Primas grupo Pensionados. Cada hoja muestra una tabla con grupo, edad, sexo, costo anual de beneficios, masa salarial anual y prima anual.
+
+### Inciso l): Prima media nivelada para toda la población
+
+La función CalcularPrimaMediaNivelada corresponde al cálculo de la prima promedio nivelada para toda la población de activos y pensionados. Esta función utiliza los costos actuariales agregados y la masa salarial total para obtener una prima única promedio aplicable a la población completa.
+
+Este cálculo complementa el inciso k), ya que mientras la prima por grupo permite observar diferencias por edad y sexo, la prima media nivelada resume el costo del plan en una sola tasa promedio para toda la población considerada.
+
+## Punto 2. Análisis de sensibilidad
+
+El módulo Sensibilidad_Costos permite evaluar cómo cambian los costos del plan ante variaciones en la tasa de descuento y en el incremento real de los salarios. Para ello, se toman como base los módulos relacionados con anualidades, beneficios por muerte y Lump Sum, y se parametrizan sus funciones para evaluar distintos escenarios.
+
+Las combinaciones de tasas se leen desde la hoja de parámetros. Para cada escenario, el módulo calcula los costos nominales y actuariales correspondientes. En el caso de los beneficios por muerte, únicamente cambia la tasa de descuento, ya que estos beneficios no dependen directamente del salario. En cambio, para anualidades y Lump Sum, los resultados sí pueden variar tanto por la tasa de descuento como por el crecimiento salarial.
+
+Este análisis permite comparar el modelo base con escenarios alternativos y evaluar la sensibilidad del costo actuarial total ante cambios en los supuestos financieros principales.
