@@ -1,0 +1,40 @@
+---
+title: ""
+author: "Alexandra González, Estefanía Mora, Daniela Prado, Sebastián Calderón y Jean Carlo Sanabria"
+format:
+  beamer:
+    theme: CambridgeUS
+    colortheme: seahorse
+    toc: false
+    aspectratio: 169
+    slide-number: true
+    navigation: empty
+    fontsize: 11pt
+    number-sections: false
+    include-in-header:
+            text: |
+                \setbeamertemplate{footline}[frame number]
+                \setbeamerfont{author}{size=\small, series=\itshape}
+                \setlength{\parskip}{0.8cm}
+---
+
+## Diapositiva 1
+
+::::: columns
+::: column
+:::
+
+::: column
+-   \vspace{0.3cm}
+
+-   \vspace{0.3cm}
+:::
+:::::
+
+## Diapositiva 2
+
+## Diapositiva 3
+
+-   \vspace{0.1cm}
+
+-   \vspace{0.3cm}
