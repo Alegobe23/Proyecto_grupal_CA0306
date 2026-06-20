@@ -186,21 +186,22 @@ En segundo lugar, se optó por una rebaja de 1.5 puntos porcentuales del porcent
 
 \end{center}
 
-|  |  |  |
-|:--:|:--:|:--:|
-| **Años de antigüedad** | **Porcentaje  anterior** | **Porcentaje actualizado** |
-| 0 - 10 | 0% | 0% |
-| **Años de antigüedad** | **Porcentaje  anterior** | **Porcentaje actualizado** |
-| 10 - 20 | 45% | 43.5% |
-| **Años de antigüedad** | **Porcentaje  anterior** | **Porcentaje actualizado** |
-| 20 - 30 | 65% | 63.5% |
-| **Años de antigüedad** | **Porcentaje  anterior** | **Porcentaje actualizado** |
-| 30 - 40 | 85% | 83.5% |
-| **Años de antigüedad** | **Porcentaje  anterior** | **Porcentaje actualizado** |
-| Más de 40 | 100% | 98.5% |
+|                        |                         |                            |
+|:----------------------:|:----------------------:|:----------------------:|
+| **Años de antigüedad** | **Porcentaje anterior** | **Porcentaje actualizado** |
+|         0 - 10         |           0%            |             0%             |
+| **Años de antigüedad** | **Porcentaje anterior** | **Porcentaje actualizado** |
+|        10 - 20         |           45%           |           43.5%            |
+| **Años de antigüedad** | **Porcentaje anterior** | **Porcentaje actualizado** |
+|        20 - 30         |           65%           |           63.5%            |
+| **Años de antigüedad** | **Porcentaje anterior** | **Porcentaje actualizado** |
+|        30 - 40         |           85%           |           83.5%            |
+| **Años de antigüedad** | **Porcentaje anterior** | **Porcentaje actualizado** |
+|       Más de 40        |          100%           |           98.5%            |
 
 De acuerdo con la Organización Internacional del Trabajo (OIT), en enero de 2024 el salario mínimo de Costa Rica se fijó en ₡358 609.5. Al emplear dicha cifra para calcular los nuevos montos asociados a la pensión por vejez se obtiene lo siguiente:
 
+```{=latex}
 \begin{center}
 
 **Tabla**
@@ -208,21 +209,51 @@ De acuerdo con la Organización Internacional del Trabajo (OIT), en enero de 202
 *Cálculo de los nuevos montos asociados a la pensión por vejez a partir del salario mínimo*
 
 \end{center}
+```
 
-|  |  |  |
-|:--:|:--:|:--:|
-| **Años de antigüedad** | **Porcentaje  anterior** | **Porcentaje actualizado** |
-| 0 - 10 | ₡0 | ₡0 |
-| **Años de antigüedad** | **Porcentaje  anterior** | **Porcentaje actualizado** |
-| 10 - 20 | ₡161 374.275 | ₡155 995.1325 |
-| **Años de antigüedad** | **Porcentaje  anterior** | **Porcentaje actualizado** |
-| 20 - 30 | ₡233 096.175 | ₡227 717.0325 |
-| **Años de antigüedad** | **Porcentaje  anterior** | **Porcentaje actualizado** |
-| 30 - 40 | ₡304 818.075 | ₡299 438.9325 |
-| **Años de antigüedad** | **Porcentaje  anterior** | **Porcentaje actualizado** |
-| Más de 40 | ₡358 609.5 | ₡353 230.3575 |
+|                        |                    |                       |
+|:----------------------:|:------------------:|:---------------------:|
+| **Años de antigüedad** | **Monto anterior** | **Monto actualizado** |
+|         0 - 10         |         ₡0         |          ₡0           |
+| **Años de antigüedad** | **Monto anterior** | **Monto actualizado** |
+|        10 - 20         |    ₡161 374.28     |      ₡155 995.13      |
+| **Años de antigüedad** | **Monto anterior** | **Monto actualizado** |
+|        20 - 30         |    ₡233 096.18     |      ₡227 717.03      |
+| **Años de antigüedad** | **Monto anterior** | **Monto actualizado** |
+|        30 - 40         |    ₡304 818.08     |      ₡299 438.93      |
+| **Años de antigüedad** | **Monto anterior** | **Monto actualizado** |
+|       Más de 40        |     ₡358 609.5     |      ₡353 230.36      |
 
-Un empleado cuyo último salario reportado fue el salario mínimo, es decir ₡358 609.5, enfrenta una reducción de ₡5 379.1425 en cada tramo de antigüedad.
+Un empleado cuyo último salario reportado fue el salario mínimo del país, es decir ₡358 609.5, enfrenta una reducción de ₡5 379.1425 en cada tramo de antigüedad. Si bien, la práctica de esta estrategia implica la percepción de un menor ingreso por parte de los pensionados, sus efectos financieros negativos no poseen un impacto considerable.
+
+## Reducción del costo actuarial de la suma única de reconocimiento
+
+Dado que la suma única de reconocimiento constituye un tipo de bonificación brindada a los empleados a la edad de 60 años, la cual se paga sobre el último salario reportado y un factor de multiplicación determinado a partir de los años laborados, representa un beneficio cuya extensión produce efectos financieros temporales, ya que se otorga en una única ocasión.
+
+La medida aplicada en este rubro, consistió en una reducción del porcentaje salarial por el cual se multiplica el factor derivado de la antigüedad. Inicialmente el porcentaje se encontraba en un 100%, así tras la aplicación de la estrategia, se fijó en 86.6838%, lo que representa una caída de 13.3162 puntos porcentuales. A pesar de que el cambio pueda parecer abrupto, lo cierto es que una reducción del ingreso percibido bajo el presente beneficio posee menores repercusiones sobre la vida de las personas contempladas, pues como se mencionó al inicio, sus efectos financieros son temporales. Lo anterior constituye el caso contrario a las modificaciones efectuadas en el porcentaje salarial mediante el cual se calculan las pensiones, pues las pensiones al ser anualidades vitalicias garantizadas durante tres años, tienen un efecto financiero de largo plazo en la realidad de los asegurados.
+
+La tabla a continuación detalla, a través del salario mínimo, la suma única de reconocimiento actualizada posterior a la aplicación de la alternativa planteada.
+
+\begin{center}
+
+**Tabla**
+
+*Cálculo de los nuevos montos asociados a la suma única de reconocimiento a partir del salario mínimo*
+
+\end{center}
+
+|  |  |  |  |
+|:----------------:|:------------------:|:---------------:|:---------------:|
+| **Años de antigüedad** | **Factor de multiplicación** | **Monto anterior** | **Monto actualizado** |
+| 0 - 10 | 1 | ₡358 609.5 | ₡310 856.34 |
+| **Años de antigüedad** | **Factor de multiplicación** | **Monto anterior** | **Monto actualizado** |
+| 10 - 20 | 2 | ₡717 219 | ₡621 712.68 |
+| **Años de antigüedad** | **Factor de multiplicación** | **Monto anterior** | **Monto actualizado** |
+| 20 - 30 | 3 | ₡1 075 828.5 | ₡932 569.03 |
+| **Años de antigüedad** | **Factor de multiplicación** | **Monto anterior** | **Monto actualizado** |
+| 30 - 40 | 4 | ₡1 434 438 | ₡1 243 425.37 |
+| **Años de antigüedad** | **Factor de multiplicación** | **Monto anterior** | **Monto actualizado** |
+| Más de 40 | 5 | ₡1 793 047.5 | ₡1 554 281.71 |
 
 # Análisis comparativo (Alexandra)
 
