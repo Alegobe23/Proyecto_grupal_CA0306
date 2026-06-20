@@ -23,6 +23,7 @@ format:
       - \usepackage{array}
       - \renewcommand{\arraystretch}{1.5}
       - \setlength{\tabcolsep}{8pt}
+      - \usepackage{float}
     include-before-body: Portada.tex
 ---
 
@@ -145,9 +146,9 @@ En primera instancia, previo a definir el conjunto de medidas por aplicar, es pr
 | **Beneficio** | **Costo actuarial** | **Porcentaje sobre el costo total** |
 | *Total reportado* | *₡16 064 590 256.58* | *100%* |
 
-En vista de que el costo actuarial asociado a los beneficios a empleados representa un monto de ₡16 064 590 256.58, la reducción que se pretende efectuar tiene un valor de ₡1 606 459 025.66. Además, se identifica que los tres rubros con mayor participación en el costo total son las anualidades de las pensiones por vejez con un 95.20%, la suma única de reconocimiento con un 3.29% y el seguro de vida para empleados pensionados con un 1.35%. Es posible percatarse de que un porcentaje cercano a la totalidad del costo reportado se concentra en las anualidades de las pensiones por vejez, los demás beneficios solo reúnen un 4.8% del costo total, de manera que el mayor porcentaje de reducción deberá aplicarse al primer ámbito mencionado.
+En vista de que el costo actuarial de los beneficios otorgados a empleados representa un monto de ₡16 064 590 256.58, la reducción que se pretende efectuar tiene un valor de ₡1 606 459 025.66. Además, se identifica que los tres rubros con mayor participación en el costo total son las anualidades de las pensiones por vejez con un 95.20%, la suma única de reconocimiento con un 3.29% y el seguro de vida para empleados pensionados con un 1.35%. Es posible percatarse de que un porcentaje cercano a la totalidad del costo reportado se concentra en las anualidades de las pensiones por vejez, los demás beneficios solo reúnen un 4.8% del costo total, de manera que el mayor porcentaje de reducción deberá aplicarse al primer ámbito mencionado.
 
-Posterior a la consideración del escenario anterior, se decidió emprender reducciones en dos beneficios particulares: las pensiones por vejez y la suma única de reconocimiento. Se excluyó el seguro de vida puesto que el costo actuarial derivado de su extensión es considerablemente bajo, de manera que no resulta esencial disminuir dicho monto con tal de alcanzar el porcentaje objetivo. Las metodología detrás del proceso de reducción en cada rubro responde a consideraciones distintas, de forma que se procede a detallar a continuación el procedimiento trazado.
+Posterior a la consideración del escenario anterior, se decidió emprender reducciones en dos beneficios particulares: las pensiones por vejez y la suma única de reconocimiento. Se excluyó el seguro de vida puesto que el costo actuarial derivado de su extensión es considerablemente bajo, de manera que no resulta esencial disminuir dicho monto con tal de alcanzar el porcentaje objetivo. Las metodología detrás del proceso de reducción en cada rubro responde a consideraciones distintas; se procede a detallar a continuación el procedimiento trazado.
 
 ## Reducción del costo actuarial de las pensiones por vejez
 
@@ -176,15 +177,19 @@ Los mecanismos aplicados repercuten en dos elementos: el periodo por el que las 
 | **Esperanza de vida** | **Empleados activos** | **Empleados pensionados** |
 |       *General*       |         50.04         |           15.94           |
 
-En segundo lugar, se optó por una rebaja de 1.5 puntos porcentuales del porcentaje salarial sobre el cual se calculan las pensiones, aplicada a cada tramo de antigüedad. Si bien, tal medida impacta de forma negativa los ingresos percibidos por las personas pensionadas para satisfacer sus necesidades, se procuró que la reducción se hiciera por el menor porcentaje posible. Además, la decisión de reducir el porcentaje de los tramos en igual medida, no solo responde a un sentido de igualdad, sino que también procura preservar el incentivo a los empleados de permanecer en condición de activos por periodos más extensos; lo cual representa el escenario contrario al caso en que se decidiera aplicar una reducción regida por la equidad, disminuyendo en mayor medida los porcentajes más altos y en menor medida los porcentajes más pequeños: los sujetos tras percibir que las pensiones con porcentajes elevados reciben los mayores impactos de las medidas reduccionistas, abandonarían la motivación de mantenerse como empleados activos por el lapso más prolongado, con el objetivo de acceder a pensiones mejores pagadas. La tabla extendida a continuación muestra los porcentajes actualizados posterior a la aplicación de la alternativa planteada.
+En segundo lugar, se optó por una rebaja de 1.5 puntos porcentuales del porcentaje salarial sobre el cual se calculan las pensiones por vejez, aplicada a cada tramo de antigüedad. Si bien, tal medida impacta de forma negativa los ingresos percibidos por las personas pensionadas para satisfacer sus necesidades, se procuró que la reducción se hiciera por el menor porcentaje posible. Además, la decisión de reducir el porcentaje de los tramos en igual medida, no solo responde a un sentido de igualdad, sino que también procura preservar el incentivo para que los empleados permanezcan en condición de activos por periodos más extensos; lo cual representa el escenario contrario al caso en que se decidiera aplicar una reducción regida por la equidad, disminuyendo en mayor medida los porcentajes más altos y en menor medida los porcentajes más pequeños: los sujetos tras percibir que las pensiones con porcentajes elevados reciben los mayores impactos de las medidas reduccionistas, abandonarían la motivación de mantenerse como empleados activos por lapsos más prolongados, con el objetivo de acceder a pensiones con un mejor pago. La tabla extendida a continuación muestra los porcentajes actualizados posterior a la aplicación de la alternativa planteada.
 
+```{=latex}
 \begin{center}
+```
 
 **Tabla**
 
 *Actualización de los porcentajes sobre los cuales se calcula la pensión por vejez*
 
+```{=latex}
 \end{center}
+```
 
 |                        |                         |                            |
 |:----------------------:|:----------------------:|:----------------------:|
@@ -203,11 +208,13 @@ De acuerdo con la Organización Internacional del Trabajo (OIT), en enero de 202
 
 ```{=latex}
 \begin{center}
+```
 
 **Tabla**
 
 *Cálculo de los nuevos montos asociados a la pensión por vejez a partir del salario mínimo*
 
+```{=latex}
 \end{center}
 ```
 
@@ -224,26 +231,30 @@ De acuerdo con la Organización Internacional del Trabajo (OIT), en enero de 202
 | **Años de antigüedad** | **Monto anterior** | **Monto actualizado** |
 |       Más de 40        |     ₡358 609.5     |      ₡353 230.36      |
 
-Un empleado cuyo último salario reportado fue el salario mínimo del país, es decir ₡358 609.5, enfrenta una reducción de ₡5 379.1425 en cada tramo de antigüedad. Si bien, la práctica de esta estrategia implica la percepción de un menor ingreso por parte de los pensionados, sus efectos financieros negativos no poseen un impacto considerable.
+Un empleado cuyo último salario reportado fue el salario mínimo del país, es decir ₡358 609.5, enfrenta una reducción de ₡5 379.1425 en cada tramo de antigüedad. Si bien, la práctica de esta estrategia implica la percepción de un menor ingreso por parte de los pensionados, sus efectos financieros adversos no poseen un impacto considerable.
 
 ## Reducción del costo actuarial de la suma única de reconocimiento
 
-Dado que la suma única de reconocimiento constituye un tipo de bonificación brindada a los empleados a la edad de 60 años, la cual se paga sobre el último salario reportado y un factor de multiplicación determinado a partir de los años laborados, representa un beneficio cuya extensión produce efectos financieros temporales, ya que se otorga en una única ocasión.
+Dado que la suma única de reconocimiento constituye una bonificación otorgada a los empleados a la edad de 60 años, la cual se paga sobre el último salario reportado y un factor de multiplicación determinado según los años laborados, representa un beneficio cuya extensión produce efectos financieros temporales, ya que se otorga en una única ocasión.
 
-La medida aplicada en este rubro, consistió en una reducción del porcentaje salarial por el cual se multiplica el factor derivado de la antigüedad. Inicialmente el porcentaje se encontraba en un 100%, así tras la aplicación de la estrategia, se fijó en 86.6838%, lo que representa una caída de 13.3162 puntos porcentuales. A pesar de que el cambio pueda parecer abrupto, lo cierto es que una reducción del ingreso percibido bajo el presente beneficio posee menores repercusiones sobre la vida de las personas contempladas, pues como se mencionó al inicio, sus efectos financieros son temporales. Lo anterior constituye el caso contrario a las modificaciones efectuadas en el porcentaje salarial mediante el cual se calculan las pensiones, pues las pensiones al ser anualidades vitalicias garantizadas durante tres años, tienen un efecto financiero de largo plazo en la realidad de los asegurados.
+La medida aplicada en este rubro, consistió en una reducción del porcentaje salarial por el cual se multiplica el factor derivado de la antigüedad. Inicialmente el porcentaje se encontraba en 100%, así tras la aplicación de la estrategia, se fijó en 86.6838%, lo que representa una caída de 13.3162 puntos porcentuales. A pesar de que el cambio pueda parecer abrupto, lo cierto es que una reducción del ingreso obtenido bajo el presente beneficio posee menores repercusiones en la vida de los asegurados, pues como se mencionó al inicio, sus efectos financieros son temporales. Lo anterior constituye el caso contrario a las modificaciones efectuadas en el porcentaje salarial mediante el cual se calculan las pensiones, puesto que las pensiones al ser anualidades vitalicias garantizadas durante tres años, tienen un efecto financiero de largo plazo en la realidad de los sujetos.
 
-La tabla a continuación detalla, a través del salario mínimo, la suma única de reconocimiento actualizada posterior a la aplicación de la alternativa planteada.
+La tabla a continuación detalla, a través del salario mínimo, la suma única de reconocimiento actualizada posterior a la aplicación de la alternativa descrita.
 
+```{=latex}
 \begin{center}
+```
 
 **Tabla**
 
 *Cálculo de los nuevos montos asociados a la suma única de reconocimiento a partir del salario mínimo*
 
+```{=latex}
 \end{center}
+```
 
 |  |  |  |  |
-|:----------------:|:------------------:|:---------------:|:---------------:|
+|:----------------:|:-----------------:|:----------------:|:----------------:|
 | **Años de antigüedad** | **Factor de multiplicación** | **Monto anterior** | **Monto actualizado** |
 | 0 - 10 | 1 | ₡358 609.5 | ₡310 856.34 |
 | **Años de antigüedad** | **Factor de multiplicación** | **Monto anterior** | **Monto actualizado** |
@@ -254,6 +265,33 @@ La tabla a continuación detalla, a través del salario mínimo, la suma única 
 | 30 - 40 | 4 | ₡1 434 438 | ₡1 243 425.37 |
 | **Años de antigüedad** | **Factor de multiplicación** | **Monto anterior** | **Monto actualizado** |
 | Más de 40 | 5 | ₡1 793 047.5 | ₡1 554 281.71 |
+
+## Resultado de las medidas reductivas
+
+La disminuciones planteadas en los apartados arriba, constituyeron una estrategia conjunta que al ser aplicada permitió alcanzar el porcentaje de reducción deseado. De esta manera, se extienden las cifras obtenidas tras la conclusión del proceso:
+
+```{=latex}
+\begin{center}
+```
+
+**Tabla**
+
+*Cifras obtenidas tras el proceso de reducción de costos*
+
+```{=latex}
+\end{center}
+```
+
+|  |  |  |
+|:----------------------:|:----------------------:|:----------------------:|
+| **Beneficio** | **Costo actuarial inicial** | **Costo actuarial actualizado** |
+| Anualidades de las pensiones por vejez | ₡15 293 673 250.90 | ₡13 757 676 922.12 |
+| **Beneficio** | **Costo actuarial inicial** | **Costo actuarial actualizado** |
+| Suma única de reconocimiento | ₡529 153 943.49 | ₡458 690 746.07 |
+| **Beneficio** | **Costo actuarial inicial** | **Costo actuarial actualizado** |
+| *Total* | ₡15 822 827 194.39 | ₡14 216 367 668.19 |
+
+De la tabla se determina que la diferencia entre los costos actuariales reportados antes y después de las medidas de reducción equivale a ₡1 606 459 526.2, superando el monto previsto inicialmente: ₡1 606 459 025.66, por un total de ₡500.54.
 
 # Análisis comparativo (Alexandra)
 
