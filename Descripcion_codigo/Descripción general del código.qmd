@@ -112,8 +112,6 @@ El módulo Funciones_mortalidad se encarga del uso de la tabla de mortalidad din
 
 El módulo Limpiar_Activos se encarga de organizar y depurar la base inicial de empleados activos. A partir de la hoja original de empleados, genera una base limpia con las variables necesarias para el modelo demográfico y actuarial. Calcula la edad al corte, la antigüedad, la edad de jubilación según sexo, los años restantes hasta jubilación, el salario anual con aguinaldo y las variables iniciales de mortalidad y esperanza de vida. También valida la consistencia de los datos, como fechas, sexo, salario y estado del registro dentro del modelo.
 
-El módulo Control_Resumen_Activos genera las tablas de control de calidad y el resumen estadístico de la población activa. Verifica que la cantidad total de empleados coincida con la base limpia, que no existan registros inválidos, que la población por sexo esté correctamente clasificada y que las variables de mortalidad y esperanza de vida no estén vacías o en cero. Además, resume los principales indicadores demográficos y salariales, como cantidad de empleados, edad promedio, edad mínima, edad máxima, antigüedad promedio, salario mensual promedio, masa salarial anual con aguinaldo y esperanza de vida promedio por sexo y total.
-
 El módulo Proyecciones_Activos realiza la proyección demográfica anual de los empleados activos. Para cada año proyectado, calcula la cantidad esperada de activos al inicio, las muertes esperadas, las jubilaciones esperadas y los activos al cierre del periodo. La proyección se realiza separando la población por sexo y considerando la edad de jubilación correspondiente: 63 años para mujeres y 65 años para hombres. La transición demográfica se modela mediante tres posibles estados: permanencia como activo, salida por muerte o salida por jubilación.
 
 El módulo Graficos_Activos genera los gráficos correspondientes a la población activa. A partir de las tablas de resumen, esperanza de vida y proyección demográfica, construye visualizaciones para mostrar la distribución de empleados por sexo, la esperanza de vida promedio, la distribución por grupos de edad, la evolución anual de activos al cierre, las muertes esperadas y las jubilaciones esperadas. Estos gráficos facilitan la interpretación de los resultados y sirven como insumo para el informe y la presentación final.
@@ -138,15 +136,23 @@ Este procedimiento permite utilizar directamente las muertes esperadas como base
 
 ### Inciso e): Proyección financiera anual de beneficios de muerte de empleados activos
 
-El módulo proy_finan_MuerteActivos corresponde al cálculo financiero del beneficio por muerte de empleados activos. Utiliza como insumo la hoja de proyección demográfica de activos, específicamente las muertes esperadas separadas por sexo. A partir de esas muertes, aplica la suma asegurada correspondiente a empleados activos, equivalente a ₡5 millones, para obtener el flujo nominal esperado de cada año.
+Se trabajó mediante funciones actuariales implementadas en el módulo Funciones_beneficios. Estas funciones permitieron calcular los flujos esperados asociados al beneficio por muerte de empleados activos, considerando la edad, sexo y probabilidades de mortalidad de cada participante.
 
-Luego, cada flujo se descuenta a valor presente mediante la tasa de descuento establecida en la hoja de parámetros. Como resultado, el módulo genera una hoja con la proyección anual de pagos por muerte de activos, incluyendo muertes esperadas, beneficio unitario, flujo nominal esperado y valor presente actuarial.
+Para este beneficio se aplicó la suma asegurada correspondiente a empleados activos, equivalente a ₡5 millones. El cálculo se realizó para los años en los que el participante se mantiene en condición activa, de manera que el flujo esperado anual se obtuvo al multiplicar la probabilidad de fallecimiento en cada año por el monto del beneficio correspondiente.
+
+Posteriormente, los flujos esperados fueron descontados a la fecha de valuación utilizando la tasa de descuento definida en la hoja de parámetros. Con ello se obtuvo, para cada año proyectado, el flujo nominal esperado y su valor presente actuarial. Finalmente, los resultados individuales se agregaron para estimar el costo nominal esperado y el costo actuarial a valor presente del beneficio por muerte de empleados activos.
 
 ### Inciso f): Proyección financiera anual de beneficios de muerte de pensionados
 
-El módulo proy_finan_MuertePensionados corresponde al cálculo financiero del beneficio por muerte de pensionados. Este módulo toma como base la proyección demográfica de pensionados y las muertes esperadas de esa población. Para cada año proyectado, multiplica las muertes esperadas por la suma asegurada aplicable a pensionados, equivalente a ₡3 millones, ya que el beneficio disminuye una vez alcanzada la edad de jubilación.
+Este también se desarrolló mediante funciones actuariales incluidas en el módulo Funciones_beneficios. En este caso, se calculó el beneficio por muerte correspondiente a participantes en condición de pensionados, aplicando la suma asegurada de ₡3 millones.
 
-Posteriormente, calcula el valor presente de los pagos esperados mediante la tasa de descuento del modelo. La hoja de salida muestra la proyección anual del beneficio por muerte de pensionados, el flujo esperado nominal y el costo actuarial en valor presente.
+El cálculo consideró a los pensionados actuales desde la fecha de corte y mantuvo su clasificación como pensionados durante todo el horizonte de proyección, aun en aquellos casos en los que la edad observada fuera menor que la edad estándar de jubilación. Además, cuando correspondía, los participantes activos que alcanzaban la condición de pensionados dentro del horizonte proyectado eran tratados como pensionados para efectos de los flujos posteriores a la jubilación.
+
+Para cada año, el flujo esperado se obtuvo multiplicando la probabilidad de fallecimiento en condición de pensionado por el beneficio correspondiente. Luego, dichos flujos fueron descontados mediante la tasa de descuento establecida en el modelo. De esta forma, se obtuvo la proyección anual del beneficio por muerte de pensionados, junto con el flujo nominal esperado y el costo actuarial en valor presente.
+
+El módulo proy_finan_MuerteActivos corresponde al cálculo financiero del beneficio por muerte de empleados activos. Utiliza como insumo la hoja de proyección demográfica de activos, específicamente las muertes esperadas separadas por sexo. A partir de esas muertes, aplica la suma asegurada correspondiente a empleados activos, equivalente a ₡5 millones, para obtener el flujo nominal esperado de cada año.
+
+Luego, cada flujo se descuenta a valor presente mediante la tasa de descuento establecida en la hoja de parámetros. Como resultado, el módulo genera una hoja con la proyección anual de pagos por muerte de activos, incluyendo muertes esperadas, beneficio unitario, flujo nominal esperado y valor presente actuarial.
 
 ### Inciso g): Proyección financiera anual de pagos de anualidades
 
