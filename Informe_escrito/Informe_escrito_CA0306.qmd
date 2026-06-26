@@ -50,25 +50,19 @@ Desde el punto de vista salarial, el salario mensual promedio total de los emple
 
 La esperanza de vida promedio de los empleados activos, estimada a partir de la tabla de mortalidad SP-2015, es de 50,54 años adicionales. Al separar por sexo, las mujeres presentan una esperanza de vida promedio de 52,31 años, mientras que los hombres presentan una esperanza de vida promedio de 48,67 años. Este resultado es coherente con el comportamiento demográfico esperado, dado que las mujeres suelen presentar mayor supervivencia esperada que los hombres. La esperanza de vida es una variable central en el modelo, ya que permite aproximar el horizonte temporal durante el cual pueden ocurrir contingencias como muerte, permanencia en estado activo o transición hacia la jubilación.
 
-```{=latex}
-\begin{table}[H]
-\centering
-\caption{Resumen estadístico de empleados activos}
-\begin{tabular}{lccc}
-\hline
-Indicador & Femenino & Masculino & Total \\
-\hline
-Cantidad & 115 & 109 & 224 \\
-Edad promedio & 37,29 & 36,33 & 36,82 \\
-Edad mínima & 24 & 22 & 22 \\
-Edad máxima & 58 & 62 & 62 \\
-Antigüedad promedio & 5,97 & 4,72 & 5,36 \\
-Salario mensual promedio & \textcolonmonetary 1.088.808,49 & \textcolonmonetary 960.074,99 & \textcolonmonetary 1.026.165,85 \\
-Esperanza de vida promedio & 52,31 & 48,67 & 50,54 \\
-\hline
-\end{tabular}
-\end{table}
-```
+
+| Indicador                         |          Femenino |         Masculino |             Total |
+| --------------------------------- | ----------------: | ----------------: | ----------------: |
+| Cantidad                          |               115 |               109 |               224 |
+| Edad promedio                     |             37,29 |             36,33 |             36,82 |
+| Edad mínima                       |                24 |                22 |                22 |
+| Edad máxima                       |                58 |                62 |                62 |
+| Antigüedad promedio               |              5,97 |              4,72 |              5,36 |
+| Salario mensual promedio          |     ₡1.088.808,49 |       ₡960.074,99 |     ₡1.026.165,85 |
+| Masa salarial anual con aguinaldo | ₡1.627.768.693,85 | ₡1.360.426.256,15 | ₡2.988.194.950,00 |
+| Esperanza de vida promedio        |             52,31 |             48,67 |             50,54 |
+
+: Resumen estadístico de empleados activos
 
 ## Población de pensionados
 
@@ -80,29 +74,34 @@ En cuanto a los montos de pensión, la pensión mensual promedio total es de apr
 
 La esperanza de vida promedio de los pensionados es de 15,94 años adicionales. Al separar por sexo, las mujeres pensionadas tienen una esperanza de vida promedio de 15,71 años, mientras que los hombres pensionados presentan una esperanza de vida promedio de 16,22 años. Aunque en la población activa las mujeres muestran mayor esperanza de vida, en la población pensionada la diferencia observada puede variar por la composición específica de edades, supervivencia previa y distribución del grupo analizado. Por esta razón, la esperanza de vida de pensionados debe interpretarse de forma conjunta con la edad actual de cada persona y no únicamente como una comparación directa entre sexos.
 
-```{=latex}
-\begin{table}[H]
-\centering
-\caption{Resumen estadístico de pensionados}
-\begin{tabular}{lccc}
-\hline
-Indicador & Femenino & Masculino & Total \\
-\hline
-Cantidad & 91 & 74 & 165 \\
-Edad promedio & 72,92 & 72,76 & 72,85 \\
-Edad mínima & 57 & 61 & 57 \\
-Edad máxima & 92 & 97 & 97 \\
-Pensión mensual promedio & \textcolonmonetary 187.979,87 & \textcolonmonetary 205.785,84 & \textcolonmonetary 195.965,58 \\
-Pensión anual total estimada & \textcolonmonetary 222.380.185,95 & \textcolonmonetary 197.965.980,55 & \textcolonmonetary 420.346.166,50 \\
-Esperanza de vida promedio & 15,71 & 16,22 & 15,94 \\
-\hline
-\end{tabular}
-\end{table}
-```
+
+| Indicador                    |        Femenino |       Masculino |           Total |
+| ---------------------------- | --------------: | --------------: | --------------: |
+| Cantidad                     |              91 |              74 |             165 |
+| Edad promedio                |           72,92 |           72,76 |           72,85 |
+| Edad mínima                  |              57 |              61 |              57 |
+| Edad máxima                  |              92 |              97 |              97 |
+| Pensión mensual promedio     |     ₡187.979,87 |     ₡205.785,84 |     ₡195.965,58 |
+| Pensión anual total estimada | ₡222.380.185,95 | ₡197.965.980,55 | ₡420.346.166,50 |
+| Esperanza de vida promedio   |           15,71 |           16,22 |           15,94 |
+
+: Resumen estadístico de pensionados
 
 ## Comparación entre empleados activos y pensionados
 
 Al comparar ambas poblaciones, se observa una diferencia demográfica marcada. Los empleados activos tienen una edad promedio de 36,82 años, mientras que los pensionados presentan una edad promedio de 72,85 años. Esta diferencia refleja que los empleados activos tienen un horizonte de permanencia y exposición mucho más amplio antes de alcanzar la jubilación, mientras que los pensionados se encuentran en una etapa donde el principal riesgo actuarial está asociado a la supervivencia y a la duración de los pagos de pensión.
+
+| Indicador                     | Empleados activos |     Pensionados |
+| ----------------------------- | ----------------: | --------------: |
+| Cantidad total                |               224 |             165 |
+| Mujeres                       |               115 |              91 |
+| Hombres                       |               109 |              74 |
+| Edad promedio total           |             36,82 |           72,85 |
+| Esperanza de vida promedio    |             50,54 |           15,94 |
+| Variable financiera principal |   Salario mensual | Pensión mensual |
+| Flujo anual total estimado    | ₡2.988.194.950,00 | ₡420.346.166,50 |
+
+: Comparación general entre empleados activos y pensionados
 
 La esperanza de vida también presenta diferencias importantes entre ambos grupos. En los activos, la esperanza de vida promedio adicional es de 50,54 años, mientras que en los pensionados es de 15,94 años. Esta diferencia es esperada, dado que los pensionados ya se encuentran en edades más avanzadas. Desde el punto de vista actuarial, esto implica que los activos requieren un modelo de transición que considere permanencia laboral, muerte y jubilación, mientras que los pensionados requieren un modelo enfocado principalmente en supervivencia, mortalidad y continuidad de pagos.
 
