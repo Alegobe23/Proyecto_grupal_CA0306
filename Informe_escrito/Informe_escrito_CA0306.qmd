@@ -480,7 +480,21 @@ Por tanto, el costo actuarial total resume el valor presente de todos los compro
 
 # Resultados obtenidos
 
+## Proyección financiera y costo actuarial de los beneficios
 
+A partir de las proyecciones realizadas, se estimaron los flujos esperados nominales y los valores presentes actuariales de los beneficios considerados en el plan. Los resultados se obtuvieron de forma separada para cada beneficio, con el objetivo de identificar su contribución individual al costo total.
+
+En primer lugar, para el beneficio por muerte de empleados activos, se obtuvo un costo nominal esperado de ₡700.868.080,89. Al descontar los flujos esperados a la fecha de valuación, el costo actuarial a valor presente fue de ₡57.946.601,36. Este monto representa el valor actual de los pagos esperados por fallecimientos ocurridos mientras los participantes se encuentran en condición activa.
+
+Por su parte, el beneficio por muerte de pensionados presentó un costo nominal esperado de ₡495.000.000,00 y un costo actuarial a valor presente de ₡202.391.712,04. Este resultado corresponde a los pagos esperados asociados a fallecimientos de participantes en condición de pensionados, considerando las probabilidades de supervivencia y muerte aplicables en cada año de proyección.
+
+Al sumar ambos beneficios de muerte, el valor presente actuarial conjunto fue de ₡260.338.313,40. Este monto refleja el costo actuarial total esperado de los beneficios por fallecimiento, distinguiendo entre la condición activa y pensionada del participante al momento del pago.
+
+En cuanto a las anualidades de pensión, se obtuvo el componente de mayor peso dentro del plan. El costo nominal esperado fue de ₡426.936.709.559,48, mientras que el costo actuarial a valor presente fue de ₡29.634.349.842,37. La magnitud de este resultado se explica porque las anualidades representan pagos periódicos de largo plazo, sujetos a supervivencia, inflación y permanencia del pensionado dentro del horizonte de proyección.
+
+Para la suma única de reconocimiento o *Lump Sum*, el costo nominal esperado fue de ₡6.001.852.514,87. Al traer estos pagos a valor presente, el costo actuarial estimado fue de ₡529.153.943,49. Este beneficio tuvo un impacto menor que las anualidades de pensión, pero superior al costo individual de los beneficios de muerte.
+
+Finalmente, al integrar todos los beneficios analizados, se obtuvo un costo nominal esperado total de ₡434.134.430.155,25. El costo actuarial total a valor presente fue de ₡30.423.842.099,26. Este valor representa la estimación global del compromiso económico del plan, considerando los beneficios por muerte de activos, muerte de pensionados, anualidades de pensión y suma única de reconocimiento.
 
 # Resultados del análisis de sensibilidad (Jean Carlo)
 
