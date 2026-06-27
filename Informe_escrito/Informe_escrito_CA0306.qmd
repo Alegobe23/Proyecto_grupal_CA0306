@@ -34,11 +34,11 @@ format:
 
 \newpage
 
-## Análisis estadístico de la población de empleados activos y pensionados
+# Análisis estadístico de la población de empleados activos y pensionados
 
 El análisis estadístico inicial permite describir las principales características demográficas y financieras de la población considerada en el modelo. Para este proyecto se trabajó con dos grupos principales: empleados activos y pensionados. En ambos casos se analizaron variables como sexo, edad, salario mensual, pensión mensual, mortalidad y esperanza de vida. Esta caracterización es necesaria porque los resultados actuariales dependen directamente de la edad, el sexo, la permanencia esperada, la mortalidad y los beneficios asociados a cada grupo.
 
-### Empleados activos
+## Empleados activos
 
 La población de empleados activos está compuesta por 224 personas. De este total, 115 son mujeres y 109 son hombres. Esto representa una distribución relativamente equilibrada por sexo, con una participación femenina de aproximadamente 51,34 % y una participación masculina de 48,66 %. Esta separación es importante porque el modelo considera edades de jubilación distintas para mujeres y hombres.
 
@@ -63,7 +63,7 @@ La esperanza de vida promedio de los empleados activos es de 50,14 años adicion
 
 : Resumen estadístico de empleados activos
 
-### Pensionados
+## Pensionados
 
 La población de pensionados está conformada por 165 personas. De este total, 91 son mujeres y 74 son hombres. Las mujeres representan aproximadamente 55,15 % de la población pensionada, mientras que los hombres representan 44,85 %. En comparación con la población activa, los pensionados presentan una mayor proporción relativa de mujeres, lo cual es coherente con una mayor supervivencia esperada.
 
@@ -85,7 +85,7 @@ La esperanza de vida promedio de los pensionados es de 16,01 años adicionales. 
 
 : Resumen estadístico de pensionados
 
-### Comparación entre empleados activos y pensionados
+## Comparación entre empleados activos y pensionados
 
 Al comparar ambas poblaciones, se observa una diferencia clara en la estructura demográfica. Los empleados activos tienen una edad promedio de 36,82 años, mientras que los pensionados presentan una edad promedio de 72,85 años. Esta diferencia es esperada, ya que los empleados activos aún se encuentran dentro de la etapa laboral, mientras que los pensionados ya se encuentran en la etapa de pago de beneficios.
 
@@ -419,7 +419,6 @@ El costo nominal esperado de cada beneficio se calculó como la suma simple de s
 $$
 CN_k=\sum_{t=0}^{n} F_{k,t},
 $$
-
 donde $(CN_k)$ representa el costo nominal esperado del beneficio $(k)$, $(F_{k,t})$ es el flujo esperado del beneficio en el año $(t)$, y $(n)$ es el horizonte de proyección.
 
 Sin embargo, el costo nominal no considera el valor del dinero en el tiempo. Por esta razón, se calculó también el costo actuarial en valor presente. Sea $(i)$ la tasa efectiva anual de descuento y
@@ -460,7 +459,7 @@ $$
 VP_{\text{total}}=\sum_{k=1}^{m} VP_k,
 $$
 
-donde (m) representa la cantidad de beneficios incluidos en el análisis.
+donde $(m)$ representa la cantidad de beneficios incluidos en el análisis.
 
 De forma análoga, el costo nominal total esperado se obtuvo como
 
@@ -472,16 +471,7 @@ La estimación de los costos actuariales se realizó siguiendo el enfoque de Bow
 
 Por tanto, el costo actuarial total resume el valor presente de todos los compromisos esperados del plan, mientras que el costo nominal total muestra el monto acumulado de pagos esperados sin aplicar descuento financiero.
 
-
----
-title: "Metodología de cálculo de primas"
-author: "Jean"
-format: pdf
----
-
-# Metodología de primas
-
-## Primas por grupo de edad y sexo
+## Cálculo de primas por grupo de edad y sexo
 
 Para la obtención de primas se dividió la población de empleados activos por sexo y grupo etario. Las primas se calcularon de la siguiente forma:
 
@@ -489,24 +479,24 @@ $$
 \text{Prima}_{\text{Grupo}} = \frac{VPA\left(\text{Costos Actuariales del grupo}\right)}{VP\left(\text{Masa salarial total del grupo}\right)}
 $$
 
-La componente del **VPA de los costos** ya ha sido abordada previamente; lo único a considerar es que aquí se toman por grupo y no para toda la población.
+La componente del VPA de los costos ya ha sido abordada previamente; lo único a considerar es que aquí se toman por grupo y no para toda la población.
 
 ### Masa salarial proyectada
 
 Para la componente del denominador se aplicó la siguiente metodología:
 
 1. Del salario mensual actual de cada persona se obtuvo el salario anual actual multiplicando por 13 (incluyendo el aguinaldo).  
-2. A partir del cálculo anual a la fecha de corte, se proyecta el salario anual esperado por grupo para el año \(2025+k\):
+2. A partir del cálculo anual a la fecha de corte, se proyecta el salario anual esperado por grupo para el año $2025+k$:
 
 $$
 S_{2025+k} = S_{\text{corte}} \cdot (1+g)^k \cdot {}_k p_x
 $$
 
 donde:  
-- \(S_{2025+k}\): salario anual esperado del grupo en el año \(2025+k\).  
-- \(S_{\text{corte}}\): salario anual del grupo a la fecha de corte.  
-- \(g = (1+\text{inflación})(1+\text{incremento real}) - 1\): crecimiento nominal del salario por año.  
-- \({}_k p_x\): probabilidad de sobrevivencia del grupo hasta el año \(2025+k\).
+- $S_{2025+k}$: salario anual esperado del grupo en el año $2025+k$.  
+- $S_{\text{corte}}$: salario anual del grupo a la fecha de corte.  
+- $g = (1+\text{inflación})(1+\text{incremento real}) - 1$: crecimiento nominal del salario por año.  
+- ${}_k p_x$: probabilidad de sobrevivencia del grupo hasta el año $2025+k$.
 
 ### Valor presente de la masa salarial
 
@@ -517,21 +507,21 @@ VP\left(\text{Masa salarial}\right) = \sum_{k=0}^{T-1} v^k \cdot S_{2025+k}
 $$
 
 donde:  
-- \(T\): número de años faltantes para la jubilación del grupo.  
-- \(v = \frac{1}{1+i}\): factor de descuento anual, con \(i\) la tasa de interés.  
+- $T$: número de años faltantes para la jubilación del grupo.  
+- $v = \frac{1}{1+i}$: factor de descuento anual, con $i$ la tasa de interés.  
 
 Esta metodología para la masa salarial es análoga al cálculo de una anualidad.
 
-## Prima media nivelada
+## Cálculo de la prima media nivelada
 
-De forma análoga al cálculo por grupos, la **prima media nivelada** se obtiene como:
+De forma análoga al cálculo por grupos, la prima media nivelada se obtiene como:
 
 $$
 \text{Prima media nivelada} = \frac{VPA\left(\text{Costos Actuariales totales}\right)}{VP\left(\text{Masa salarial total}\right)}
 $$
 
 Para la obtención del valor presente de la masa salarial se sumaron las masas salariales de todos los grupos de empleados activos.  
-En cuanto a los costos, se tomó en cuenta el **VPA total del plan de beneficios** para toda la población (activos y pensionados).
+En cuanto a los costos, se tomó en cuenta el VPA total del plan de beneficios para toda la población (activos y pensionados).
 
 
 # Resultados obtenidos
