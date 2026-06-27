@@ -493,10 +493,10 @@ S_{2025+k} = S_{\text{corte}} \cdot (1+g)^k \cdot {}_k p_x
 $$
 
 donde:  
-- $S_{2025+k}$: salario anual esperado del grupo en el año $2025+k$.  
-- $S_{\text{corte}}$: salario anual del grupo a la fecha de corte.  
-- $g = (1+\text{inflación})(1+\text{incremento real}) - 1$: crecimiento nominal del salario por año.  
-- ${}_k p_x$: probabilidad de sobrevivencia del grupo hasta el año $2025+k$.
+$S_{2025+k}$: salario anual esperado del grupo en el año $2025+k$.  
+$S_{\text{corte}}$: salario anual del grupo a la fecha de corte.  
+$g = (1+\text{inflación})(1+\text{incremento real}) - 1$: crecimiento nominal del salario por año.  
+${}_k p_x$: probabilidad de sobrevivencia del grupo hasta el año $2025+k$.
 
 ### Valor presente de la masa salarial
 
@@ -507,8 +507,8 @@ VP\left(\text{Masa salarial}\right) = \sum_{k=0}^{T-1} v^k \cdot S_{2025+k}
 $$
 
 donde:  
-- $T$: número de años faltantes para la jubilación del grupo.  
-- $v = \frac{1}{1+i}$: factor de descuento anual, con $i$ la tasa de interés.  
+$T$: número de años faltantes para la jubilación del grupo.  
+$v = \frac{1}{1+i}$: factor de descuento anual, con $i$ la tasa de interés.  
 
 Esta metodología para la masa salarial es análoga al cálculo de una anualidad.
 
@@ -559,7 +559,6 @@ Finalmente, al integrar todos los beneficios analizados, se obtuvo un costo nomi
 
 Para el análisis de sensibilidad de las tasas, se calcularon los costos totales nominales (i.e., la suma de los flujos anuales esperados brutos) y el valor presente actuarial de los costos (i.e., la suma de los flujos anuales esperados traídos a valor presente) al reducir y aumentar en un punto porcentual la tasa de incremento salarial (2% anual originalmente) y la tasa de descuento (6,5% anual) para cada beneficio en el plan. El objetivo fue observar la tendencia general, cuantificar las diferencias y ofrecer un razonamiento que justifique los resultados.
 
----
 
 ## Costos Nominales
 
@@ -587,7 +586,6 @@ En el caso del **Lump Sum**, los costos son menores cuando la tasa de incremento
 
 En el caso de las **Anualidades**, el análisis es similar, aunque con diferencias más amplias. Cabe señalar que el cambio en el incremento salarial solo afecta a los trabajadores activos, ya que las pensiones se ajustan únicamente por inflación. Al reducir la tasa en un punto porcentual, la diferencia es de aproximadamente -25,8%, mientras que al aumentarla es de +26%. Una explicación plausible es que, al tratarse de pagos mensuales recurrentes, el efecto del cambio se acumula a lo largo de los años, amplificado por el hecho de que la pensión depende del último salario, que es mayor que el considerado en el Lump Sum. En consecuencia, el impacto es más significativo.
 
----
 
 ## Cambios en el valor presente de los Costos Actuariales
 
@@ -620,8 +618,8 @@ El análisis es más sencillo: como se explicó antes, los costos no dependen de
 La tendencia frente a cambios en la tasa de descuento es análoga a la del Lump Sum. Sin embargo, las variaciones son mucho mayores debido a que se trata de un flujo recurrente acumulado a lo largo de los años y que representa el mayor porcentaje de los costos totales del plan.  
 
 En diagonal, los razonamientos son los mismos que para el Lump Sum, pero las diferencias son más amplias:  
-- De izquierda a derecha, las variaciones son menores en magnitud, aunque proporcionalmente más altas que en el Lump Sum.  
-- De derecha a izquierda, las diferencias son más significativas y se alejan más del valor original.  
+De izquierda a derecha, las variaciones son menores en magnitud, aunque proporcionalmente más altas que en el Lump Sum.  
+De derecha a izquierda, las diferencias son más significativas y se alejan más del valor original.  
 
 Esto se explica porque en el Lump Sum el descuento se aplica una sola vez, mientras que en las anualidades se aplica cada año sobre cada flujo, amplificando el efecto.
 
