@@ -111,44 +111,44 @@ En síntesis, la población activa es más joven, tiene mayor esperanza de vida 
 
 ## Proyección demográfica y proyección de muertes de pensionados
 
-La proyección demográfica de pensionados se desarrolló a partir del enfoque actuarial clásico de supervivencia presentado por Bowers et al. (1997). En este marco, se considera una vida de edad (x) y se modela su tiempo de vida futuro mediante la variable aleatoria $(T_x)$. Para el caso discreto, se trabaja con la vida futura acotada $(K_x)$, la cual permite expresar probabilidades de supervivencia y fallecimiento en años enteros.
+La proyección demográfica de pensionados se desarrolló a partir del enfoque actuarial clásico de supervivencia presentado por Bowers et al. (1997). Bajo este enfoque, se considera una vida de edad $(x)$ y se modela su tiempo de vida futuro mediante la variable aleatoria $(T_x)$. En el caso discreto, se utiliza la vida futura acotada $(K_x)$, lo que permite expresar probabilidades de supervivencia y fallecimiento en años enteros.
 
-Bajo la notación actuarial usual, la probabilidad de que una vida de edad (x) sobreviva $(k)$ años se denota como
+La probabilidad de que una vida de edad $(x)$ sobreviva $(k)$ años se denota como
 
 $$
 {}_k p_x.
 $$
 
-Asimismo, la probabilidad de que una vida de edad (x + k) fallezca durante el siguiente año se denota como
+Asimismo, la probabilidad de que una vida de edad $(x+k)$ fallezca durante el siguiente año se denota como
 
 $$
 q_{x+k}.
 $$
 
-Por lo tanto, en el caso clásico con una tabla de mortalidad, la probabilidad de que una vida de edad (x) sobreviva $(k)$ años y fallezca durante el año siguiente se expresa como
+Por tanto, la probabilidad de sobrevivir $(k)$ años y fallecer durante el año siguiente se expresa como
 
 $$
-{}k p_x q{x+k}.
+{}*k p_x q*{x+k}.
 $$
 
-En este proyecto se mantuvo esta lógica de supervivencia anual discreta, pero se adaptó al uso de la tabla de mortalidad dinámica SP-2015 de SUPEN. Dicha tabla permite que la probabilidad de muerte varíe no solo con la edad, sino también con el año calendario y el sexo. Por esta razón, la probabilidad anual de muerte utilizada en la proyección se representó como
+En este proyecto se mantuvo esta lógica de supervivencia anual discreta, pero adaptada a la tabla de mortalidad dinámica SP-2015 de SUPEN. Esta tabla permite que la probabilidad de muerte varíe según la edad, el sexo y el año calendario. Por ello, la probabilidad anual de muerte se representó como
 
 $$
 q_x^{(s,y)},
 $$
 
-donde (x) corresponde a la edad alcanzada, (s) al sexo de la persona y $(y)$ al año calendario proyectado.
+donde $(x)$ es la edad alcanzada, $(s)$ el sexo de la persona y $(y)$ el año calendario proyectado.
 
-Así, la probabilidad de supervivencia acumulada durante $(k)$ años, para una persona de edad inicial (x), sexo (s) y año base $(y_0)$, se calculó como
+Así, la probabilidad de supervivencia acumulada durante $(k)$ años, para una persona de edad inicial $(x)$, sexo $(s)$ y año base $(y_0)$, se calculó como
 
 $$
 \prod_{j=0}^{k-1}
 \left(1-q_{x+j}^{(s,y_0+j)}\right).
 $$
 
-Esta expresión conserva la estructura de $({}_k p_x)$ utilizada en Bowers et al. (1997), pero incorpora la mortalidad dinámica de la tabla SP-2015 al hacer depender cada $(q)$ del año calendario correspondiente.
+Esta expresión conserva la estructura de $({}_k p_x)$ de Bowers et al. (1997), pero incorpora la mortalidad dinámica de la tabla SP-2015.
 
-La población pensionada proyectada se separó en dos componentes. El primero corresponde a los pensionados existentes al inicio del periodo de valoración, mientras que el segundo corresponde a los empleados activos que alcanzan la edad de jubilación durante el horizonte de proyección. Por tanto, la cantidad esperada de pensionados vivos al inicio del año $(k)$ se definió como
+La población pensionada proyectada se dividió en dos componentes: los pensionados existentes al inicio del periodo de valoración y los empleados activos que alcanzan la edad de jubilación durante el horizonte de proyección. Por tanto, la cantidad esperada de pensionados vivos al inicio del año $(k)$ se definió como
 
 $$
 L_k^{P_0}
@@ -156,34 +156,34 @@ L_k^{P_0}
 L_k^{A\to P},
 $$
 
-donde $(L_k^{P_0})$ representa los pensionados iniciales sobrevivientes al año $(k)$, y $(L_k^{A\to P})$ representa los empleados activos que se incorporan como pensionados al alcanzar la edad de jubilación.
+donde $(L_k^{P_0})$ representa los pensionados iniciales sobrevivientes y $(L_k^{A\to P})$ los empleados activos que se incorporan como pensionados.
 
-Para los pensionados existentes al inicio de la proyección, la cantidad esperada de vivos al inicio del año $(k)$ se calculó como
-
-$$
-\sum_{i\in P_0}
-{}k p{x_i}^{(s_i,y_0)},
-$$
-
-donde $(P_0)$ es el conjunto de pensionados iniciales, $(x_i)$ es la edad inicial del pensionado $(i)$, y $(s_i)$ corresponde a su sexo.
-
-Las muertes esperadas de los pensionados iniciales durante el año $(k)$ se obtuvieron mediante
+Para los pensionados iniciales, la cantidad esperada de vivos al inicio del año $(k)$ se calculó como
 
 $$
 \sum_{i\in P_0}
-{}k p{x_i}^{(s_i,y_0)}
+{}*k p*{x_i}^{(s_i,y_0)},
+$$
+
+donde $(P_0)$ es el conjunto de pensionados iniciales, $(x_i)$ la edad inicial del pensionado $(i)$ y $(s_i)$ su sexo.
+
+Las muertes esperadas de estos pensionados durante el año $(k)$ se obtuvieron mediante
+
+$$
+\sum_{i\in P_0}
+{}*k p*{x_i}^{(s_i,y_0)}
 q_{x_i+k}^{(s_i,y_0+k)}.
 $$
 
-Esta expresión corresponde a la forma discreta usual $({}k p_x q{x+k})$, adaptada a una tabla dinámica de mortalidad.
+Esta expresión corresponde a la forma discreta usual $({}*k p_x q*{x+k})$, adaptada a una tabla dinámica de mortalidad.
 
-Para incorporar a los empleados activos que se convierten en pensionados, se consideró la edad normal de jubilación definida en el proyecto: 65 años para hombres y 63 años para mujeres. Esta condición se expresó como
+Para incorporar a los empleados activos que se convierten en pensionados, se utilizó la edad normal de jubilación definida en el proyecto: 65 años para hombres y 63 años para mujeres. Esta condición se expresó como
 
 $$
 R_s =
 \begin{cases}
-65, & \text{si } s=\text{hombre},\\
-63, & \text{si } s=\text{mujer}
+65, & \text{si } s=\text{hombre},\
+63, & \text{si } s=\text{mujer}.
 \end{cases}
 $$
 
@@ -194,10 +194,10 @@ $$
 \left(1-q_{x_i+j}^{(s_i,y_0+j)}\right).
 $$
 
-Una vez alcanzada la edad de jubilación, el individuo se incorpora a la población pensionada proyectada. Para $(k\geq k_i^R)$, su contribución esperada a los pensionados vivos al inicio del año $(k)$ se representó como
+Una vez alcanzada la jubilación, el individuo se incorpora a la población pensionada proyectada. Para $(k\geq k_i^R)$, su contribución esperada a los pensionados vivos al inicio del año $(k)$ se representó como
 
 $$
-{}{k_i^R}p{x_i}^{(s_i,y_0)}
+{}*{k_i^R}p*{x_i}^{(s_i,y_0)}
 \prod_{j=k_i^R}^{k-1}
 \left(1-q_{R_{s_i}+j-k_i^R}^{(s_i,y_0+j)}\right).
 $$
@@ -224,57 +224,57 @@ Este enfoque permitió considerar tanto la supervivencia de los pensionados inic
 
 ## Proyección financiera de los flujos por beneficios de muerte
 
-Para la proyección financiera de los beneficios de muerte se utilizó un enfoque actuarial individual, en el cual cada participante fue proyectado año a año según su edad, sexo, condición dentro del plan y probabilidades de mortalidad correspondientes. Posteriormente, los resultados individuales fueron agregados por año de proyección, con el fin de obtener los flujos esperados anuales y sus respectivos valores presentes.
+Para la proyección financiera de los beneficios de muerte se separaron los cálculos según la condición del participante al momento del fallecimiento. El beneficio de muerte de empleados activos se calculó mediante un enfoque individual, proyectando a cada persona año a año. En cambio, el beneficio de muerte de pensionados se calculó de forma agregada por año, a partir de las muertes esperadas anuales de la población pensionada.
 
-Dada la fecha de corte, el primer año proyectado correspondió a 2026 y los flujos esperados de dicho año se descontaron por un período completo. En consecuencia, para un flujo correspondiente al año (a), el tiempo de descuento se definió como
+Dada la fecha de corte, el primer año proyectado correspondió a 2026 y los flujos esperados de dicho año se descontaron por un período completo. Por tanto, para un flujo correspondiente al año $(a)$, el tiempo de descuento se definió como
 
 $$
-t = a - 2025
+t = a - 2025.
 $$
 
 De esta forma, el flujo del año 2026 se valoró con $(t=1)$, el flujo del año 2027 con $(t=2)$, y así sucesivamente.
 
-Para cada persona $(j)$, se calculó la probabilidad de encontrarse viva al inicio de cada año de proyección y la probabilidad de fallecer durante dicho año. Si la edad de la persona en la fecha de corte es $(x_j)$, la probabilidad esperada de muerte en el año $(t)$ se expresó como
+Para los empleados activos, el cálculo se realizó individualmente. Para cada persona $(j)$, se estimó la probabilidad de encontrarse viva al inicio de cada año de proyección y de fallecer durante ese año. Si la edad de la persona en la fecha de corte es $(x_j)$, la probabilidad esperada de muerte en el año $(t)$ se expresó como
 
 $$
-{}*{t-1}p*{x_j},q_{x_j+t-1},
+{}*{t-1}p*{x_j}q_{x_j+t-1},
 $$
 
-donde $({}{t-1}p*{x_j})$ representa la probabilidad de supervivencia desde la fecha de corte hasta el inicio del año de riesgo, y $(q_{x_j+t-1})$ corresponde a la probabilidad de fallecimiento durante ese año, según la tabla de mortalidad utilizada.
+donde $({}*{t-1}p*{x_j})$ representa la probabilidad de supervivencia hasta el inicio del año de riesgo, y $(q_{x_j+t-1})$ corresponde a la probabilidad de fallecimiento durante ese año.
 
-El flujo esperado anual se obtuvo multiplicando la probabilidad esperada de muerte por el beneficio correspondiente. Para evitar mezclas entre beneficios, los flujos se clasificaron según la condición del participante al momento del pago. Por tanto, el beneficio de muerte de empleados activos incluyó únicamente los fallecimientos ocurridos antes de la jubilación, mientras que el beneficio de muerte de pensionados incluyó los fallecimientos ocurridos cuando la persona ya se encontraba en condición de pensionada.
-
-Para los empleados activos, el flujo esperado por muerte activa se calculó únicamente durante los años en los que la persona permanecía como activa. Si el beneficio por muerte de activos se denota por $(B_A)$, entonces el flujo esperado para el año $(t)$ fue
+Si el beneficio por muerte de activos se denota por $(B_A)$, el flujo esperado individual para el año $(t)$ fue
 
 $$
-FE^{A}_{j,t}=B_A \cdot {}*{t-1}p*{x_j},q_{x_j+t-1},
+FE^{A}*{j,t}=B_A \cdot {}*{t-1}p_{x_j}q_{x_j+t-1},
 $$
 
-siempre que la persona aún no hubiese alcanzado la edad de jubilación al inicio del año de riesgo. En caso contrario, dicho flujo no se clasificó como beneficio de muerte de activos.
+siempre que la persona permaneciera como activa al inicio del año de riesgo. Si la persona ya había alcanzado la edad de jubilación, el flujo no se clasificó como beneficio de muerte de activos.
 
-Para los pensionados, se consideraron dos grupos. El primero correspondió a los pensionados actuales, es decir, aquellas personas que ya se encontraban pensionadas en la fecha de corte. En estos casos, no se utilizó la edad estándar de jubilación para reclasificar a la persona, ya que su condición de pensionada venía dada por la base de datos. Por tanto, incluso si un pensionado actual tenía una edad menor que la edad estándar de jubilación, se mantuvo como pensionado para efectos del cálculo.
+Para los pensionados, el cálculo financiero se realizó de forma agregada por año. En este grupo se incluyeron tanto los pensionados existentes en la fecha de corte como los empleados activos que alcanzaron la jubilación dentro del horizonte de proyección. En el caso de los pensionados actuales, su condición de pensionados se mantuvo según la base de datos, aunque su edad fuera menor que la edad estándar de jubilación.
 
-El segundo grupo correspondió a los empleados activos que alcanzaban la jubilación dentro del horizonte de proyección. Para estos participantes, los fallecimientos posteriores a la jubilación se clasificaron dentro del beneficio de muerte de pensionados, no dentro del beneficio de muerte de activos. Si el beneficio por muerte de pensionados se denota por (B_P), el flujo esperado anual se calculó como
+Las muertes esperadas anuales de pensionados se obtuvieron previamente en la proyección demográfica. Por ello, si $(D_t^P)$ representa las muertes esperadas totales de pensionados en el año $(t)$ y $(B_P)$ el beneficio por muerte de pensionados, el flujo esperado anual se calculó como
 
 $$
-FE^{P}_{j,t}=B_P \cdot {}*{t-1}p*{x_j},q_{x_j+t-1},
+FE_t^P = B_P \cdot D_t^P.
 $$
 
-siempre que la persona ya se encontrara pensionada al inicio del año de riesgo.
+Es decir, para pensionados no se calculó el flujo financiero persona por persona, sino que se tomó el total de muertes esperadas de cada año y se multiplicó por el beneficio correspondiente.
 
 El valor presente de cada flujo esperado se calculó mediante
 
 $$
-VP_{j,t}=\frac{FE_{j,t}}{(1+i)^t},
+VP_t=\frac{FE_t}{(1+i)^t},
 $$
 
-donde $(i)$ representa la tasa de descuento anual. Finalmente, el costo actuarial de cada beneficio se obtuvo como la suma de los valores presentes esperados de todos los participantes y de todos los años del horizonte de proyección:
+donde $(i)$ representa la tasa de descuento anual. Para los activos, este valor presente provino de los flujos individuales agregados por año. Para los pensionados, provino directamente del flujo anual agregado.
+
+Finalmente, el costo actuarial de cada beneficio se obtuvo como la suma de los valores presentes esperados a lo largo del horizonte de proyección:
 
 $$
-CA=\sum_j \sum_t VP_{j,t}.
+CA=\sum_t VP_t.
 $$
 
-Con este procedimiento, la proyección financiera anual se obtuvo agregando los flujos individuales por año. Esto permitió presentar los resultados en forma anual, pero manteniendo el cálculo actuarial a nivel individual. Además, la separación entre beneficios de muerte de activos y beneficios de muerte de pensionados evitó doble conteo y aseguró que cada flujo fuera asignado al beneficio correspondiente según la condición de la persona en el momento del pago.
+Este procedimiento permitió mantener el cálculo individual para el beneficio de muerte de empleados activos y, al mismo tiempo, calcular el beneficio de muerte de pensionados de forma agregada por año. Además, la separación entre ambos beneficios evitó doble conteo y aseguró que cada flujo fuera asignado según la condición de la persona al momento del fallecimiento.
 
 ## Anualidades de vida
 
@@ -546,16 +546,15 @@ A partir de las proyecciones realizadas, se estimaron los flujos esperados nomin
 
 En primer lugar, para el beneficio por muerte de empleados activos, se obtuvo un costo nominal esperado de ₡700.868.080,89. Al descontar los flujos esperados a la fecha de valuación, el costo actuarial a valor presente fue de ₡57.946.601,36. Este monto representa el valor actual de los pagos esperados por fallecimientos ocurridos mientras los participantes se encuentran en condición activa.
 
-Por su parte, el beneficio por muerte de pensionados presentó un costo nominal esperado de ₡495.000.000,00 y un costo actuarial a valor presente de ₡202.391.712,04. Este resultado corresponde a los pagos esperados asociados a fallecimientos de participantes en condición de pensionados, considerando las probabilidades de supervivencia y muerte aplicables en cada año de proyección.
+Por su parte, el beneficio por muerte de pensionados presentó un costo nominal esperado de ₡948.234.510,00 y un costo actuarial a valor presente de ₡233.162.744,05. Este resultado corresponde a los pagos esperados asociados a fallecimientos de participantes en condición de pensionados.
 
-Al sumar ambos beneficios de muerte, el valor presente actuarial conjunto fue de ₡260.338.313,40. Este monto refleja el costo actuarial total esperado de los beneficios por fallecimiento, distinguiendo entre la condición activa y pensionada del participante al momento del pago.
+Al sumar ambos beneficios de muerte, el valor presente actuarial conjunto fue de ₡291.109.345,41. Este monto refleja el costo actuarial total esperado de los beneficios por fallecimiento, distinguiendo entre la condición activa y pensionada del participante al momento del pago.
 
-En cuanto a las anualidades de pensión, se obtuvo el componente de mayor peso dentro del plan. El costo nominal esperado fue de ₡426.936.709.559,48, mientras que el costo actuarial a valor presente fue de ₡29.634.349.842,37. La magnitud de este resultado se explica porque las anualidades representan pagos periódicos de largo plazo, sujetos a supervivencia, inflación y permanencia del pensionado dentro del horizonte de proyección.
+En cuanto a las anualidades de pensión, se obtuvo el componente de mayor peso dentro del plan. El costo nominal esperado fue de ₡430.796.400.185,61, mientras que el costo actuarial a valor presente fue de ₡29.634.349.842,37. La magnitud de este resultado se explica porque las anualidades representan pagos periódicos de largo plazo.
 
-Para la suma única de reconocimiento o *Lump Sum*, el costo nominal esperado fue de ₡6.001.852.514,87. Al traer estos pagos a valor presente, el costo actuarial estimado fue de ₡529.153.943,49. Este beneficio tuvo un impacto menor que las anualidades de pensión, pero superior al costo individual de los beneficios de muerte.
+Para la suma única de reconocimiento o *Lump Sum*, el costo nominal esperado fue de ₡2.736.349.062,19. Al traer estos pagos a valor presente, el costo actuarial estimado fue de ₡529.153.943,49. Este beneficio tuvo un impacto menor que las anualidades de pensión, pero superior al costo individual de los beneficios de muerte.
 
-Finalmente, al integrar todos los beneficios analizados, se obtuvo un costo nominal esperado total de ₡434.134.430.155,25. El costo actuarial total a valor presente fue de ₡30.423.842.099,26. Este valor representa la estimación global del compromiso económico del plan, considerando los beneficios por muerte de activos, muerte de pensionados, anualidades de pensión y suma única de reconocimiento.
-
+Finalmente, al integrar todos los beneficios analizados, se obtuvo un costo nominal esperado total de ₡435.181.851.838,70. El costo actuarial total a valor presente fue de ₡30.454.613.131,27. Este valor representa la estimación global del compromiso económico del plan, considerando los beneficios por muerte de activos, muerte de pensionados, anualidades de pensión y suma única de reconocimiento.
 
 # Resultados del análisis de sensibilidad
 
@@ -615,12 +614,8 @@ Manteniendo la tasa de incremento original y variando la tasa de descuento en un
 
 Un comportamiento interesante se observa al movernos en diagonal en el análisis: cuando ambas tasas aumentan simultáneamente, sus efectos se contrarrestan (el mayor descuento reduce los costos, mientras que el mayor incremento salarial los eleva), generando un efecto compensatorio que mantiene los valores relativamente estables. En cambio, en la diagonal opuesta, las tasas se mueven en direcciones contrarias y ambos efectos se suman, produciendo costos más alejados del valor original.
 
----
-
 ### Beneficio por Muerte
 El análisis es más sencillo: como se explicó antes, los costos no dependen de los salarios. El único factor que los afecta es la tasa de descuento, y la tendencia es siempre a la baja conforme esta aumenta, ya que el dinero pierde más valor anualmente.
-
----
 
 ### Anualidades de pensión
 La tendencia frente a cambios en la tasa de descuento es análoga a la del Lump Sum. Sin embargo, las variaciones son mucho mayores debido a que se trata de un flujo recurrente acumulado a lo largo de los años y que representa el mayor porcentaje de los costos totales del plan.  
@@ -630,7 +625,6 @@ En diagonal, los razonamientos son los mismos que para el Lump Sum, pero las dif
 - De derecha a izquierda, las diferencias son más significativas y se alejan más del valor original.  
 
 Esto se explica porque en el Lump Sum el descuento se aplica una sola vez, mientras que en las anualidades se aplica cada año sobre cada flujo, amplificando el efecto.
-
 
 # Proceso de reducción del costo
 
