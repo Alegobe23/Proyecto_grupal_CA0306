@@ -50,16 +50,16 @@ Desde el punto de vista salarial, el salario mensual promedio total es de aproxi
 
 La esperanza de vida promedio de los empleados activos es de 50,14 años adicionales. Las mujeres presentan una esperanza de vida promedio de 51,92 años y los hombres de 48,28 años. Este resultado es coherente con el comportamiento esperado de mortalidad, donde usualmente las mujeres presentan mayor supervivencia esperada que los hombres. Esta variable es fundamental para la proyección demográfica, ya que permite estimar el horizonte de exposición a eventos como muerte, permanencia activa y jubilación.
 
-| Indicador                    |          Femenino |         Masculino |             Total |
-| ---------------------------- | ----------------: | ----------------: | ----------------: |
-| Cantidad                     |               115 |               109 |               224 |
-| Edad promedio                |             37,29 |             36,33 |             36,82 |
-| Edad mínima                  |                24 |                22 |                22 |
-| Edad máxima                  |                58 |                62 |                62 |
-| Antigüedad promedio          |              5,97 |              4,72 |              5,36 |
-| Salario mensual promedio     |     ₡1.088.808,49 |       ₡960.074,99 |     ₡1.026.165,85 |
+| Indicador | Femenino | Masculino | Total |
+|-----------------------|---------------:|---------------:|---------------:|
+| Cantidad | 115 | 109 | 224 |
+| Edad promedio | 37,29 | 36,33 | 36,82 |
+| Edad mínima | 24 | 22 | 22 |
+| Edad máxima | 58 | 62 | 62 |
+| Antigüedad promedio | 5,97 | 4,72 | 5,36 |
+| Salario mensual promedio | ₡1.088.808,49 | ₡960.074,99 | ₡1.026.165,85 |
 | Masa salarial anual estimada | ₡1.502.555.717,40 | ₡1.255.778.082,60 | ₡2.758.333.800,00 |
-| Esperanza de vida promedio   |             51,92 |             48,28 |             50,14 |
+| Esperanza de vida promedio | 51,92 | 48,28 | 50,14 |
 
 : Resumen estadístico de empleados activos
 
@@ -73,15 +73,15 @@ En cuanto a los montos de pensión, la pensión mensual promedio total es de apr
 
 La esperanza de vida promedio de los pensionados es de 16,01 años adicionales. Al separar por sexo, las mujeres presentan una esperanza de vida promedio de 16,87 años y los hombres de 14,94 años. Este resultado es consistente con la estructura demográfica esperada, ya que las mujeres pensionadas presentan una supervivencia promedio mayor que los hombres pensionados. En este grupo, la esperanza de vida debe interpretarse junto con la edad actual de cada pensionado y con la duración esperada de los pagos futuros.
 
-| Indicador                    |        Femenino |       Masculino |           Total |
-| ---------------------------- | --------------: | --------------: | --------------: |
-| Cantidad                     |              91 |              74 |             165 |
-| Edad promedio                |           72,92 |           72,76 |           72,85 |
-| Edad mínima                  |              57 |              61 |              57 |
-| Edad máxima                  |              92 |              97 |              97 |
-| Pensión mensual promedio     |     ₡187.979,87 |     ₡205.785,84 |     ₡195.965,58 |
+| Indicador | Femenino | Masculino | Total |
+|-------------------------|---------------:|---------------:|---------------:|
+| Cantidad | 91 | 74 | 165 |
+| Edad promedio | 72,92 | 72,76 | 72,85 |
+| Edad mínima | 57 | 61 | 57 |
+| Edad máxima | 92 | 97 | 97 |
+| Pensión mensual promedio | ₡187.979,87 | ₡205.785,84 | ₡195.965,58 |
 | Pensión anual total estimada | ₡222.380.185,95 | ₡197.965.980,55 | ₡420.346.166,50 |
-| Esperanza de vida promedio   |           16,87 |           14,94 |           16,01 |
+| Esperanza de vida promedio | 16,87 | 14,94 | 16,01 |
 
 : Resumen estadístico de pensionados
 
@@ -94,7 +94,7 @@ También se observa una diferencia importante en la esperanza de vida. Los emple
 Desde el punto de vista financiero, los empleados activos están asociados principalmente con salarios, masa salarial y beneficios futuros. En cambio, los pensionados representan obligaciones actuales de pago que deben proyectarse en el tiempo. Por esta razón, el modelo trata ambos grupos de forma diferenciada: para los activos se modela la transición entre sobrevivencia, muerte y jubilación, mientras que para los pensionados se proyectan pagos condicionados a supervivencia.
 
 | Indicador                     | Empleados activos |     Pensionados |
-| ----------------------------- | ----------------: | --------------: |
+|-------------------------------|------------------:|----------------:|
 | Cantidad total                |               224 |             165 |
 | Mujeres                       |               115 |              91 |
 | Hombres                       |               109 |              74 |
@@ -106,7 +106,6 @@ Desde el punto de vista financiero, los empleados activos están asociados princ
 : Comparación general entre empleados activos y pensionados
 
 En síntesis, la población activa es más joven, tiene mayor esperanza de vida adicional y requiere una proyección de transición entre estados laborales y actuariales. Por su parte, la población pensionada es de mayor edad y su análisis se concentra en la continuidad esperada de los pagos de pensión. Esta diferencia justifica que el modelo utilice tratamientos separados para activos y pensionados dentro del cálculo determinístico de contingencias de vida.
-
 
 # Sección metodológica
 
@@ -178,7 +177,7 @@ $$
 
 Esta expresión corresponde a la forma discreta usual $({}k p_x q{x+k})$, adaptada a una tabla dinámica de mortalidad.
 
-Para incorporar a los empleados activos que se convierten en pensionados, se consideró la edad normal de jubilación definida en el proyecto: 65 años para hombres y 63 años para mujeres. Esta condición se expresó como 
+Para incorporar a los empleados activos que se convierten en pensionados, se consideró la edad normal de jubilación definida en el proyecto: 65 años para hombres y 63 años para mujeres. Esta condición se expresó como
 
 $$
 R_s =
@@ -276,7 +275,6 @@ CA=\sum_j \sum_t VP_{j,t}.
 $$
 
 Con este procedimiento, la proyección financiera anual se obtuvo agregando los flujos individuales por año. Esto permitió presentar los resultados en forma anual, pero manteniendo el cálculo actuarial a nivel individual. Además, la separación entre beneficios de muerte de activos y beneficios de muerte de pensionados evitó doble conteo y aseguró que cada flujo fuera asignado al beneficio correspondiente según la condición de la persona en el momento del pago.
-
 
 ## Anualidades de vida
 
@@ -470,13 +468,27 @@ De forma análoga, el costo nominal total esperado se obtuvo como
 
 $$
 CN_{\text{total}}=\sum_{k=1}^{m} CN_k.
-$$ 
+$$
 
 La estimación de los costos actuariales se realizó siguiendo el enfoque de Bowers et al. (1997), en el cual los pagos futuros esperados se valoran mediante su valor actuarial presente.
 
 Por tanto, el costo actuarial total resume el valor presente de todos los compromisos esperados del plan, mientras que el costo nominal total muestra el monto acumulado de pagos esperados sin aplicar descuento financiero.
 
 # Resultados obtenidos
+
+## Proyección de anualidades
+
+En cuanto a las anualidades de pensión, se obtuvo el componente de mayor peso dentro del plan. La proyección se desarrolló sobre un horizonte de 101 años (2025–2125), separando los flujos generados por los pensionados existentes a la fecha de corte y por los empleados activos que alcanzan la edad de jubilación dentro del horizonte de proyección. El flujo de los pensionados actuales inicia en 2026 y se extingue alrededor de 2083, conforme la cohorte original se agota por efecto de la mortalidad. El flujo de los empleados activos, en cambio, es nulo entre 2025 y 2031, dado que ningún participante activo alcanza aún la edad de jubilación en ese periodo, e inicia en 2032, superando en magnitud al de los pensionados actuales a partir de 2043, año en que el efecto acumulado de las nuevas jubilaciones y del crecimiento salarial supera a la cohorte pensionada original. El costo nominal esperado total de las anualidades fue de ₡430.796.400.185,61, mientras que el costo actuarial a valor presente, descontado a la fecha de valuación con la tasa nominal anual del 6,5 %, fue de ₡29.139.619.674,00. El flujo nominal anual máximo se alcanzó en 2073 (₡12.407.035.081,30), mientras que el valor presente anual máximo se observó en 2064 (₡880.735.150,81), año en el que el crecimiento nominal de los flujos todavía compensaba el efecto del descuento financiero acumulado; a partir de ese punto, el descuento domina y el valor presente decrece de forma sostenida hasta la extinción completa de ambas cohortes alrededor de 2119.
+
+Al desglosar este resultado por sexo, se obtuvo lo siguiente:
+
+| Componente |           Costo nominal |   Costo actuarial (VP) |
+|------------|------------------------:|-----------------------:|
+| Mujeres    |     ₡242.686.003.395,56 |     ₡16.993.785.144,04 |
+| Hombres    |     ₡188.110.396.790,05 |     ₡12.145.834.529,96 |
+| **Total**  | **₡430.796.400.185,61** | **₡29.139.619.674,00** |
+
+Como se mencionó en la sección de análisis estadístico, esta diferencia tiene sentido por la combinación de varios factores: la mayor proporción de mujeres dentro de la población pensionada (55,15 % frente a 44,85 %) y, en menor medida, dentro de la población activa (51,34 % frente a 48,66 %); el salario mensual promedio más alto de las mujeres activas (₡1.088.808,49 frente a ₡960.074,99), que incide directamente en el monto de pensión proyectado al momento de la jubilación; y los factores actuariales propios del modelo, es decir, la edad de jubilación menor para mujeres (63 años frente a 65 años) y su mayor esperanza de vida tanto en la población activa (51,92 frente a 48,28 años) como en la pensionada (16,87 frente a 14,94 años). Esto explica por qué, aun cuando la pensión mensual promedio individual de los hombres pensionados actuales es superior a la de las mujeres (₡205.785,84 frente a ₡187.979,87), el costo actuarial agregado atribuible a las mujeres resulta mayor.
 
 ## Proyección financiera y costo actuarial de los beneficios
 
