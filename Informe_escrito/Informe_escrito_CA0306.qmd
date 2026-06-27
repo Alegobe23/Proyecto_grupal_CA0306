@@ -506,25 +506,78 @@ Finalmente, al integrar todos los beneficios analizados, se obtuvo un costo nomi
 
 # Resultados del análisis de sensibilidad
 
-Para realizar un análisis de sensibilidad de las tasas de nuestros supuestos, se recalculan los costos totales nominales (i.e la suma de los flujos anuales brutos) y el valor presente actuarial de los costos (i.e la suma de los flujos anuales traídos a valor presente) al reducir y aumentar en un punto porcentual la tasa de incremento salarial (2% anual originalmente) y la tasa de descuento (6.5% anual) para cada beneficio del plan. Con el objetivo de observar la tendencia general, cuantificar la diferencia y poder dar algún tipo de razonamiento qué justifique dichos resultados. Véanse las tablas anexadas:
+Para el análisis de sensibilidad de las tasas, se calcularon los costos totales nominales (i.e., la suma de los flujos anuales esperados brutos) y el valor presente actuarial de los costos (i.e., la suma de los flujos anuales esperados traídos a valor presente) al reducir y aumentar en un punto porcentual la tasa de incremento salarial (2% anual originalmente) y la tasa de descuento (6,5% anual) para cada beneficio en el plan. El objetivo fue observar la tendencia general, cuantificar las diferencias y ofrecer un razonamiento que justifique los resultados.
 
-{Tabla
+---
 
-Costos Nominales: En cuánto a los costos nominales, cómo primer punto a notar es fácil y razonable ver que los costos por los beneficios de muerte brindados son idénticos para toda tasa de incremento salarial, esto puesto a que el beneficio de muerte no toma en cuenta los salarios de los empleados, siendo lo único relevante para su cálculo la edad y el sexo del trabajador o pensionado. Por lo que para este apartado solo nos encargaremos de inferir los resultados obtenidos por los otros dos beneficios.
+## Costos Nominales
 
-Para la suma única Lump Sum vemos que los costos son claramente menores para una tasa menor, con una diferencia negativa porcentual de aproximadamente del 23.6% respecto al original. Muy poco significativa pero ligeramente mayor es la diferencia subiendo un punto a la supuesta, con una estimación de casi 23.7%. Con estos dos datos podemos sacar dos conclusiones, la primera y más evidente un incremento salarial real más alto o más baja en los salarios de un año al siguiente, implica un aumento (en el caso de ambos) en el poder adquisitivo de los trabajadores, puesto que significa que el salario ha crecido más que la realidad inflacionaria. Lo que implica en nuestro supuesto de tasas constantes a través del tiempo un mayor o menor salario proyectado e independientemente del múltiplo, por la naturaleza del beneficio, refleja una mayor/menor suma monetaria al año de pago respecto a la original. Lo segundo que podemos decir es que las diferencias son bastante comparables en cambios de similar magnitud para las tasas, independientemente de la dirección del cambio.
+| Incremento real | Lump Sum             | Beneficio por Muerte | Anualidades             |
+|----------------:|---------------------:|---------------------:|------------------------:|
+| 0,01            | ₡2 091 179 011,97    | ₡1 649 102 590,89    | ₡319 820 252 421,33     |
+| 0,02            | ₡2 736 349 062,19    | ₡1 649 102 590,89    | ₡430 796 400 185,61     |
+| 0,03            | ₡3 585 210 177,90    | ₡1 649 102 590,89    | ₡582 165 036 205,87     |
 
-Para el caso de las anualidades, es un análisis similar. Cabe puntualizar que el cambio en el aumento salarial solo afecta a los costos de los trabajadores activos, debido a que la pensión solo se corrige por inflación. En cuánto a porcentajes bajando un punto tenemos una diferencia negativa aproximada de 25.8% y un 26% si la subimos. En este caso las diferencias son mayores que en el Lump Sum, una posible explicación es que el segundo al ser un pago único el impacto del cambio es menor, en cambio las anualidades al ser mensuales es posible que el efecto del cambio se vaya acumulando aún siendo diluido por la probabilidad de sobrevivencia a través de los años, además la pensión toma en cuenta el último salario, claro está es mayor que el que toma el otro. Para lo demás la explicación es análoga al Lump sum.
+: Costo Total Nominal por tasa de incremento salarial
 
-Valor presente de los Costos Actuariales: Lump Sum
+| Incremento real | Lump Sum | Beneficio por Muerte | Anualidades |
+|----------------:|---------:|---------------------:|------------:|
+| 0,01            | 23,6%    | 0%                   | 25,8%       |
+| 0,02            | 0%       | 0%                   | 0%          |
+| 0,03            | 23,7%    | 0%                   | 26,0%       |
 
-Para el lump sum manteniendo la tasa de incremento original y desplazandonos un punto porcentual por la tasa de descuento podemos ver que la tendencia es de nuevo la esperable, a mayor interés menos es el valor que pierde el dinero con el tiempo por lo que al traernos una suma única en un tiempo futuro conocido a valor presente es más grande el flujo esperado. Es recíproco pero a la inversa con una tasa más baja. Esa tendencia se mantiene cómo es lógico si nos movemos en el interés para cada serie de tasas de incremento salarial.
+: Diferencias porcentuales respecto a la tasa original (0,02)
 
-Un comportamiento más interesante es el que vemos si nos movemos de forma diagonal en la tabla, noté que del extremo superior izquierdo al inferior derecho, ambas tasas incrementan en la misma dirección, sin embargo cómo vimos en el análsiis de los nominales y cómo dedujimos en el párrafo anterior el cambio en la magnitud del costo va en dirección opuesta, es decir si incremento el descuento los costos bajan si lo incremento en la real los costos suben. Por lo tanto, lo que se observa en esa diagonal es una especie de efecto compensatorio que mantienen los costos bastante similares al variar un pto en las tasas. Caso contrario si nos movemos en la diagonal opuesta, aquí las tasas se mueven en dirección opuesta por lo tanto las magnitudes de los costos se mueven positivamente. Cómo para cada par de tasas hay dos fuerzas que incrementan los costos, el resultado son costos notablemente más lejanos al original y con mayor diferencia entre sí. Beneficio de Muerte
+En cuanto a los costos nominales, lo primero que se observa es que los beneficios por muerte son idénticos para toda tasa de incremento salarial. Esto se debe a que dicho beneficio no depende de los salarios, sino únicamente de la edad y el sexo del trabajador o pensionado. Por lo tanto, el análisis se centra en los otros dos beneficios.
 
-Para los costos del beneficio por muerte el análisis es mucho más sencillo, puesto a que cómo declaramos antes, no se ven afectados por el incremento en los salarios. Por lo tanto el único factor que los afecta directamente es el descuento, que cómo también vimos anteriormente la tendencia es a la bajada por cada incremento de tasa, por la misma razón de que el dinero pierde más valor anualmente a mayores tasas. Anualidades
+En el caso del **Lump Sum**, los costos son menores cuando la tasa de incremento salarial es más baja, con una diferencia negativa de aproximadamente 23,6% respecto al valor original. Al aumentar un punto porcentual la tasa, la diferencia es cercana al 23,7%. De aquí se desprenden dos conclusiones:  
+1. Un incremento salarial real más alto implica mayor poder adquisitivo, mientras que uno más bajo implica menor poder adquisitivo. Bajo el supuesto de tasas constantes, esto se traduce en salarios proyectados más altos o más bajos que los de la tasa original.  
+2. Las diferencias porcentuales son bastante simétricas en magnitud, independientemente de si la tasa aumenta o disminuye.
 
-Al movernos positivamente en el descuento para cada serie de incremento real, la tendencia es exactamente análoga a las anteriores. En el caso del análisis en diagonal son válidas los mismos razonamientos que para el Lump Sum, con la diferencia en que el cambio en los costos en cada celda de la tabla son mucho mayores, ya sea de izquierda a derecha con variaciones entre costos menores aunque mayormente significativas a las del primero o de derecha a izquierda con diferencias más significativas y más distantes a la de la suma única. Una razón plausible de que sean más amplias es que al ser un flujo recurrente acumulado y además de ser el de mayor presencia en los costos totales del plan las brechas sean de mayor envergadura. Asimismo en el Lump sum el descuento se aplica una única vez a diferencia de las anualidades donde se aplica anualmente y en cada flujo anual durante un periodo más sustancial.
+En el caso de las **Anualidades**, el análisis es similar, aunque con diferencias más amplias. Cabe señalar que el cambio en el incremento salarial solo afecta a los trabajadores activos, ya que las pensiones se ajustan únicamente por inflación. Al reducir la tasa en un punto porcentual, la diferencia es de aproximadamente -25,8%, mientras que al aumentarla es de +26%. Una explicación plausible es que, al tratarse de pagos mensuales recurrentes, el efecto del cambio se acumula a lo largo de los años, amplificado por el hecho de que la pensión depende del último salario, que es mayor que el considerado en el Lump Sum. En consecuencia, el impacto es más significativo.
+
+---
+
+## Cambios en el valor presente de los Costos Actuariales
+
+| Incremento real | Tasa de descuento 0,055 | Tasa de descuento 0,065 | Tasa de descuento 0,075 |
+|----------------:|------------------------:|------------------------:|------------------------:|
+| **Lump Sum**    |                         |                         |                         |
+| 0,01            | ₡523 747 903,46         | ₡416 494 393,98         | ₡333 510 789,82         |
+| 0,02            | ₡668 687 467,62         | ₡529 153 943,49         | ₡421 597 633,70         |
+| 0,03            | ₡855 851 552,72         | ₡674 107 218,11         | ₡534 516 210,04         |
+| **Beneficio por Muerte** |                |                         |                         |
+| 0,01            | ₡348 291 949,35         | ₡291 109 345,41         | ₡248 632 523,80         |
+| 0,02            | ₡348 291 949,35         | ₡291 109 345,41         | ₡248 632 523,80         |
+| 0,03            | ₡348 291 949,35         | ₡291 109 345,41         | ₡248 632 523,80         |
+| **Anualidades** |                         |                         |                         |
+| 0,01            | ₡32 449 412 579,06      | ₡23 284 360 686,74      | ₡17 168 098 907,41      |
+| 0,02            | ₡41 245 598 095,43      | ₡29 139 619 674,00      | ₡21 123 731 917,53      |
+| 0,03            | ₡53 003 012 052,02      | ₡36 935 165 986,30      | ₡26 368 938 489,19      |
+
+: Valor presente del Costo Total Actuarial para cada combinación de tasas
+
+### Lump Sum
+Manteniendo la tasa de incremento original y variando la tasa de descuento en un punto porcentual, la tendencia es la esperada: a mayor tasa de interés, menor es el valor presente de los flujos, y viceversa.  
+
+Un comportamiento interesante se observa al movernos en diagonal en el análisis: cuando ambas tasas aumentan simultáneamente, sus efectos se contrarrestan (el mayor descuento reduce los costos, mientras que el mayor incremento salarial los eleva), generando un efecto compensatorio que mantiene los valores relativamente estables. En cambio, en la diagonal opuesta, las tasas se mueven en direcciones contrarias y ambos efectos se suman, produciendo costos más alejados del valor original.
+
+---
+
+### Beneficio por Muerte
+El análisis es más sencillo: como se explicó antes, los costos no dependen de los salarios. El único factor que los afecta es la tasa de descuento, y la tendencia es siempre a la baja conforme esta aumenta, ya que el dinero pierde más valor anualmente.
+
+---
+
+### Anualidades de pensión
+La tendencia frente a cambios en la tasa de descuento es análoga a la del Lump Sum. Sin embargo, las variaciones son mucho mayores debido a que se trata de un flujo recurrente acumulado a lo largo de los años y que representa el mayor porcentaje de los costos totales del plan.  
+
+En diagonal, los razonamientos son los mismos que para el Lump Sum, pero las diferencias son más amplias:  
+- De izquierda a derecha, las variaciones son menores en magnitud, aunque proporcionalmente más altas que en el Lump Sum.  
+- De derecha a izquierda, las diferencias son más significativas y se alejan más del valor original.  
+
+Esto se explica porque en el Lump Sum el descuento se aplica una sola vez, mientras que en las anualidades se aplica cada año sobre cada flujo, amplificando el efecto.
+
 
 # Proceso de reducción del costo
 
