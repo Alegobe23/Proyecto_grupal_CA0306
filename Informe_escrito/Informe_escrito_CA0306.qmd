@@ -523,7 +523,6 @@ $$
 Para la obtención del valor presente de la masa salarial se sumaron las masas salariales de todos los grupos de empleados activos.  
 En cuanto a los costos, se tomó en cuenta el VPA total del plan de beneficios para toda la población (activos y pensionados).
 
-
 # Resultados obtenidos
 
 ## Proyección de anualidades

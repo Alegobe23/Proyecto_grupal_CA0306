@@ -4,6 +4,7 @@ author: "Alexandra González, Estefanía Mora, Daniela Prado, Sebastián Calder�
 format:
   beamer:
     theme: CambridgeUS
+    lang: es
     colortheme: seahorse
     toc: false
     aspectratio: 169
@@ -38,3 +39,116 @@ format:
 -   \vspace{0.1cm}
 
 -   \vspace{0.3cm}
+
+# Sección metodológica
+
+## Proyección demográfica y muertes de pensionados
+
+- Se usó un enfoque actuarial discreto de supervivencia.
+- La mortalidad se tomó de la tabla dinámica SP-2015 de SUPEN.
+- La población pensionada incluye pensionados iniciales y activos que se jubilan.
+
+$$
+{}_k p_x^{(s,y_0)}
+=
+\prod_{j=0}^{k-1}
+\left(1-q_{x+j}^{(s,y_0+j)}\right)
+$$
+
+$$
+D_k^P = D_k^{P_0}+D_k^{A\to P}
+$$
+
+## Beneficios por muerte
+
+- Activos: cálculo individual por persona y año.
+- Pensionados: cálculo agregado por muertes esperadas anuales.
+- Los flujos se descontaron desde 2026, con $t=1$.
+
+$$
+FE_t = B \cdot D_t
+$$
+
+$$
+VP_t=\frac{FE_t}{(1+i)^t}
+$$
+
+## Anualidades de vida
+
+- La pensión se modeló como anualidad discreta vencida.
+- Incluye pensión mensual, aguinaldo y garantía cierta de 5 años.
+- Luego del periodo cierto, los pagos dependen de la supervivencia.
+
+$$
+a_x = \sum_{k=1}^{\infty} v^k {}_k p_x
+$$
+
+$$
+VP=\sum_t v^t(\text{flujo cierto}_t+\text{flujo vitalicio}_t)
+$$
+
+## Suma única de reconocimiento (*Lump Sum*)
+
+- Se valoró como un pago único futuro.
+- Aplica a empleados activos que cumplen las condiciones del plan.
+- Depende de supervivencia, salario proyectado, múltiplo y descuento.
+
+$$
+LS_i=m_iS_{i,0}(1+g)^{t_i}
+$$
+
+$$
+VP_i^{LS}
+=
+v^{t_i}
+{}_{t_i}p_{x_i}^{(s_i,y_0)}
+LS_i
+$$
+
+## Costo actuarial total
+
+- Se calculó el costo nominal y el valor presente de cada beneficio.
+- El valor presente permite comparar todos los flujos en la fecha de corte.
+- El costo total es la suma de los valores presentes individuales.
+
+$$
+CN_k=\sum_t F_{k,t}
+$$
+
+$$
+VP_{\text{total}}
+=
+\sum_{k=1}^{m}VP_k
+$$
+
+## Primas por grupo de edad y sexo
+
+- La población activa se dividió por sexo y grupo etario.
+- La prima compara costos actuariales contra masa salarial proyectada.
+- La masa salarial considera crecimiento nominal y supervivencia.
+
+$$
+\text{Prima}_{\text{Grupo}}
+=
+\frac{
+VPA(\text{costos del grupo})
+}{
+VP(\text{masa salarial del grupo})
+}
+$$
+
+## Prima media nivelada
+
+- Resume el costo del plan para toda la población.
+- Usa el VPA total de beneficios y el VP total de masa salarial.
+- Expresa el costo como proporción nivelada de los salarios.
+
+$$
+\text{Prima media nivelada}
+=
+\frac{
+VPA(\text{costos totales})
+}{
+VP(\text{masa salarial total})
+}
+$$
