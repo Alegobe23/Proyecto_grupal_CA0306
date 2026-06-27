@@ -51,7 +51,7 @@ Desde el punto de vista salarial, el salario mensual promedio total es de aproxi
 La esperanza de vida promedio de los empleados activos es de 50,14 años adicionales. Las mujeres presentan una esperanza de vida promedio de 51,92 años y los hombres de 48,28 años. Este resultado es coherente con el comportamiento esperado de mortalidad, donde usualmente las mujeres presentan mayor supervivencia esperada que los hombres. Esta variable es fundamental para la proyección demográfica, ya que permite estimar el horizonte de exposición a eventos como muerte, permanencia activa y jubilación.
 
 | Indicador | Femenino | Masculino | Total |
-|-----------------------|---------------:|---------------:|---------------:|
+|----------------------|----------------:|----------------:|----------------:|
 | Cantidad | 115 | 109 | 224 |
 | Edad promedio | 37,29 | 36,33 | 36,82 |
 | Edad mínima | 24 | 22 | 22 |
@@ -74,7 +74,7 @@ En cuanto a los montos de pensión, la pensión mensual promedio total es de apr
 La esperanza de vida promedio de los pensionados es de 16,01 años adicionales. Al separar por sexo, las mujeres presentan una esperanza de vida promedio de 16,87 años y los hombres de 14,94 años. Este resultado es consistente con la estructura demográfica esperada, ya que las mujeres pensionadas presentan una supervivencia promedio mayor que los hombres pensionados. En este grupo, la esperanza de vida debe interpretarse junto con la edad actual de cada pensionado y con la duración esperada de los pagos futuros.
 
 | Indicador | Femenino | Masculino | Total |
-|-------------------------|---------------:|---------------:|---------------:|
+|-----------------------|----------------:|----------------:|----------------:|
 | Cantidad | 91 | 74 | 165 |
 | Edad promedio | 72,92 | 72,76 | 72,85 |
 | Edad mínima | 57 | 61 | 57 |
@@ -280,66 +280,64 @@ Con este procedimiento, la proyección financiera anual se obtuvo agregando los 
 
 El beneficio de jubilación del plan (pensión mensual cierta por 5 años y luego vitalicia, con un pago adicional anual de aguinaldo) corresponde a una anualidad cierta y vitalicia (*n-year certain and life annuity*), pagada en forma discreta. El desarrollo teórico que sustenta el modelo sigue el marco de Bowers et al. (1997), quienes presentan de forma unificada las anualidades continuas y discretas a partir de la variable aleatoria de tiempo de vida futuro $T(x)$.
 
-Se asumen los supuestos estándar de dicho marco: tasa de interés efectiva anual constante $i$ (con $v=(1+i)^{-1}$) y mortalidad agregada (no select), con la extensión a mortalidad dinámica que se detalla más adelante.
+Se asumen los supuestos estándar de dicho marco: tasa de interés efectiva anual constante $i$ (con $v=(1+i)^{-1}$) y mortalidad agregada, con la extensión a mortalidad dinámica que se detalla más adelante.
 
 Para una anualidad-anticipada (*annuity-due*) de vida entera que paga 1 al inicio de cada año mientras $(x)$ sobrevive, Bowers et al. (1997) muestran que el valor actuarial presente puede expresarse, vía la técnica del pago corriente (*current payment technique*), como
 
-$$
-\ddot a_x = \sum_{k=0}^{\infty} v^k \,{}_k p_x .
-$$
+$$\ddot a_x = \sum_{k=0}^{\infty} v^k \,{}_k p_x .$$
 
 Esta es la forma operativa que sustenta el modelo: en lugar de obtener un valor cerrado de la anualidad, cada flujo anual nominal se pondera por la probabilidad de que el pago se realice (${}_kp_x$) y se descuenta a la fecha de valuación.
 
 Para una anualidad temporal de $n$ años (Bowers et al., 1997),
 
-$$
-\ddot a_{x:\overline{n}|} = \sum_{k=0}^{n-1} v^k \,{}_k p_x ,
-$$
+$$\ddot a_{x:\overline{n}|} = \sum_{k=0}^{n-1} v^k \,{}_k p_x ,$$
 
 y para la anualidad diferida $n$ años (Bowers et al., 1997),
 
-$$
-{}_{n|}\ddot a_x = \ddot a_x - \ddot a_{x:\overline{n}|} = \sum_{k=n}^{\infty} v^k \,{}_k p_x .
-$$
+$${}_{n|}\ddot a_x = \ddot a_x - \ddot a_{x:\overline{n}|} = \sum_{k=n}^{\infty} v^k \,{}_k p_x .$$
 
 Esta última es la pieza relevante para los empleados activos: ya que la pensión de un activo solo comienza a pagarse a partir del momento de su jubilación, por lo que su valor actuarial es el de una anualidad diferida $n=t_{jub}-x$ años, ponderada además por la probabilidad de que el empleado llegue vivo a la jubilación, ${}_{n}p_x$.
 
 El beneficio descrito en el enunciado del proyecto (garantía de 5 años y luego vitalicio) es el caso particular conocido como *n-year certain and life annuity-due*, denotado $\ddot a_{x:\overline{n}|}^{\,-}$. Bowers et al. (1997) lo definen como una anualidad de vida entera con garantía de pago durante los primeros $n$ años, cuyo valor actuarial es
 
-$$
-\ddot a_{x:\overline{n}|}^{\,-} \;=\; \ddot a_{\overline{n}|} \;+\; \sum_{k=n}^{\infty} v^k \,{}_k p_x
-\;=\; \ddot a_{\overline{n}|} + \ddot a_x - \ddot a_{x:\overline{n}|}.
-$$
+$$\ddot a_{x:\overline{n}|}^{\,-} \;=\; \ddot a_{\overline{n}|} \;+\; \sum_{k=n}^{\infty} v^k \,{}_k p_x
+\;=\; \ddot a_{\overline{n}|} + \ddot a_x - \ddot a_{x:\overline{n}|}.$$
 
 La interpretación es que $Y$ es igual a $\ddot a_{\overline n|}$ con certeza si la muerte ocurre antes de $n$ años, y a $\ddot a_{\overline T|}$ si la sobrevida supera $n$ (Bowers et al., 1997). Esto justifica que el modelo descomponga la valuación de cada persona en dos componentes: primeramente el componente cierto ($t \le n=5$ años desde la jubilación) donde el pago no se pondera por mortalidad, ya que está garantizado y seguidamente por el componente vitalicio que es donde el pago se pondera por la probabilidad de supervivencia ${}_kp_x$.
 
-Esta separación es precisamente la descomposición algebraica que sugiere la ecuación anterior, y permite calcular cada bloque por separado y sumarlos para obtener el valor total de la prestación.
+Esta separación es precisamente la desviación algebraica que sugiere la ecuación anterior, y permite calcular cada bloque por separado y sumarlos para obtener el valor total de la prestación.
+
+La determinación de la frontera temporal entre el componente cierto y el componente vitalicio difiere según la condición del participante en la fecha de corte. Por un lado, para los empleados activos que se jubilan dentro del horizonte de proyección, el período cierto corresponde, sin ambigüedad, a los primeros 5 años contados desde el momento efectivo de la jubilación ($t_{jub}$), dado que el modelo asume que todo nuevo jubilado se retira exactamente a la edad estipulada por el enunciado del proyecto ($R_s$). Por otro lado, para los pensionados ya existentes en la fecha de corte, la frontera del período cierto se calculó en función de la edad estipulada de jubilación y no de la edad real de retiro del pensionado. De esta manera, si $x_i$ es la edad de un pensionado actual y $R_{s_i}$ su edad estipulada de jubilación según el sexo, el período cierto remanente, expresado en años transcurridos desde la fecha de corte ($t$), se definió como el intervalo:
+
+$$[\max(R_{s_i}-x_i,\,1),\;\max(R_{s_i}+4-x_i,\,0)]$$
+
+Esta regla cubre dos casos particulares. Por un lado, si el pensionado se jubiló de forma anticipada ($x_i < R_{s_i}$), el período cierto remanente solo inicia a partir del año en que la persona habría alcanzado la edad estipulada de jubilación, y no desde su fecha real de retiro. Por otro lado, si a la fecha de corte el pensionado ya superó por completo la ventana de 5 años de garantía ($x_i \ge R_{s_i}+4$), el intervalo resultante queda vacío y la totalidad de sus pagos futuros se valora bajo el componente vitalicio. De este modo, para cualquier año de proyección que quede fuera de este intervalo, el pago correspondiente se trata como vitalicio y se pondera por la probabilidad de supervivencia ${}_t p_{x_i}$.
+
+El modelo incorpora además dos condiciones restrictivas que delimitan qué empleados activos generan flujo de anualidad. Primero, solo quienes acumulen una antigüedad mayor a 10 años al momento de la jubilación tienen derecho a un porcentaje de pensión distinto de cero, según la escala de reemplazo definida por tramos de años de servicio; los empleados que no cumplen este mínimo no generan flujo alguno de anualidad. Segundo, si un empleado activo ya superó la edad estipulada de jubilación a la fecha de corte, se le asigna $t_{jub}=0$, es decir, se le trata como si se jubilara de forma inmediata en el año de corte, evaluando su pensión y probabilidad de supervivencia bajo esa misma condición.
 
 El monto del beneficio se determina con periodicidad mensual (12 mensualidades regulares más un pago adicional de aguinaldo), pero esta estructura se resuelve antes de aplicar la teoría de anualidades, no dentro de ella. El salario activo se multiplica primero por 13 para consolidar en un solo bloque las 12 mensualidades más el aguinaldo, y ese bloque se proyecta con el factor de crecimiento salarial $g=(1+\text{inflación})(1+\text{incremento real})-1$ hasta el momento de jubilación:
 
-$$
-\text{salario}_{jub} \;=\; \big(\text{salario}_{act}\times 13\big)\times(1+g)^{t_{jub}},
-$$
+$$\text{salario}_{jub} \;=\; \big(\text{salario}_{act}\times 13\big)\times(1+g)^{t_{jub}},$$
 
 monto que luego se multiplica por el porcentaje de pensión para obtener el beneficio anual agregado, $\text{pensión}_{jub}$. Por la propiedad conmutativa de la multiplicación, el factor de crecimiento $(1+g)^{t_{jub}}$ se aplica de manera uniforme sobre el bloque salarial ya anualizado, y no de forma diferenciada sobre alguno de sus componentes: el salario regular y el aguinaldo crecen exactamente al mismo ritmo, como un único monto consolidado.
+
+Es importante distinguir dos tasas de crecimiento aplicadas en momentos distintos del modelo. Antes de la jubilación, el salario se proyecta con la tasa combinada $g=(1+\text{inflación})(1+\text{incremento real})-1$, ya que durante la vida activa se espera tanto el ajuste por inflación como el crecimiento real de los salarios. Una vez determinado el monto de la pensión al momento de la jubilación, los pagos posteriores (tanto para los nuevos jubilados como para los pensionados ya existentes en la fecha de corte) se indexan únicamente por la tasa de inflación, sin incorporar el componente de incremento real. Esto refleja que las pensiones se ajustan por costo de vida una vez otorgadas, pero no continuúan creciendo en términos reales como lo haría un salario activo.
 
 A partir de este monto anual, el modelo opera enteramente en la escala anual: la indexación por inflación, la clasificación entre período cierto (primeros 5 años) y vitalicio, la ponderación por la probabilidad de supervivencia, y el descuento financiero, se aplican todos sobre flujos anuales únicos. En la notación de Bowers et al. (1997), esto corresponde al caso particular $m=1$ de la familia de anualidades $\ddot a_x^{(m)}$, para el cual $\alpha(1)=1$ y $\beta(1)=0$, de modo que $\ddot a_x^{(1)}=\ddot a_x$ exactamente. Es decir, no se trata de una aproximación al caso de pagos mensuales, sino del caso anual puro y exacto: la estructura de pagos mensuales del beneficio queda absorbida por completo en la construcción del monto anual agregado, y no interviene en el tratamiento actuarial de la anualidad propiamente dicha.
 
 El desarrollo de Bowers et al. (1997) asume una tabla de mortalidad agregada y estática, de modo que ${}_kp_x$ depende únicamente de la edad. La tabla SP-2015 de SUPEN es, en cambio, dinámica (generacional): la probabilidad de sobrevivir un año depende tanto de la edad como del año calendario proyectado, reflejando las mejoras esperadas en la mortalidad. La generalización natural de la fórmula de supervivencia acumulada es
 
-$$
-{}_k p_x \;=\; \prod_{j=0}^{k-1} p_{\,x+j}(\tau+j),
-$$
+$${}_k p_x \;=\; \prod_{j=0}^{k-1} p_{\,x+j}(\tau+j),$$
 
 donde $p_{x+j}(\tau+j)$ es la probabilidad de sobrevivir un año a la edad $x+j$ en el año calendario $\tau+j$. Esto implica dos supuestos de extrapolación necesarios: cuando la edad excede la edad máxima tabulada, la probabilidad de supervivencia se considera nula; y cuando el año calendario proyectado excede el último año disponible en la tabla, la mortalidad se mantiene constante en el nivel del último año tabulado. Ambos supuestos son requeridos porque la tabla SP-2015 cubre un horizonte finito de años de proyección, mientras que el modelo necesita probabilidades de supervivencia hasta 100 años hacia adelante.
 
 Finalmente, siguiendo la técnica del pago corriente, el costo actuarial total de las anualidades en la fecha de corte se obtiene descontando cada flujo nominal anual (suma de componentes ciertos y vitalicios, para activos y pensionados, por sexo) a la tasa de descuento del plan:
 
-$$
-\text{VP} \;=\; \sum_{t=1}^{H} v^t \cdot \big[\, cc_t + cv_t \,\big],
-$$
+$$\text{VP} \;=\; \sum_{t=1}^{H} v^t \cdot \big[\, cc_t + cv_t \,\big],$$
 
-donde H es el horizonte de proyección (100 años en este modelo) y $cc_t$, $cv_t$ son los flujos ciertos y vitalicios agregados del año $t$, consolidados por sexo y categoría (activos y pensionados).
+donde $H$ es el horizonte de proyección (100 años en este modelo) y $cc_t$, $cv_t$ son los flujos ciertos y vitalicios agregados del año $t$, consolidados por sexo y categoría (activos y pensionados).
+
+La tasa utilizada en la fórmula anterior corresponde directamente al parámetro de tasa de descuento definido en la hoja de parámetros del modelo, aplicada como tasa efectiva anual de capitalización compuesta, sin transformaciones adicionales. Asimismo, siguiendo la convención establecida para el resto de beneficios del plan, el primer año proyectado corresponde al año calendario siguiente a la fecha de corte, de modo que $t=1$ representa el primer año de pagos potenciales tanto para pensionados actuales como para empleados activos.
 
 ## Cálculo de la suma única de reconocimiento (*Lump Sum*)
 
