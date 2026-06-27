@@ -473,15 +473,21 @@ La estimación de los costos actuariales se realizó siguiendo el enfoque de Bow
 Por tanto, el costo actuarial total resume el valor presente de todos los compromisos esperados del plan, mientras que el costo nominal total muestra el monto acumulado de pagos esperados sin aplicar descuento financiero.
 
 
+---
+title: "Metodología de cálculo de primas"
+author: "Jean"
+format: pdf
+---
+
 # Metodología de primas
 
 ## Primas por grupo de edad y sexo
 
 Para la obtención de primas se dividió la población de empleados activos por sexo y grupo etario. Las primas se calcularon de la siguiente forma:
 
-\[
+$$
 \text{Prima}_{\text{Grupo}} = \frac{VPA\left(\text{Costos Actuariales del grupo}\right)}{VP\left(\text{Masa salarial total del grupo}\right)}
-\]
+$$
 
 La componente del **VPA de los costos** ya ha sido abordada previamente; lo único a considerar es que aquí se toman por grupo y no para toda la población.
 
@@ -492,11 +498,11 @@ Para la componente del denominador se aplicó la siguiente metodología:
 1. Del salario mensual actual de cada persona se obtuvo el salario anual actual multiplicando por 13 (incluyendo el aguinaldo).  
 2. A partir del cálculo anual a la fecha de corte, se proyecta el salario anual esperado por grupo para el año \(2025+k\):
 
-\[
+$$
 S_{2025+k} = S_{\text{corte}} \cdot (1+g)^k \cdot {}_k p_x
-\]
+$$
 
-donde:
+donde:  
 - \(S_{2025+k}\): salario anual esperado del grupo en el año \(2025+k\).  
 - \(S_{\text{corte}}\): salario anual del grupo a la fecha de corte.  
 - \(g = (1+\text{inflación})(1+\text{incremento real}) - 1\): crecimiento nominal del salario por año.  
@@ -506,23 +512,23 @@ donde:
 
 Finalmente, para obtener el valor presente de la masa salarial total del grupo se suman los salarios anuales proyectados desde el año base (2025) hasta la edad de jubilación correspondiente al grupo etario según el sexo:
 
-\[
+$$
 VP\left(\text{Masa salarial}\right) = \sum_{k=0}^{T-1} v^k \cdot S_{2025+k}
-\]
+$$
 
-donde:
+donde:  
 - \(T\): número de años faltantes para la jubilación del grupo.  
 - \(v = \frac{1}{1+i}\): factor de descuento anual, con \(i\) la tasa de interés.  
 
-Esta metodología es análoga al cálculo de una anualidad.
+Esta metodología para la masa salarial es análoga al cálculo de una anualidad.
 
 ## Prima media nivelada
 
 De forma análoga al cálculo por grupos, la **prima media nivelada** se obtiene como:
 
-\[
+$$
 \text{Prima media nivelada} = \frac{VPA\left(\text{Costos Actuariales totales}\right)}{VP\left(\text{Masa salarial total}\right)}
-\]
+$$
 
 Para la obtención del valor presente de la masa salarial se sumaron las masas salariales de todos los grupos de empleados activos.  
 En cuanto a los costos, se tomó en cuenta el **VPA total del plan de beneficios** para toda la población (activos y pensionados).
