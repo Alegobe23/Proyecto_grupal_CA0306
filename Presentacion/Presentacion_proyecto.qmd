@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "Proyecto grupal: Contingencias de vida I"
 author: "Alexandra González, Estefanía Mora, Daniela Prado, Sebastián Calderón y Jean Carlo Sanabria"
 format:
   beamer:
@@ -10,7 +10,7 @@ format:
     aspectratio: 169
     slide-number: true
     navigation: empty
-    fontsize: 11pt
+    fontsize: 10pt
     number-sections: false
     include-in-header:
             text: |
@@ -19,34 +19,12 @@ format:
                 \setlength{\parskip}{0.8cm}
 ---
 
-## Diapositiva 1
-
-::::: columns
-::: column
-:::
-
-::: column
--   \vspace{0.3cm}
-
--   \vspace{0.3cm}
-:::
-:::::
-
-## Diapositiva 2
-
-## Diapositiva 3
-
--   \vspace{0.1cm}
-
--   \vspace{0.3cm}
-
-# Sección metodológica
 
 ## Proyección demográfica y muertes de pensionados
 
-- Se usó un enfoque actuarial discreto de supervivencia.
-- La mortalidad se tomó de la tabla dinámica SP-2015 de SUPEN.
-- La población pensionada incluye pensionados iniciales y activos que se jubilan.
+-   Se usó un enfoque actuarial discreto de supervivencia.
+-   La mortalidad se tomó de la tabla dinámica SP-2015 de SUPEN.
+-   La población pensionada incluye pensionados iniciales y activos que se jubilan.
 
 $$
 {}_k p_x^{(s,y_0)}
@@ -61,9 +39,9 @@ $$
 
 ## Beneficios por muerte
 
-- Activos: cálculo individual por persona y año.
-- Pensionados: cálculo agregado por muertes esperadas anuales.
-- Los flujos se descontaron desde 2026, con $t=1$.
+-   Activos: cálculo individual por persona y año.
+-   Pensionados: cálculo agregado por muertes esperadas anuales.
+-   Los flujos se descontaron desde 2026, con $t=1$.
 
 $$
 FE_t = B \cdot D_t
@@ -75,9 +53,9 @@ $$
 
 ## Anualidades de vida
 
-- La pensión se modeló como anualidad discreta vencida.
-- Incluye pensión mensual, aguinaldo y garantía cierta de 5 años.
-- Luego del periodo cierto, los pagos dependen de la supervivencia.
+-   La pensión se modeló como anualidad discreta vencida.
+-   Incluye pensión mensual, aguinaldo y garantía cierta de 5 años.
+-   Luego del periodo cierto, los pagos dependen de la supervivencia.
 
 $$
 a_x = \sum_{k=1}^{\infty} v^k {}_k p_x
@@ -89,9 +67,9 @@ $$
 
 ## Suma única de reconocimiento (*Lump Sum*)
 
-- Se valoró como un pago único futuro.
-- Aplica a empleados activos que cumplen las condiciones del plan.
-- Depende de supervivencia, salario proyectado, múltiplo y descuento.
+-   Se valoró como un pago único futuro.
+-   Aplica a empleados activos que cumplen las condiciones del plan.
+-   Depende de supervivencia, salario proyectado, múltiplo y descuento.
 
 $$
 LS_i=m_iS_{i,0}(1+g)^{t_i}
@@ -107,9 +85,9 @@ $$
 
 ## Costo actuarial total
 
-- Se calculó el costo nominal y el valor presente de cada beneficio.
-- El valor presente permite comparar todos los flujos en la fecha de corte.
-- El costo total es la suma de los valores presentes individuales.
+-   Se calculó el costo nominal y el valor presente de cada beneficio.
+-   El valor presente permite comparar todos los flujos en la fecha de corte.
+-   El costo total es la suma de los valores presentes individuales.
 
 $$
 CN_k=\sum_t F_{k,t}
@@ -123,9 +101,9 @@ $$
 
 ## Primas por grupo de edad y sexo
 
-- La población activa se dividió por sexo y grupo etario.
-- La prima compara costos actuariales contra masa salarial proyectada.
-- La masa salarial considera crecimiento nominal y supervivencia.
+-   La población activa se dividió por sexo y grupo etario.
+-   La prima compara costos actuariales contra masa salarial proyectada.
+-   La masa salarial considera crecimiento nominal y supervivencia.
 
 $$
 \text{Prima}_{\text{Grupo}}
@@ -139,9 +117,9 @@ $$
 
 ## Prima media nivelada
 
-- Resume el costo del plan para toda la población.
-- Usa el VPA total de beneficios y el VP total de masa salarial.
-- Expresa el costo como proporción nivelada de los salarios.
+-   Resume el costo del plan para toda la población.
+-   Usa el VPA total de beneficios y el VP total de masa salarial.
+-   Expresa el costo como proporción nivelada de los salarios.
 
 $$
 \text{Prima media nivelada}
@@ -151,4 +129,131 @@ VPA(\text{costos totales})
 }{
 VP(\text{masa salarial total})
 }
-$$
+$$ 
+
+## Reducción de los costos actuariales 
+###
+- El **costo actuarial** de los beneficios representa un monto de **₡29 963 897 507.40**, la **reducción** que se pretende efectuar tiene un valor de **₡2 996 389 751**.\vspace{0.3cm}
+
+- Los tres rubros con **mayor participación** son las **anualidades de las pensiones por vejez** con un **97.26%**, la **suma única de reconocimiento** con un **1.77%** y el **seguro de vida** para empleados pensionados con un **0.78%**. \vspace{0.3cm}
+
+- Se realizaron reducciones en dos beneficios particulares: las pensiones por vejez y la suma única de reconocimiento. Se excluyó el seguro de vida puesto que el costo actuarial derivado de su extensión es considerablemente bajo. \vspace{0.3cm}
+
+## Reducción del costo de las pensiones por vejez
+::: columns
+
+:::: column
+\small
+- **Reducción del tiempo en el que se garantizan las pensiones:** se concentra en una población reducida. Las pensiones pasaron de garantizarse por cinco años a garantizarse por solo dos años. \vspace{0.2cm}
+
+- **Rebaja del porcentaje salarial sobre el cual se calculan las pensiones por vejez**: se definió un nuevo porcentaje máximo de 87.53149%, a partir de esta cifra se definen los porcentajes de los demás tramos de antigüedad. \vspace{0.2cm} 
+
+- Se procura preservar el incentivo para que los empleados permanezcan en condición de activos por periodos más extensos. \vspace{0.2cm}
+
+:::
+
+::: column
+
+\small
+```{=latex}
+\begin{center}
+```
+
+**Tabla 1** \vspace{0.2cm}
+
+*Porcentajes actualizados*
+
+```{=latex}
+\end{center}
+```
+
+| **Antigüedad** | **Anterior** | **Actualizado** |
+|:----------------------:|:------------:|:---------------:|
+| 1–10 | 0 % | 0 % |
+| 10–20 | 45 % | ≈39.389% |
+| 20–30 | 65 % | ≈ 56.895% |
+| 30–40 | 85 % | ≈74.401% |
+| Más de 40 | 100 % | ≈87.531% |
+
+:::
+::::
+
+
+## Reducción del costo del Lump Sum
+:::: columns 
+::: column
+- Produce efectos financieros temporales, ya que se otorga en una única ocasión.\vspace{0.4cm}
+
+- **Reducción del porcentaje salarial**: inicialmente el porcentaje se encontraba en 100%, ahora se fijó en 80%. \vspace{0.4cm}
+
+- **Modificación de la tabla de factores derivados de la antigüedad** \vspace{0.4cm}
+
+- A pesar de que el cambio pueda parecer abrupto posee menores repercusiones en la vida de los asegurados: efectos financieros temporales.\vspace{0.2cm}
+:::
+::: column
+
+```{=latex}
+\begin{center}
+```
+
+**Tabla 3** \vspace{0.2cm}
+
+*Factores de multiplicación actualizados*
+
+```{=latex}
+\end{center}
+```
+| **Antigüedad** | **Anterior** | **Actualizado** |
+|:--------------:|--------------------:|-----------------------:|
+| 1–10           | 1,0                 | 0,5                    |
+| 10–20          | 2,0                 | 1,0                    |
+| 20–30          | 3,0                 | 2,0                    |
+| 30–40          | 4,0                 | 3,0                    |
+| Más de 40      | 5,0                 | 4,0                    |
+
+:::
+::::
+
+## Resultado de la reducción de costos
+###
+```{=latex}
+\begin{center}
+```
+
+**Tabla 4** 
+
+*Resultado de la reducción de costos*
+```{=latex}
+\end{center}
+```
+
+| Beneficio | Inicial | Actualizado |
+|:----------|--------:|------------:|
+| Anualidades | ₡29.143.634.218 | ₡26.378.590.023 |
+| Suma única | ₡529.153.943 | ₡297.806.765 |
+| **Total** | **₡29.672.788.162** | **₡26.676.396.789** |
+
+- La diferencia entre los costos actuariales reportados equivale a **₡2 996 391 373.3**, superando el monto previsto inicialmente: **₡2 996 389 751**, por un total de **₡1 622.3**.
+
+## Análisis comparativo 
+###
+
+El comportamiento de los costos actuariales está determinado en su mayoría por las anualidades de la pensión por vejez. \vspace{0.2cm}
+
+- **Modelo base**: este beneficio concentra más del 97% del costo total. \vspace{0.2cm}
+
+- **Análisis de sensibilidad**: las mayores variaciones se producen precisamente en este componente. \vspace{0.4cm}
+
+- Las **anualidades de la pensión por vejez** continúan siendo el **elemento con mayor influencia**, mientras que los demás beneficios mantienen una participación mucho menor.\vspace{0.2cm}
+
+## Análisis comparativo 
+###
+
+**Modelo base y el proceso de reducción de los costos** \vspace{0.3cm}
+
+
+- En lugar de aplicar reducciones uniformes a todos los beneficios, las modificaciones se concentraron en los beneficios con un mayor costo. \vspace{0.2cm}
+
+
+- El análisis de sensibilidad confirma la importancia de las anualidades dentro del plan, ya que este beneficio es el que experimenta las mayores variaciones cuando cambian los supuestos financieros. \vspace{0.4cm}
+ 

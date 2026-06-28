@@ -637,7 +637,7 @@ Para el análisis de sensibilidad de las tasas, se calcularon los costos totales
 
 **Tabla 5**
 
-* Costo Total Nominal por tasa de incremento salarial*
+-   Costo Total Nominal por tasa de incremento salarial\*
 
 ```{=latex}
 \end{center}
@@ -648,7 +648,6 @@ Para el análisis de sensibilidad de las tasas, se calcularon los costos totales
 |            0,01 | ₡2 091 179 011,97 |    ₡1 649 102 590,89 | ₡319 820 252 421,33 |
 |            0,02 | ₡2 736 349 062,19 |    ₡1 649 102 590,89 | ₡430 796 400 185,61 |
 |            0,03 | ₡3 585 210 177,90 |    ₡1 649 102 590,89 | ₡582 165 036 205,87 |
-
 
 ```{=latex}
 \begin{center}
@@ -668,9 +667,7 @@ Para el análisis de sensibilidad de las tasas, se calcularon los costos totales
 |            0,02 |       0% |                   0% |          0% |
 |            0,03 |    23,7% |                   0% |       26,0% |
 
-
-
-### Beneficio de muerte 
+### Beneficio de muerte
 
 En cuanto a los costos nominales, lo primero que se observa es que los beneficios por muerte son idénticos para toda tasa de incremento salarial. Esto se debe a que dicho beneficio no depende de los salarios, sino únicamente de la edad y el sexo del trabajador o pensionado. Por lo tanto, el análisis se centra en los otros dos beneficios.
 
@@ -712,8 +709,6 @@ En el caso de las anualidades de la pensión por vejez, el análisis es similar,
 | 0,01 | ₡32 449 412 579,06 | ₡23 284 360 686,74 | ₡17 168 098 907,41 |
 | 0,02 | ₡41 245 598 095,43 | ₡29 139 619 674,00 | ₡21 123 731 917,53 |
 | 0,03 | ₡53 003 012 052,02 | ₡36 935 165 986,30 | ₡26 368 938 489,19 |
-
-
 
 ### Suma única de reconocimiento (*Lump Sum*)
 
@@ -927,7 +922,7 @@ En segundo lugar, en el análisis de sensibilidad se calcularon los costos nomin
 
 En tercer lugar, el proceso de reducción de costos se enfocó principalmente en los beneficios de mayor peso: las anualidades de la pensión por vejez y el Lump Sum. La reducción se efectuó por un 10% del costo actuarial reportado inicialmente, resultando en una disminución de ₡2.996.389.751. Dicha cifra se alcanzó a partir de la disminución del periodo garantizado de las pensiones por vejez, la reducción de los porcentajes utilizados para calcular la pensión, la disminución del porcentaje salarial sobre el cual se calcula el Lump Sum y la baja de los factores de multiplicación asociados al Lump Sum.
 
-Al comparar los tres escenarios analizados, se observa que el comportamiento de los costos actuariales está determinado en su mayoría por las anualidades de las pensión por vejez. En el modelo base, este beneficio concentra más del 97% del costo total, lo anterior se refleja de igual manera en el análisis de sensibilidad, donde las mayores variaciones se producen precisamente en este componente cuando cambian la tasa de incremento salarial o la tasa de descuento. En contraste, la suma única de reconocimiento presenta cambios de menor magnitud y los beneficios por fallecimiento muestran una variación aún más reducida, ya que estos últimos solo responden a modificaciones en la tasa de descuento. Así, se determina que la estructura del valor presente del costo actuarial de los beneficios se conserva en los distintos escenarios: las anualidades de la pensión por vejez continúan siendo el elemento con mayor influencia, mientras que los demás beneficios mantienen una participación mucho menor.
+Al comparar los tres escenarios analizados, se observa que el comportamiento de los costos actuariales está determinado en su mayoría por las anualidades de la pensión por vejez. En el modelo base, este beneficio concentra más del 97% del costo total, lo anterior se refleja de igual manera en el análisis de sensibilidad, donde las mayores variaciones se producen precisamente en este componente cuando cambian la tasa de incremento salarial o la tasa de descuento. En contraste, la suma única de reconocimiento presenta cambios de menor magnitud y los beneficios por fallecimiento muestran una variación aún más reducida, ya que estos últimos solo responden a modificaciones en la tasa de descuento. Así, se determina que la estructura del valor presente del costo actuarial de los beneficios se conserva en los distintos escenarios: las anualidades de la pensión por vejez continúan siendo el elemento con mayor influencia, mientras que los demás beneficios mantienen una participación mucho menor.
 
 La comparación entre el modelo base y el proceso de reducción de los costos actuariales muestra que las medidas planteadas concuerdan con los resultados obtenidos en el análisis previo. En lugar de aplicar reducciones uniformes a todos los beneficios, las modificaciones se concentraron en aquellos beneficios que tenían una mayor incidencia sobre el costo actuarial, lo que permitió alcanzar la disminución del 10% sin alterar el seguro de vida, cuyo aporte al costo total es inferior al 1%. Asimismo, el análisis de sensibilidad confirma la importancia de las anualidades dentro del plan, ya que este beneficio es el que experimenta las mayores variaciones cuando cambian los supuestos financieros.
 
