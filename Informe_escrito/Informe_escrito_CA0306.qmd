@@ -619,7 +619,7 @@ Al desglosar este resultado por sexo, se obtuvo lo siguiente:
 |------------|------------------------:|-----------------------:|
 | Mujeres    |     ₡242.687.516.177,41 |     ₡16.994.861.114,90 |
 | Hombres    |     ₡188.114.899.755,33 |     ₡12.148.773.103,60 |
-| **Total**  | **₡430.796.400.185,61** | **₡29.143.634.218,50** |
+| **Total**  | **₡430.802.415.932.74** | **₡29.143.634.218,50** |
 
 Como se mencionó en la sección de análisis estadístico, esta diferencia tiene sentido por la combinación de varios factores: la mayor proporción de mujeres dentro de la población pensionada (55,15 % frente a 44,85 %) y, en menor medida, dentro de la población activa (51,34 % frente a 48,66 %); el salario mensual promedio más alto de las mujeres activas (₡1.088.808,49 frente a ₡960.074,99), que incide directamente en el monto de pensión proyectado al momento de la jubilación; y los factores actuariales propios del modelo, es decir, la edad de jubilación menor para mujeres (63 años frente a 65 años) y su mayor esperanza de vida tanto en la población activa (51,92 frente a 48,28 años) como en la pensionada (16,87 frente a 14,94 años). Esto explica por qué, aun cuando la pensión mensual promedio individual de los hombres pensionados actuales es superior a la de las mujeres (₡205.785,84 frente a ₡187.979,87), el costo actuarial agregado atribuible a las mujeres resulta mayor.
 
@@ -633,11 +633,11 @@ Por su parte, el beneficio por muerte de pensionados presentó un costo nominal 
 
 Al sumar ambos beneficios de muerte, el valor presente actuarial conjunto fue de ₡291.109.345,41. Este monto refleja el costo actuarial total esperado de los beneficios por fallecimiento, distinguiendo entre la condición activa y pensionada del participante al momento del pago.
 
-En cuanto a las anualidades de pensión, se obtuvo el componente de mayor peso dentro del plan. El costo nominal esperado fue de ₡430.796.400.185,61, mientras que el costo actuarial a valor presente fue de ₡29.634.349.842,37. La magnitud de este resultado se explica porque las anualidades representan pagos periódicos de largo plazo.
+En cuanto a las anualidades de pensión, se obtuvo el componente de mayor peso dentro del plan. El costo nominal esperado fue de ₡430.802.415.932,75, mientras que el costo actuarial a valor presente fue de ₡29.143.634.218,50 La magnitud de este resultado se explica porque las anualidades representan pagos periódicos de largo plazo.
 
 Para la suma única de reconocimiento o *Lump Sum*, el costo nominal esperado fue de ₡2.736.349.062,19. Al traer estos pagos a valor presente, el costo actuarial estimado fue de ₡529.153.943,49. Este beneficio tuvo un impacto menor que las anualidades de pensión, pero superior al costo individual de los beneficios de muerte.
 
-Finalmente, al integrar todos los beneficios analizados, se obtuvo un costo nominal esperado total de ₡435.181.851.838,70. El costo actuarial total a valor presente fue de ₡30.454.613.131,27. Este valor representa la estimación global del compromiso económico del plan, considerando los beneficios por muerte de activos, muerte de pensionados, anualidades de pensión y suma única de reconocimiento.
+Finalmente, al integrar todos los beneficios analizados, se obtuvo un costo nominal esperado total de ₡435.187.867.585,83 El costo actuarial total a valor presente fue de ₡29.963.897.507,40. Este valor representa la estimación global del compromiso económico del plan, considerando los beneficios por muerte de activos, muerte de pensionados, anualidades de pensión y suma única de reconocimiento.
 
 ## Resultados Primas
 
