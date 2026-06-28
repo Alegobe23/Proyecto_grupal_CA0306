@@ -631,7 +631,7 @@ Finalmente, al integrar todos los beneficios analizados, se obtuvo un costo nomi
 
 ### Primas por grupo de edad y sexo
 
-De acuerdo con lo expuesto en la sección de metodología, apartado «Primas», se calcularon las primas por grupo de edad y sexo para empleados activos y se obtuvieron los siguientes resultados:
+De acuerdo con lo expuesto en la sección de metodología, apartado "Cálculo de primas por grupo de edad y sexo", se calcularon las primas por grupo de edad y sexo para empleados activos y se obtuvieron los siguientes resultados:
 
  ```{=latex}
 \begin{center}
@@ -686,7 +686,7 @@ De acuerdo con lo expuesto en la sección de metodología, apartado «Primas», 
 
 ### Prima media nivelada
 
-Empleando el procedimiento descrito en la sección de metodología, apartado "Cálculo de Prima Media", se calculó la prima media general para toda la población y se obtuvo el siguiente resultado:
+Empleando el procedimiento descrito en la sección de metodología, apartado "Cálculo de la prima media nivelada", se calculó la prima media general para toda la población y se obtuvo el siguiente resultado:
 
 ```{=latex}
 \begin{center}
