@@ -631,13 +631,36 @@ Para el análisis de sensibilidad de las tasas, se calcularon los costos totales
 
 ## Costos Nominales
 
+```{=latex}
+\begin{center}
+```
+
+**Tabla 5**
+
+* Costo Total Nominal por tasa de incremento salarial*
+
+```{=latex}
+\end{center}
+```
+
 | Incremento real |          Lump Sum | Beneficio por Muerte |         Anualidades |
 |----------------:|------------------:|---------------------:|--------------------:|
 |            0,01 | ₡2 091 179 011,97 |    ₡1 649 102 590,89 | ₡319 820 252 421,33 |
 |            0,02 | ₡2 736 349 062,19 |    ₡1 649 102 590,89 | ₡430 796 400 185,61 |
 |            0,03 | ₡3 585 210 177,90 |    ₡1 649 102 590,89 | ₡582 165 036 205,87 |
 
-: Costo Total Nominal por tasa de incremento salarial
+
+```{=latex}
+\begin{center}
+```
+
+**Tabla 6**
+
+*Diferencias porcentuales respecto a la tasa original (0,02)*
+
+```{=latex}
+\end{center}
+```
 
 | Incremento real | Lump Sum | Beneficio por Muerte | Anualidades |
 |----------------:|---------:|---------------------:|------------:|
@@ -645,7 +668,7 @@ Para el análisis de sensibilidad de las tasas, se calcularon los costos totales
 |            0,02 |       0% |                   0% |          0% |
 |            0,03 |    23,7% |                   0% |       26,0% |
 
-: Diferencias porcentuales respecto a la tasa original (0,02)
+
 
 En cuanto a los costos nominales, lo primero que se observa es que los beneficios por muerte son idénticos para toda tasa de incremento salarial. Esto se debe a que dicho beneficio no depende de los salarios, sino únicamente de la edad y el sexo del trabajador o pensionado. Por lo tanto, el análisis se centra en los otros dos beneficios.
 
@@ -656,6 +679,18 @@ En el caso del Lump Sum, los costos son menores cuando la tasa de incremento sal
 En el caso de las anualidades de la pensión por vejez, el análisis es similar, aunque con diferencias más amplias. Cabe señalar que el cambio en el incremento salarial solo afecta a los trabajadores activos, ya que las pensiones se ajustan únicamente por inflación. Al reducir la tasa en un punto porcentual, la diferencia es de aproximadamente -25,8%, mientras que al aumentarla es de +26%. Una explicación plausible es que, al tratarse de pagos mensuales recurrentes, el efecto del cambio se acumula a lo largo de los años, amplificado por el hecho de que la pensión depende del último salario, que es mayor que el considerado en el Lump Sum. En consecuencia, el impacto es más significativo.
 
 ## Cambios en el valor presente de los Costos Actuariales
+
+```{=latex}
+\begin{center}
+```
+
+**Tabla 7**
+
+*Valor presente del Costo Total Actuarial para cada combinación de tasas*
+
+```{=latex}
+\end{center}
+```
 
 | Incremento real | Tasa de descuento 0,055 | Tasa de descuento 0,065 | Tasa de descuento 0,075 |
 |---:|---:|---:|---:|
@@ -672,7 +707,7 @@ En el caso de las anualidades de la pensión por vejez, el análisis es similar,
 | 0,02 | ₡41 245 598 095,43 | ₡29 139 619 674,00 | ₡21 123 731 917,53 |
 | 0,03 | ₡53 003 012 052,02 | ₡36 935 165 986,30 | ₡26 368 938 489,19 |
 
-: Valor presente del Costo Total Actuarial para cada combinación de tasas
+
 
 ### Lump Sum
 
