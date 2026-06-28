@@ -748,7 +748,7 @@ Empleando el procedimiento descrito en la sección de metodología, apartado "C�
 
 | Valor Presente Actuarial del total de los Costos | Valor Presente Esperado de la Masa salarial total | Prima media |
 |----------------------------|-----------------------------|---------------|
-| ₡29 730 734 763,35 | ₡67 646 592 226,38 | 0,44 |
+| ₡29 963 897 507,40 | ₡67 646 592 226,38 | 0,44 |
 
 La columna de VPA del total de los costos representa el valor actuarial de los costos totales calculados para el plan de beneficios. Por su parte, la columna del VP esperado de la masa salarial se obtiene aplicando el procedimiento descrito en la sección de metodología, apartado "Cálculo de primas por grupo de edad y sexo", en el inciso "Valor presente de la masa salarial".
 Observe que resultado de esta prima no es más que el promedio aproximado de los valores de las primas de los grupos de edad y sexo.
