@@ -716,6 +716,15 @@ De acuerdo con lo expuesto en la sección de metodología, apartado "Cálculo de
 | 58           | 0,00    | 0,03    |
 | 62           | 0,04    | 0,00    |
 
+Viendo los resultados de las primas podemos señalar varios aspectos:
+Lo primero que se observa es una tendencia al crecimiento conforme aumenta la edad del grupo. Esto no debe sorprender, ya que a mayor edad se integran menos salarios anuales a la masa salarial; en consecuencia, el denominador de la fracción decrece. Existen algunas excepciones, como el grupo masculino conformado por un hombre de 62 años y el femenino por una mujer de 58 años. Estas primas son de hecho las más bajas, pues ambos presentan una edad elevada y una antigüedad muy baja (menor a 10 años), lo que los deja sin derecho a pensión.
+También se aprecia que, en general, las mujeres de la misma edad que los hombres tienen una prima más alta. Esto puede deberse a varios factores: por un lado, al tener una edad de jubilación más temprana, reciben en promedio más beneficios de pensión durante su vida jubilada. Además, según la tabla SP‑2015, la mortalidad femenina es menor que la masculina, lo que implica que los beneficios de pensión o el Lump Sum pesan más en proporción, ya que las mujeres tienen mayor probabilidad de alcanzar edades avanzadas. Asimismo, factores externos al sexo, como la antigüedad promedio, el número de miembros y los niveles salariales, pueden generar variaciones en los costos y en la masa salarial, y por ende en las primas.
+Las brechas en las primas se hacen más notorias a partir de los 41 años. Al analizar detalladamente los números, se observa una tendencia a un mayor cambio negativo en la masa salarial que en los costos. Esto significa que, en las mujeres, los costos cambian menos en proporción que la masa salarial, lo que provoca que la razón de la prima se incremente proporcionalmente más. La explicación radica en que en las mujeres la edad de jubilación es más temprana (63 años frente a 65 en los hombres). Al retirarse antes, la masa salarial esperada de las mujeres suman menos años de aportes, lo que reduce el denominador, que hace que en edades más avanzadas, al disponer de menos años restantes de trabajo, el diferimiento en los salarios recibidos tenga un mayor efecto en la prima resultante en comparación con la de los hombres.
+Finalmente, al analizar los valores extremos de las primas encontramos dos situaciones:
+En el mínimo, el valor 0,0 corresponde a grupos de personas de un sexo y edad en los que no existen trabajadores activos. Excluyendo este caso trivial, los valores más bajos para grupos existentes son 0,03 y 0,04, correspondientes a las personas mencionadas en el primer párrafo.
+En el extremo superior aparecen valores pico como 1,50 y 1,45. Estos corresponden a casos especiales de grupos de una sola persona, mujeres de 54 y 56 años respectivamente, que están próximas al retiro y cuentan con una antigüedad elevada a pocos años de la fecha de corte. En estos casos, el factor de descuento aplicado a los primeros años de pensión o al pago del Lump Sum no reduce tanto el valor al traerlo a presente, lo que explica las primas tan altas.
+
+
 ### Prima media nivelada
 
 Empleando el procedimiento descrito en la sección de metodología, apartado "Cálculo de la prima media nivelada", se calculó la prima media general para toda la población y se obtuvo el siguiente resultado:
@@ -737,6 +746,7 @@ Empleando el procedimiento descrito en la sección de metodología, apartado "C�
 | ₡29 730 734 763,35 | ₡67 646 592 226,38 | 0,44 |
 
 La columna de VPA del total de los costos representa el valor actuarial de los costos totales calculados para el plan de beneficios. Por su parte, la columna del VP esperado de la masa salarial se obtiene aplicando el procedimiento descrito en la sección de metodología, apartado "Cálculo de primas por grupo de edad y sexo", en el inciso "Valor presente de la masa salarial".
+Observe que resultado de esta prima no es más que el promedio aproximado de los valores de las primas de los grupos de edad y sexo.
 
 # Resultados del análisis de sensibilidad
 
