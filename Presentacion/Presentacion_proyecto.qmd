@@ -369,7 +369,7 @@ Aunque la pensión mensual promedio individual de los hombres pensionados es may
 \centering
 **VPA del total de los costos**\vspace{0.2cm}
 
-\large ₡29.730.734.763,35
+\large ₡29 963 897 507,40	
 :::
 ::: column
 \centering
