@@ -3,9 +3,8 @@ title: "Proyecto grupal: Contingencias de vida I"
 author: "Alexandra González, Estefanía Mora, Daniela Prado, Sebastián Calderón y Jean Carlo Sanabria"
 format:
   beamer:
-    theme: CambridgeUS
+    theme: default
     lang: es
-    colortheme: seahorse
     toc: false
     aspectratio: 169
     slide-number: true
@@ -14,12 +13,29 @@ format:
     number-sections: false
     include-in-header:
             text: |
+                \usepackage{lmodern}
+                \renewcommand{\familydefault}{\sfdefault}
+                \definecolor{mNavy}{HTML}{1E2761}
+                \definecolor{mGold}{HTML}{C99A2E}
+                \definecolor{mIce}{HTML}{CADCFC}
+                \definecolor{mBg}{HTML}{EFF4FC}
+                \setbeamercolor{title}{fg=white,bg=mNavy}
+                \setbeamercolor{frametitle}{fg=white,bg=mNavy}
+                \setbeamercolor{normal text}{fg=mNavy,bg=white}
+                \setbeamercolor{structure}{fg=mGold}
+                \setbeamercolor{itemize item}{fg=mGold}
+                \setbeamercolor{itemize subitem}{fg=mGold}
+                \setbeamercolor{block title}{fg=mNavy,bg=mIce}
+                \setbeamercolor{block body}{fg=mNavy,bg=mBg}
                 \setbeamertemplate{footline}[frame number]
+                \setbeamerfont{frametitle}{series=\bfseries}
                 \setbeamerfont{author}{size=\small, series=\itshape}
                 \setlength{\parskip}{0.8cm}
 ---
 
 ## Análisis estadístico
+
+\vspace*{0.5cm}
 
 | Grupo       | Total | Mujeres | Hombres | Edad promedio | Esperanza de vida |
 | :---------- | ----: | ------: | ------: | ------------: | ----------------: |
@@ -148,6 +164,228 @@ VPA(\text{costos totales})
 VP(\text{masa salarial total})
 }
 $$ 
+
+## Resultados obtenidos
+###
+\small
+- **Anualidades de pensión**: proyección 2025–2125, costo nominal y actuarial, desglose por sexo. \vspace{0.2cm}
+- **Beneficios por muerte y suma única**: activos, pensionados y lump sum, además del costo total del plan. \vspace{0.2cm}
+- **Primas**: por grupo de edad y sexo, y prima media nivelada. \vspace{0.2cm}
+
+## Anualidades de pensión
+
+**Horizonte de proyección: 101 años (2025–2125)**\vspace{0.2cm}
+
+Dos cohortes generan el flujo: los pensionados actuales a la fecha de corte y los empleados activos que se jubilan dentro del horizonte.\vspace{0.3cm}
+
+:::: columns
+::: column
+\small
+- **2026**: inicia el flujo de pensionados actuales.
+- **2032**: inicia el flujo de empleados activos.
+- **2043**: los activos superan a los pensionados actuales.
+:::
+::: column
+\small
+- **2083**: se extingue la cohorte de pensionados actuales.
+- **2119**: extinción total de ambas cohortes.
+:::
+::::
+
+## Anualidades de pensión
+
+**Costo global: nominal vs. actuarial**\vspace{0.3cm}
+
+:::: columns
+::: column
+\centering
+**Costo nominal esperado total**\vspace{0.2cm}
+
+\large ₡430.802.415.932,75 \normalsize\vspace{0.3cm}
+
+\small Suma de pensionados actuales y empleados activos a lo largo del horizonte de 101 años.
+:::
+::: column
+\centering
+**Costo actuarial (valor presente)**\vspace{0.2cm}
+
+\large ₡29.143.634.218,50 \normalsize\vspace{0.3cm}
+
+\small Flujos descontados a la fecha de valuación con una tasa nominal anual de 6,5%.
+:::
+::::
+
+## Anualidades de pensión
+
+**Desglose por participante**
+
+| Componente | Costo nominal | Costo actuarial (VP) |
+| :--- | ---: | ---: |
+| Activos | ₡420.667.774.047,24 | ₡24.280.099.546,57 |
+| Pensionados | ₡10.134.641.885,50 | ₡4.863.534.671,92 |
+| **Total** | **₡430.802.415.932,74** | **₡29.143.634.218,50** |
+
+<br>
+
+**Desglose por sexo**
+
+| Componente | Costo nominal | Costo actuarial (VP) |
+| :--- | ---: | ---: |
+| Mujeres | ₡242.687.516.177,41 | ₡16.994.861.114,90 |
+| Hombres | ₡188.114.899.755,33 | ₡12.148.773.103,60 |
+| **Total** | **₡430.802.415.932,74** | **₡29.143.634.218,50** |
+
+
+
+## Anualidades de pensión
+###
+**¿Por qué el costo agregado es mayor en mujeres?**\vspace{0.2cm}
+
+\small
+- **Mayor peso poblacional**: 55,15% de los pensionados y 51,34% de los activos son mujeres.
+- **Salario activo más alto**: salario mensual promedio de ₡1.088.808,49 en mujeres frente a ₡960.074,99 en hombres.
+- **Jubilación más temprana**: edad de jubilación de 63 años en mujeres frente a 65 años en hombres.
+- **Mayor esperanza de vida**: activas, 51,92 frente a 48,28 años en activos; pensionadas, 16,87 frente a 14,94 años en pensionados.
+
+\vspace{0.3cm}
+Aunque la pensión mensual promedio individual de los hombres pensionados es mayor (₡205.785,84 frente a ₡187.979,87), el costo actuarial agregado de las mujeres resulta mayor por los factores anteriores.
+
+## Beneficios por muerte y suma única
+###
+| Beneficio | Costo nominal | Costo actuarial (VP) |
+|:----------|---------------:|----------------------:|
+| Muerte de activos | ₡700.868.080,89 | ₡57.946.601,36 |
+| Muerte de pensionados | ₡948.234.510,00 | ₡233.162.744,05 |
+| Suma única (lump sum) | ₡2.736.349.062,19 | ₡529.153.943,49 |
+
+\vspace{0.3cm}
+\small **Costo actuarial del beneficio de muerte general: ₡291.109.345,41**
+
+## Costo total del plan
+
+**Integración de todos los beneficios**\vspace{0.3cm}
+
+:::: columns
+::: column
+\centering
+**Costo nominal total**\vspace{0.2cm}
+
+\large ₡435.187.867.585,83
+:::
+::: column
+\centering
+**Costo actuarial total (VP)**\vspace{0.2cm}
+
+\large ₡29.963.897.507,40
+:::
+::::
+
+\vspace{0.4cm}
+\small
+- Anualidades: 97.26%
+- Suma única (lump sum): 1.77%
+- Muerte de pensionados: 0.78%
+- Muerte de activos: 0.19%
+
+\vspace{0.2cm}
+
+## Primas por grupo de edad y sexo
+
+\vspace*{1 cm}
+
+:::: {.columns}
+
+::: {.column width="60%"}
+\scriptsize
+:::: {.columns}
+::: {.column width="50%"}
+| Edad | Hombres | Mujeres |
+|:----:|:-------:|:-------:|
+|  22  |  0,25   |  0,00   |
+|  23  |  0,26   |  0,00   |
+|  24  |  0,26   |  0,29   |
+|  25  |  0,27   |  0,30   |
+|  26  |  0,26   |  0,30   |
+|  27  |  0,27   |  0,34   |
+|  28  |  0,29   |  0,33   |
+|  29  |  0,26   |  0,34   |
+|  30  |  0,27   |  0,35   |
+|  31  |  0,29   |  0,36   |
+|  32  |  0,31   |  0,39   |
+|  33  |  0,33   |  0,38   |
+|  34  |  0,31   |  0,37   |
+|  35  |  0,32   |  0,43   |
+|  36  |  0,33   |  0,43   |
+|  37  |  0,34   |  0,38   |
+|  38  |  0,36   |  0,48   |
+|  39  |  0,34   |  0,43   |
+:::
+
+::: {.column width="50%"}
+| Edad | Hombres | Mujeres |
+|:----:|:-------:|:-------:|
+|  40  |  0,40   |  0,42   |
+|  41  |  0,33   |  0,51   |
+|  42  |  0,34   |  0,54   |
+|  43  |  0,37   |  0,47   |
+|  44  |  0,40   |  0,55   |
+|  45  |  0,40   |  0,52   |
+|  46  |  0,42   |  0,61   |
+|  47  |  0,00   |  0,42   |
+|  48  |  0,48   |  0,60   |
+|  49  |  0,51   |  0,65   |
+|  50  |  0,43   |  0,68   |
+|  51  |  0,41   |  0,57   |
+|  52  |  0,44   |  0,00   |
+|  54  |  0,55   |  1,50   |
+|  56  |  0,00   |  1,45   |
+|  57  |  0,00   |  1,18   |
+|  58  |  0,00   |  0,03   |
+|  62  |  0,04   |  0,00   |
+:::
+::::
+:::
+
+::: {.column width="40%"}
+\small
+
+* **Efecto edad:** Incremento sostenido de las primas con la edad; los segmentos jóvenes promedian entre **25% y 35%**, mientras que los mayores superan el **50%**.
+
+<br>
+
+* **Brecha por sexo:** Las **mujeres registran primas superiores** a los hombres en casi todas las edades, acentuándose notablemente a partir de los 41 años.
+
+<br>
+
+* **Valores extremos:** Los ceros (**0,00**) indican ausencia de personal activo en esa edad, mientras que los picos (ej. mujeres de 54 y 56 años con **1,50** y **1,45**) reflejan el alto costo actuarial por la cercanía del retiro.
+:::
+
+::::
+
+## Prima media nivelada
+
+:::: columns
+::: column
+\centering
+**VPA del total de los costos**\vspace{0.2cm}
+
+\large ₡29.730.734.763,35
+:::
+::: column
+\centering
+**VP de la masa salarial total**\vspace{0.2cm}
+
+\large ₡67.646.592.226,38
+:::
+::::
+
+\vspace{0.4cm}
+\centering
+**Prima media: 0,44**
+
+\vspace{0.4cm}
+\raggedright\small
+La VPA del total de los costos representa el valor actuarial de los costos totales del plan de beneficios. El VP de la masa salarial total se obtiene calculando las proyecciones salariales segmentadas por grupo de edad y sexo.
 
 ## Reducción de los costos actuariales 
 ###

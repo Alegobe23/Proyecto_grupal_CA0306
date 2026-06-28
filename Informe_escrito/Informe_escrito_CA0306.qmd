@@ -601,13 +601,33 @@ En cuanto a los costos, se tomó en cuenta el VPA total del plan de beneficios p
 
 En cuanto a las anualidades de pensión, se obtuvo el componente de mayor peso dentro del plan. La proyección se desarrolló sobre un horizonte de 101 años (2025–2125), separando los flujos generados por los pensionados existentes a la fecha de corte y por los empleados activos que alcanzan la edad de jubilación dentro del horizonte de proyección. El flujo de los pensionados actuales inicia en 2026 y se extingue alrededor de 2083, conforme la cohorte original se agota por efecto de la mortalidad. El flujo de los empleados activos, en cambio, es nulo entre 2025 y 2031, dado que ningún participante activo alcanza aún la edad de jubilación en ese periodo, e inicia en 2032, superando en magnitud al de los pensionados actuales a partir de 2043, año en que el efecto acumulado de las nuevas jubilaciones y del crecimiento salarial supera a la cohorte pensionada original. El costo nominal esperado total de las anualidades fue de ₡430.802.415.932,75, mientras que el costo actuarial a valor presente, descontado a la fecha de valuación con la tasa nominal anual del 6,5 %, fue de ₡29.143.634.218,50. El flujo nominal anual máximo se alcanzó en 2073 (₡12.407.035.081,30), mientras que el valor presente anual máximo se observó en 2064 (₡880.735.150,81), año en el que el crecimiento nominal de los flujos todavía compensaba el efecto del descuento financiero acumulado; a partir de ese punto, el descuento domina y el valor presente decrece de forma sostenida hasta la extinción completa de ambas cohortes alrededor de 2119.
 
-Al desglosar este resultado por sexo, se obtuvo lo siguiente:
+Resulta relevante notar que, aunque el flujo de los pensionados actuales inicia antes en el tiempo, su peso dentro del costo total del plan es comparativamente bajo: representan apenas el 2,35 % del costo nominal y el 16,69 % del costo actuarial total, mientras que los empleados activos concentran el 97,65 % del costo nominal y el 83,31 % del costo actuarial. Esta diferencia se explica porque la cohorte de pensionados actuales es relativamente pequeña y se extingue antes (alrededor de 2083), mientras que los activos constituyen un grupo más numeroso cuyos beneficios, una vez jubilados, se proyectan sobre un horizonte considerablemente más largo (hasta 2119), además de beneficiarse del crecimiento salarial acumulado previo a la jubilación.
 
 ```{=latex}
 \begin{center}
 ```
 
 **Tabla 4**
+
+*Costo nominal y actuarial esperado de las anualidades de pensión, desglosado por tipo de participante*
+
+```{=latex}
+\end{center}
+```
+
+| Componente  |           Costo nominal |   Costo actuarial (VP) |
+|-------------|------------------------:|-----------------------:|
+| Activos     |     ₡420.667.774.047,24 |     ₡24.280.099.546,57 |
+| Pensionados |      ₡10.134.641.885,50 |      ₡4.863.534.671,92 |
+| **Total**   | **₡430.802.415.932,74** | **₡29.143.634.218,50** |
+
+Al desglosar este resultado por sexo, se obtuvo lo siguiente:
+
+```{=latex}
+\begin{center}
+```
+
+**Tabla 5**
 
 *Costo nominal y actuarial esperado de las anualidades de pensión, desglosado por sexo*
 
@@ -619,7 +639,7 @@ Al desglosar este resultado por sexo, se obtuvo lo siguiente:
 |------------|------------------------:|-----------------------:|
 | Mujeres    |     ₡242.687.516.177,41 |     ₡16.994.861.114,90 |
 | Hombres    |     ₡188.114.899.755,33 |     ₡12.148.773.103,60 |
-| **Total**  | **₡430.802.415.932.74** | **₡29.143.634.218,50** |
+| **Total**  | **₡430.802.415.932,74** | **₡29.143.634.218,50** |
 
 Como se mencionó en la sección de análisis estadístico, esta diferencia tiene sentido por la combinación de varios factores: la mayor proporción de mujeres dentro de la población pensionada (55,15 % frente a 44,85 %) y, en menor medida, dentro de la población activa (51,34 % frente a 48,66 %); el salario mensual promedio más alto de las mujeres activas (₡1.088.808,49 frente a ₡960.074,99), que incide directamente en el monto de pensión proyectado al momento de la jubilación; y los factores actuariales propios del modelo, es decir, la edad de jubilación menor para mujeres (63 años frente a 65 años) y su mayor esperanza de vida tanto en la población activa (51,92 frente a 48,28 años) como en la pensionada (16,87 frente a 14,94 años). Esto explica por qué, aun cuando la pensión mensual promedio individual de los hombres pensionados actuales es superior a la de las mujeres (₡205.785,84 frente a ₡187.979,87), el costo actuarial agregado atribuible a las mujeres resulta mayor.
 
@@ -645,11 +665,11 @@ Finalmente, al integrar todos los beneficios analizados, se obtuvo un costo nomi
 
 De acuerdo con lo expuesto en la sección de metodología, apartado "Cálculo de primas por grupo de edad y sexo", se calcularon las primas por grupo de edad y sexo para empleados activos y se obtuvieron los siguientes resultados:
 
- ```{=latex}
+```{=latex}
 \begin{center}
 ```
 
-**Tabla 5**
+**Tabla 6**
 
 *Primas por edad y Sexo*
 
@@ -704,7 +724,7 @@ Empleando el procedimiento descrito en la sección de metodología, apartado "C�
 \begin{center}
 ```
 
-**Tabla 6**
+**Tabla 7**
 
 *Prima media nivelada*
 
@@ -712,10 +732,9 @@ Empleando el procedimiento descrito en la sección de metodología, apartado "C�
 \end{center}
 ```
 
-
 | Valor Presente Actuarial del total de los Costos | Valor Presente Esperado de la Masa salarial total | Prima media |
-|--------------------------------------------------|---------------------------------------------------|-------------|
-| ₡29 730 734 763,35                               | ₡67 646 592 226,38                                | 0,44        |
+|----------------------------|-----------------------------|---------------|
+| ₡29 730 734 763,35 | ₡67 646 592 226,38 | 0,44 |
 
 La columna de VPA del total de los costos representa el valor actuarial de los costos totales calculados para el plan de beneficios. Por su parte, la columna del VP esperado de la masa salarial se obtiene aplicando el procedimiento descrito en la sección de metodología, apartado "Cálculo de primas por grupo de edad y sexo", en el inciso "Valor presente de la masa salarial".
 
@@ -729,10 +748,9 @@ Para el análisis de sensibilidad de las tasas, se calcularon los costos totales
 \begin{center}
 ```
 
-**Tabla 7**
+**Tabla 8**
 
 *Costo Total Nominal por tasa de incremento salarial*
-
 
 ```{=latex}
 \end{center}
@@ -748,7 +766,7 @@ Para el análisis de sensibilidad de las tasas, se calcularon los costos totales
 \begin{center}
 ```
 
-**Tabla 8**
+**Tabla 9**
 
 *Diferencias porcentuales respecto a la tasa original (0,02)*
 
@@ -782,7 +800,7 @@ En el caso de las anualidades de la pensión por vejez, el análisis es similar,
 \begin{center}
 ```
 
-**Tabla 9**
+**Tabla 10**
 
 *Valor presente del Costo Total Actuarial para cada combinación de tasas*
 
@@ -833,7 +851,7 @@ En primera instancia, previo a definir el conjunto de medidas por aplicar, es pr
 \begin{center}
 ```
 
-**Tabla 10**
+**Tabla 11**
 
 *Costo actuarial de los beneficios a empleados*
 
@@ -870,7 +888,7 @@ En segundo lugar, se optó por una rebaja del porcentaje salarial sobre el cual 
 \begin{center}
 ```
 
-**Tabla 11**
+**Tabla 12**
 
 *Actualización de los porcentajes sobre los cuales se calcula la pensión por vejez*
 
@@ -897,7 +915,7 @@ De acuerdo con la Organización Internacional del Trabajo (OIT), en enero de 202
 \begin{center}
 ```
 
-**Tabla 12**
+**Tabla 13**
 
 *Cálculo de los nuevos montos asociados a la pensión por vejez a partir del salario mínimo*
 
@@ -928,7 +946,7 @@ Las medidas aplicadas en este rubro, consistieron en una reducción del porcenta
 \begin{center}
 ```
 
-**Tabla 13**
+**Tabla 14**
 
 *Reducción de la tabla de factores derivados de la antigüedad*
 
@@ -959,7 +977,7 @@ La tabla a continuación detalla, a través del salario mínimo, la suma única 
 \begin{center}
 ```
 
-**Tabla 14**
+**Tabla 15**
 
 *Cálculo de los nuevos montos asociados a la suma única de reconocimiento a partir del salario mínimo*
 
@@ -988,7 +1006,7 @@ La disminuciones planteadas en los apartados arriba, constituyeron una estrategi
 \begin{center}
 ```
 
-**Tabla 15**
+**Tabla 16**
 
 *Cifras obtenidas tras el proceso de reducción de costos*
 
