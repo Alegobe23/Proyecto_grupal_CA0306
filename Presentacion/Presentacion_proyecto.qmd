@@ -19,6 +19,24 @@ format:
                 \setlength{\parskip}{0.8cm}
 ---
 
+## Análisis estadístico
+
+| Grupo       | Total | Mujeres | Hombres | Edad promedio | Esperanza de vida |
+| :---------- | ----: | ------: | ------: | ------------: | ----------------: |
+| Activos     |   224 |     115 |     109 |         36.82 |             50.14 |
+| Pensionados |   165 |      91 |      74 |         72.85 |             16.01 |
+
+
+| Grupo       | Variable principal | Promedio mensual | Flujo anual estimado |
+| :---------- | :----------------- | ---------------: | -------------------: |
+| Activos     | Salario mensual    |    ₡1.026.165,85 |       ₡2.758.333.800 |
+| Pensionados | Pensión mensual    |      ₡195.965,58 |      ₡420.346.166,50 |
+
+- Los **activos** tienen mayor horizonte de exposición.
+- Por eso se modelan transiciones entre **activo, fallecido y jubilado**.
+- Los **pensionados** tienen menor esperanza de vida adicional.
+- Por eso su análisis se concentra en **supervivencia y continuidad de pagos**.
+- Esta caracterización define la base demográfica y financiera del modelo actuarial.
 
 ## Proyección demográfica y muertes de pensionados
 
