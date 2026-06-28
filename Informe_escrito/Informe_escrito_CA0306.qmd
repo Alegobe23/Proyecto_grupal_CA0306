@@ -63,7 +63,7 @@ La esperanza de vida promedio de los empleados activos es de 50,14 años adicion
 ```
 
 | Indicador | Femenino | Masculino | Total |
-|:--:|:--:|:--:|:--:|
+|:----------------:|:----------------:|:----------------:|:----------------:|
 | Cantidad | 115 | 109 | 224 |
 | *Edad promedio* | 37,29 | 36,33 | 36,82 |
 | *Edad mínima* | 24 | 22 | 22 |
@@ -96,7 +96,7 @@ La esperanza de vida promedio de los pensionados es de 16,01 años adicionales. 
 ```
 
 | Indicador | Femenino | Masculino | Total |
-|:--:|:--:|:--:|:--:|
+|:----------------:|:----------------:|:----------------:|:----------------:|
 | *Cantidad* | 91 | 74 | 165 |
 | *Edad promedio* | 72,92 | 72,76 | 72,85 |
 | *Edad mínima* | 57 | 61 | 57 |
@@ -149,8 +149,8 @@ La edad normal de jubilación se definió según el sexo del empleado:
 
 $$ R_s =
 \begin{cases}
-65, & \text{si } s=\text{hombre};\
-63, & \text{si } s=\text{mujer}
+65, \text{si } s=\text{hombre},\
+63, \text{si } s=\text{mujer}
 \end{cases}
 $$
 
@@ -253,8 +253,8 @@ Para incorporar a los empleados activos que se convierten en pensionados, se uti
 $$
 R_s =
 \begin{cases}
-65, & \text{si } s=\text{hombre};\
-63, & \text{si } s=\text{mujer}.
+65,  \text{si } s=\text{hombre};\
+63,  \text{si } s=\text{mujer}.
 \end{cases}
 $$
 
@@ -627,12 +627,12 @@ Finalmente, al integrar todos los beneficios analizados, se obtuvo un costo nomi
 
 # Resultados del análisis de sensibilidad
 
-Para el análisis de sensibilidad de las tasas, se calcularon los costos totales nominales (i.e., la suma de los flujos anuales esperados brutos) y el valor presente actuarial de los costos (i.e., la suma de los flujos anuales esperados traídos a valor presente). Se redujeron y aumentaron en un punto porcentual la tasa de incremento salarial, que era de 2% anual originalmente, y la tasa de descuento, que era de 6,5% anual, para cada beneficio en el plan. El objetivo era observar la tendencia general, cuantificar las diferencias y ofrecer un razonamiento que justifique los resultados.
+Para el análisis de sensibilidad de las tasas, se calcularon los costos totales nominales (i.e., la suma de los flujos anuales esperados brutos) y el valor presente actuarial de los costos (i.e., la suma de los flujos anuales esperados traídos a valor presente) de cada uno de los beneficios del plan. Se redujeron y se aumentaron en un punto porcentual la tasa de incremento salarial, que era de 2% anual originalmente, y la tasa de descuento, que era de 6,5% anual. El objetivo era observar la tendencia general, cuantificar las diferencias y ofrecer un razonamiento que justifique los resultados.
 
 ## Costos Nominales
 
 | Incremento real |          Lump Sum | Beneficio por Muerte |         Anualidades |
-|----------------:|------------------:|---------------------:|--------------------:|
+|-----------------:|-----------------:|-----------------:|-----------------:|
 |            0,01 | ₡2 091 179 011,97 |    ₡1 649 102 590,89 | ₡319 820 252 421,33 |
 |            0,02 | ₡2 736 349 062,19 |    ₡1 649 102 590,89 | ₡430 796 400 185,61 |
 |            0,03 | ₡3 585 210 177,90 |    ₡1 649 102 590,89 | ₡582 165 036 205,87 |
@@ -647,18 +647,24 @@ Para el análisis de sensibilidad de las tasas, se calcularon los costos totales
 
 : Diferencias porcentuales respecto a la tasa original (0,02)
 
+### Beneficio de muerte 
+
 En cuanto a los costos nominales, lo primero que se observa es que los beneficios por muerte son idénticos para toda tasa de incremento salarial. Esto se debe a que dicho beneficio no depende de los salarios, sino únicamente de la edad y el sexo del trabajador o pensionado. Por lo tanto, el análisis se centra en los otros dos beneficios.
+
+### Suma única de reconocimiento (*Lump Sum*)
 
 En el caso del Lump Sum, los costos son menores cuando la tasa de incremento salarial es más baja, con una diferencia negativa de aproximadamente 23,6% respecto al valor original. Al aumentar un punto porcentual la tasa, la diferencia es cercana al 23,7%. De aquí se desprenden dos conclusiones:\
 1. Un incremento salarial real más alto implica mayor poder adquisitivo, mientras que uno más bajo implica menor poder adquisitivo. Bajo el supuesto de tasas constantes, esto se traduce en salarios proyectados más altos o más bajos que los de la tasa original.\
 2. Las diferencias porcentuales son bastante simétricas en magnitud, independientemente de si la tasa aumenta o disminuye.
+
+### Anualidades de la pensión por vejez
 
 En el caso de las anualidades de la pensión por vejez, el análisis es similar, aunque con diferencias más amplias. Cabe señalar que el cambio en el incremento salarial solo afecta a los trabajadores activos, ya que las pensiones se ajustan únicamente por inflación. Al reducir la tasa en un punto porcentual, la diferencia es de aproximadamente -25,8%, mientras que al aumentarla es de +26%. Una explicación plausible es que, al tratarse de pagos mensuales recurrentes, el efecto del cambio se acumula a lo largo de los años, amplificado por el hecho de que la pensión depende del último salario, que es mayor que el considerado en el Lump Sum. En consecuencia, el impacto es más significativo.
 
 ## Cambios en el valor presente de los Costos Actuariales
 
 | Incremento real | Tasa de descuento 0,055 | Tasa de descuento 0,065 | Tasa de descuento 0,075 |
-|---:|---:|---:|---:|
+|-----------------:|-----------------:|-----------------:|-----------------:|
 | **Lump Sum** |  |  |  |
 | 0,01 | ₡523 747 903,46 | ₡416 494 393,98 | ₡333 510 789,82 |
 | 0,02 | ₡668 687 467,62 | ₡529 153 943,49 | ₡421 597 633,70 |
@@ -674,23 +680,21 @@ En el caso de las anualidades de la pensión por vejez, el análisis es similar,
 
 : Valor presente del Costo Total Actuarial para cada combinación de tasas
 
-### Lump Sum
+### Suma única de reconocimiento (*Lump Sum*)
 
 Manteniendo la tasa de incremento original y variando la tasa de descuento en un punto porcentual, la tendencia es la esperada: a mayor tasa de interés, menor es el valor presente de los flujos, y viceversa.
 
-Un comportamiento interesante se observa al movernos en diagonal en el análisis: cuando ambas tasas aumentan simultáneamente, sus efectos se contrarrestan (el mayor descuento reduce los costos, mientras que el mayor incremento salarial los eleva), generando un efecto compensatorio que mantiene los valores relativamente estables. En cambio, en la diagonal opuesta, las tasas se mueven en direcciones contrarias y ambos efectos se suman, produciendo costos más alejados del valor original.
+Un comportamiento interesante se observa al moverse en dirección diagonal en el análisis: cuando ambas tasas aumentan simultáneamente, sus efectos se contrarrestan (el mayor descuento reduce los costos, mientras que el mayor incremento salarial los eleva), generando un efecto compensatorio que mantiene los valores relativamente estables. En cambio, en la diagonal opuesta, las tasas se mueven en direcciones contrarias y ambos efectos se suman, produciendo costos más alejados del valor original.
 
-### Beneficio por Muerte
+### Beneficio de muerte
 
 El análisis es más sencillo: como se explicó antes, los costos no dependen de los salarios. El único factor que los afecta es la tasa de descuento, y la tendencia es siempre a la baja conforme esta aumenta, ya que el dinero pierde más valor anualmente.
 
-### Anualidades de pensión
+### Anualidades de la pensión por vejez
 
 La tendencia frente a cambios en la tasa de descuento es análoga a la del Lump Sum. Sin embargo, las variaciones son mucho mayores debido a que se trata de un flujo recurrente acumulado a lo largo de los años y que representa el mayor porcentaje de los costos totales del plan.
 
-En diagonal, los razonamientos son los mismos que para el Lump Sum, pero las diferencias son más amplias:\
-De izquierda a derecha, las variaciones son menores en magnitud, aunque proporcionalmente más altas que en el Lump Sum.\
-De derecha a izquierda, las diferencias son más significativas y se alejan más del valor original.
+En diagonal, los razonamientos son los mismos que para el Lump Sum, pero las diferencias son más amplias: de izquierda a derecha, las variaciones son menores en magnitud, aunque proporcionalmente más altas que en el Lump Sum; mientras que de derecha a izquierda, las diferencias son más significativas y se alejan más del valor original.
 
 Esto se explica porque en el Lump Sum el descuento se aplica una sola vez, mientras que en las anualidades se aplica cada año sobre cada flujo, amplificando el efecto.
 
@@ -713,7 +717,7 @@ En primera instancia, previo a definir el conjunto de medidas por aplicar, es pr
 ```
 
 |  |  |  |
-|:--:|:--:|:--:|
+|:----------------------:|:----------------------:|:----------------------:|
 | **Beneficio** | **Costo actuarial** | **Porcentaje sobre el costo total** |
 | Seguro de vida para empleados activos | ₡57.946.601,36 | 0.19% |
 | **Beneficio** | **Costo actuarial** | **Porcentaje sobre el costo total** |
@@ -750,7 +754,7 @@ En segundo lugar, se optó por una rebaja del porcentaje salarial sobre el cual 
 ```
 
 |                        |                         |                            |
-|:----------------------:|:-----------------------:|:--------------------------:|
+|:---------------------:|:---------------------:|:------------------------:|
 | **Años de antigüedad** | **Porcentaje anterior** | **Porcentaje actualizado** |
 |         1 - 10         |           0%            |             0%             |
 | **Años de antigüedad** | **Porcentaje anterior** | **Porcentaje actualizado** |
@@ -868,7 +872,7 @@ La disminuciones planteadas en los apartados arriba, constituyeron una estrategi
 ```
 
 |  |  |  |
-|:--:|:--:|:--:|
+|:----------------------:|:----------------------:|:----------------------:|
 | **Beneficio** | **Costo actuarial inicial** | **Costo actuarial actualizado** |
 | Anualidades de las pensiones por vejez | ₡29.143.634.218,50 | ₡26.378.590.023,33 |
 | **Beneficio** | **Costo actuarial inicial** | **Costo actuarial actualizado** |
@@ -879,6 +883,20 @@ La disminuciones planteadas en los apartados arriba, constituyeron una estrategi
 De la tabla se determina que la diferencia entre los costos actuariales reportados antes y después de las medidas de reducción equivale a ₡2 996 391 373.3, superando el monto previsto inicialmente: ₡2 996 389 751, por un total de ₡1 622.3.
 
 # Análisis comparativo
+
+Previo a profundizar en un componente comparativo, es importante recapitular de manera general los resultados obtenidos en cada una de las etapas de desarrollo: el modelo base, el análisis de sensibilidad y la reducción de los costos actuariales.
+
+En primer lugar, el modelo base permitió estimar el costo actuarial del plan de beneficios bajo los supuestos inicialmente establecidos: una inflación de largo plazo del 3% anual, un incremento real de los salarios del 2% por año y una tasa de descuento nominal del 6,5 % anual. A partir de dichos supuestos, se encontró que el valor presente de los costos actuariales fue de *₡*29.963.897.507,40, donde las anualidades de pensión por vejez colaboraron con un costo actuarial de ₡29.634.349.842,37, la suma única de reconocimiento participó con ₡529.153.943,49 y el seguro de vida tanto para empleados activos como para empleados pensionados, contribuyó con un valor presente de ₡291.109.345,41.
+
+En segundo lugar, en el análisis de sensibilidad se calcularon los costos nominales y el valor presente actuarial de los beneficios del plan, implementando una reducción y posteriormente un incremento del 1% en la tasa de incremento salarial y la tasa de descuento. Tras la modificación de la tasa de incremento salarial, se encontró una variación nula del costo nominal asociado al seguro de vida: dicho beneficio depende únicamente de la edad y el sexo del asegurado. En el caso del Lump Sum, los costos nominales son menores cuando la tasa de incremento salarial es más baja y son mayores cuando la tasa de incremento salarial es más alta, con diferencias bastante simétricas. En el caso de las anualidades de la pensión por vejez, el análisis es similar: la presencia de costos nominales más bajos al reducir la tasa de incremento salarial y la presencia de costos nominales más altos al aumentar la tasa de incremento salarial, asimismo, las diferencias son casi idénticas. Ahora, al mantener la tasa de incremento salarial preestablecida y variando la tasa de descuento se encontró que los comportamientos del Lump Sum, las anualidades de pensión por vejez y el seguro de vida, son los esperados: a mayor tasa de descuento, menor es el valor presente de los flujos, y viceversa. Al variar simultáneamente ambas tasas se encontró lo siguiente para el Lump Sum y las anualidades de pensión por vejez: cuando ambas tasas aumentan, sus efectos se contrarrestan; en cambio, cuando las tasas se mueven en direcciones contrarias, ambos efectos se suman produciendo costos más alejados del valor original.
+
+En tercer lugar, el proceso de reducción de costos se enfocó principalmente en los beneficios de mayor peso: las anualidades de la pensión por vejez y el Lump Sum. La reducción se efectuó por un 10% del costo actuarial reportado inicialmente, resultando en una disminución de ₡2.996.389.751. Dicha cifra se alcanzó a partir de la disminución del periodo garantizado de las pensiones por vejez, la reducción de los porcentajes utilizados para calcular la pensión, la disminución del porcentaje salarial sobre el cual se calcula el Lump Sum y la baja de los factores de multiplicación asociados al Lump Sum.
+
+Al comparar los tres escenarios analizados, se observa que el comportamiento de los costos actuariales está determinado en su mayoría por las anualidades de las pensión por vejez. En el modelo base, este beneficio concentra más del 97% del costo total, lo anterior se refleja de igual manera en el análisis de sensibilidad, donde las mayores variaciones se producen precisamente en este componente cuando cambian la tasa de incremento salarial o la tasa de descuento. En contraste, la suma única de reconocimiento presenta cambios de menor magnitud y los beneficios por fallecimiento muestran una variación aún más reducida, ya que estos últimos solo responden a modificaciones en la tasa de descuento. Así, se determina que la estructura del valor presente del costo actuarial de los beneficios se conserva en los distintos escenarios: las anualidades de la pensión por vejez continúan siendo el elemento con mayor influencia, mientras que los demás beneficios mantienen una participación mucho menor.
+
+La comparación entre el modelo base y el proceso de reducción de los costos actuariales muestra que las medidas planteadas concuerdan con los resultados obtenidos en el análisis previo. En lugar de aplicar reducciones uniformes a todos los beneficios, las modificaciones se concentraron en aquellos beneficios que tenían una mayor incidencia sobre el costo actuarial, lo que permitió alcanzar la disminución del 10% sin alterar el seguro de vida, cuyo aporte al costo total es inferior al 1%. Asimismo, el análisis de sensibilidad confirma la importancia de las anualidades dentro del plan, ya que este beneficio es el que experimenta las mayores variaciones cuando cambian los supuestos financieros.
+
+En síntesis la comparación de las tres etapas de desarollo evidencia que la identificación de los beneficios con mayor incidencia sobre el costo actuarial constituye un elemento fundamental para la toma de decisiones. Asimismo, se reafirma la importancia de estudiar la sensibilidad de los elementos bajo estudio respecto a los diversos supuestos financieros, ya que esto permite identificar los aspectos que podrían disparar los costos actuariales asociados a los beneficios otorgados, en consecuencia, las decisiones tomadas en torno a la reducción de costos podrían realizarse desde un mayor conocimiento.
 
 # Conclusiones
 
@@ -901,6 +919,8 @@ A partir de lo desarrollado en los apartados anteriores, se construye una serie 
 -   Si bien se reconoce la necesidad de procurar la sostenibilidad financiera de las empresas aseguradoras, se recomienda que cualquier estrategia orientada a la reducción de costos mantenga un equilibrio entre el rubro mencionado y la protección de los derechos e intereses de la población beneficiaria. Pese a que es requerido adoptar una perspectiva empresarial que promueva el uso eficiente de los recursos, también es indispensable reconocer que las medidas de ajuste recaen sobre beneficios de gran relevancia para las personas, tales como la pensión por vejez, el seguro de vida y otros mecanismos de protección.
 
 -   Se resalta la importancia de identificar los elementos o las variables que potencialmente podrían disparar el costo de las obligaciones que las aseguradoras deben cubrir. Así, se recomienda evaluar el efecto que tienen los cambios en los principales supuestos actuariales: la tasa de descuento, la mortalidad, el crecimiento salarial y la inflación, sobre el costo actuarial de los planes de beneficio, con el objetivo de fortalecer la toma de decisiones y resguardar de esta forma la capacidad de pago de la aseguradora.
+
+    \newpage
 
 # Referencias
 
