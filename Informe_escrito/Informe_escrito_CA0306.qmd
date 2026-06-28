@@ -603,6 +603,18 @@ En cuanto a las anualidades de pensión, se obtuvo el componente de mayor peso d
 
 Al desglosar este resultado por sexo, se obtuvo lo siguiente:
 
+```{=latex}
+\begin{center}
+```
+
+**Tabla 4**
+
+*Costo nominal y actuarial esperado de las anualidades de pensión, desglosado por sexo*
+
+```{=latex}
+\end{center}
+```
+
 | Componente |           Costo nominal |   Costo actuarial (VP) |
 |------------|------------------------:|-----------------------:|
 | Mujeres    |     ₡242.687.516.177,41 |     ₡16.994.861.114,90 |
@@ -637,7 +649,7 @@ De acuerdo con lo expuesto en la sección de metodología, apartado "Cálculo de
 \begin{center}
 ```
 
-**Tabla 4**
+**Tabla 5**
 
 *Primas por edad y Sexo*
 
@@ -692,7 +704,7 @@ Empleando el procedimiento descrito en la sección de metodología, apartado "C�
 \begin{center}
 ```
 
-**Tabla 5**
+**Tabla 6**
 
 *Prima media nivelada*
 
@@ -717,9 +729,10 @@ Para el análisis de sensibilidad de las tasas, se calcularon los costos totales
 \begin{center}
 ```
 
-**Tabla 5**
+**Tabla 7**
 
--   Costo Total Nominal por tasa de incremento salarial\*
+*Costo Total Nominal por tasa de incremento salarial*
+
 
 ```{=latex}
 \end{center}
@@ -735,7 +748,7 @@ Para el análisis de sensibilidad de las tasas, se calcularon los costos totales
 \begin{center}
 ```
 
-**Tabla 6**
+**Tabla 8**
 
 *Diferencias porcentuales respecto a la tasa original (0,02)*
 
@@ -769,7 +782,7 @@ En el caso de las anualidades de la pensión por vejez, el análisis es similar,
 \begin{center}
 ```
 
-**Tabla 7**
+**Tabla 9**
 
 *Valor presente del Costo Total Actuarial para cada combinación de tasas*
 
@@ -820,7 +833,7 @@ En primera instancia, previo a definir el conjunto de medidas por aplicar, es pr
 \begin{center}
 ```
 
-**Tabla 8**
+**Tabla 10**
 
 *Costo actuarial de los beneficios a empleados*
 
@@ -857,7 +870,7 @@ En segundo lugar, se optó por una rebaja del porcentaje salarial sobre el cual 
 \begin{center}
 ```
 
-**Tabla 9**
+**Tabla 11**
 
 *Actualización de los porcentajes sobre los cuales se calcula la pensión por vejez*
 
@@ -884,7 +897,7 @@ De acuerdo con la Organización Internacional del Trabajo (OIT), en enero de 202
 \begin{center}
 ```
 
-**Tabla 10**
+**Tabla 12**
 
 *Cálculo de los nuevos montos asociados a la pensión por vejez a partir del salario mínimo*
 
@@ -915,7 +928,7 @@ Las medidas aplicadas en este rubro, consistieron en una reducción del porcenta
 \begin{center}
 ```
 
-**Tabla 11**
+**Tabla 13**
 
 *Reducción de la tabla de factores derivados de la antigüedad*
 
@@ -946,7 +959,7 @@ La tabla a continuación detalla, a través del salario mínimo, la suma única 
 \begin{center}
 ```
 
-**Tabla 12**
+**Tabla 14**
 
 *Cálculo de los nuevos montos asociados a la suma única de reconocimiento a partir del salario mínimo*
 
@@ -975,7 +988,7 @@ La disminuciones planteadas en los apartados arriba, constituyeron una estrategi
 \begin{center}
 ```
 
-**Tabla 13**
+**Tabla 15**
 
 *Cifras obtenidas tras el proceso de reducción de costos*
 
