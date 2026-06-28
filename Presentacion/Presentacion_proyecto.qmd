@@ -387,6 +387,73 @@ Aunque la pensión mensual promedio individual de los hombres pensionados es may
 \raggedright\small
 La VPA del total de los costos representa el valor actuarial de los costos totales del plan de beneficios. El VP de la masa salarial total se obtiene calculando las proyecciones salariales segmentadas por grupo de edad y sexo.
 
+
+## Análisis de sensibilidad a las tasas
+
+
+\vspace*{1 cm}
+
+:::: {.columns}
+
+::: {.column width="60%"}
+\scriptsize
+:::: {.columns}
+::: {.column width="50%"}
+
+| Incremento real |          Lump Sum | Beneficio por Muerte |         Anualidades |
+|-----------------:|-----------------:|-----------------:|-----------------:|
+|            0,01 | ₡2 091 179 011,97 |    ₡1 649 102 590,89 | ₡319 820 252 421,33 |
+|            0,02 | ₡2 736 349 062,19 |    ₡1 649 102 590,89 | ₡430 796 400 185,61 |
+|            0,03 | ₡3 585 210 177,90 |    ₡1 649 102 590,89 | ₡582 165 036 205,87 |
+:::
+
+::: {.column width="50%"}
+
+| Incremento real | Tasa de descuento 0,055 | Tasa de descuento 0,065 | Tasa de descuento 0,075 |
+|-----------------:|-----------------:|-----------------:|-----------------:|
+| **Lump Sum** |  |  |  |
+| 0,01 | ₡523 747 903,46 | ₡416 494 393,98 | ₡333 510 789,82 |
+| 0,02 | ₡668 687 467,62 | ₡529 153 943,49 | ₡421 597 633,70 |
+| 0,03 | ₡855 851 552,72 | ₡674 107 218,11 | ₡534 516 210,04 |
+| **Beneficio por Muerte** |  |  |  |
+| 0,01 | ₡348 291 949,35 | ₡291 109 345,41 | ₡248 632 523,80 |
+| 0,02 | ₡348 291 949,35 | ₡291 109 345,41 | ₡248 632 523,80 |
+| 0,03 | ₡348 291 949,35 | ₡291 109 345,41 | ₡248 632 523,80 |
+| **Anualidades** |  |  |  |
+| 0,01 | ₡32 449 412 579,06 | ₡23 284 360 686,74 | ₡17 168 098 907,41 |
+| 0,02 | ₡41 245 598 095,43 | ₡29 139 619 674,00 | ₡21 123 731 917,53 |
+| 0,03 | ₡53 003 012 052,02 | ₡36 935 165 986,30 | ₡26 368 938 489,19 |
+:::
+::::
+:::
+
+::: {.column width="40%"}
+\small
+
+* **Sensibilidad diferenciada de los beneficios:** El beneficio de muerte se mantiene estable frente a cambios en las tasas, porque no depende de los salarios.
+En cambio, el lump sum y las anualidades sí responden directamente al incremento salarial y al descuento, mostrando variaciones claras en los costos.
+
+
+<br>
+
+* **Impacto acumulativo de las anualidades:** Las **anualidades de pensión** son las más sensibles, ya que se pagan de forma recurrente durante muchos años.
+Esto amplifica el efecto de cualquier cambio en las tasas, mucho más que en el lump sum, que es un pago único.
+
+<br>
+
+* **Efectos compensatorios y extremos:** Cuando las **tasas de incremento salarial** y de **descuento** cambian en la misma dirección, sus efectos tienden a **compensarse**.
+Cuando cambian en **direcciones opuestas**, las **variaciones se amplifican**, generando las mayores diferencias en los costos totales del plan.
+:::
+
+::::
+
+
+
+
+
+
+
+
 ## Reducción de los costos actuariales 
 ###
 - El **costo actuarial** de los beneficios representa un monto de **₡29 963 897 507.40**, la **reducción** que se pretende efectuar tiene un valor de **₡2 996 389 751**.\vspace{0.3cm}
