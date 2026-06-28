@@ -50,7 +50,6 @@ Desde el punto de vista salarial, el salario mensual promedio total es de aproxi
 
 La esperanza de vida promedio de los empleados activos es de 50,14 años adicionales. Las mujeres presentan una esperanza de vida promedio de 51,92 años y los hombres de 48,28 años. Este resultado es coherente con el comportamiento esperado de mortalidad, donde usualmente las mujeres presentan mayor supervivencia esperada que los hombres. Esta variable es fundamental para la proyección demográfica, ya que permite estimar el horizonte de exposición a eventos como muerte, permanencia activa y jubilación.
 
-
 ```{=latex}
 \begin{center}
 ```
@@ -64,7 +63,7 @@ La esperanza de vida promedio de los empleados activos es de 50,14 años adicion
 ```
 
 | Indicador | Femenino | Masculino | Total |
-|-------------------|-----------------:|-----------------:|-----------------:|
+|------------------|-----------------:|-----------------:|-----------------:|
 | Cantidad | 115 | 109 | 224 |
 | Edad promedio | 37,29 | 36,33 | 36,82 |
 | Edad mínima | 24 | 22 | 22 |
@@ -97,7 +96,7 @@ La esperanza de vida promedio de los pensionados es de 16,01 años adicionales. 
 ```
 
 | Indicador | Femenino | Masculino | Total |
-|-------------------|-----------------:|-----------------:|-----------------:|
+|------------------|-----------------:|-----------------:|-----------------:|
 | Cantidad | 91 | 74 | 165 |
 | Edad promedio | 72,92 | 72,76 | 72,85 |
 | Edad mínima | 57 | 61 | 57 |
@@ -164,7 +163,7 @@ $$
 D_{i,t}=L_{i,t}q_{x_i}.
 $$
 
-Donde (D_{i,t}) representa las muertes esperadas del empleado (i) en el año (t), (L_{i,t}) representa la probabilidad de que el empleado permanezca activo al inicio del año y (q_{x_i}) corresponde a la probabilidad inicial de muerte obtenida de la tabla SP-2015.
+Donde (D\_{i,t}) representa las muertes esperadas del empleado (i) en el año (t), (L\_{i,t}) representa la probabilidad de que el empleado permanezca activo al inicio del año y (q\_{x_i}) corresponde a la probabilidad inicial de muerte obtenida de la tabla SP-2015.
 
 La cantidad esperada de sobrevivientes se calculó como
 
@@ -178,7 +177,7 @@ $$
 L_{i,t+1}=S_{i,t}-J_{i,t}.
 $$
 
-Donde (J_{i,t}) representa la salida esperada por jubilación. De esta forma, la transición anual de empleados activos se resumió mediante la relación entre activos al inicio, muertes esperadas, jubilaciones esperadas y activos al cierre.
+Donde (J\_{i,t}) representa la salida esperada por jubilación. De esta forma, la transición anual de empleados activos se resumió mediante la relación entre activos al inicio, muertes esperadas, jubilaciones esperadas y activos al cierre.
 
 Finalmente, los resultados individuales se agregaron por año y sexo. Para cada año proyectado se obtuvo la cantidad esperada de activos al inicio, muertes esperadas, jubilaciones esperadas y activos al cierre, separados entre mujeres, hombres y total. Esta estructura permitió analizar la evolución demográfica de la población activa y generar las tablas y gráficos correspondientes del modelo.
 
@@ -491,8 +490,7 @@ El costo nominal esperado de cada beneficio se calculó como la suma simple de s
 
 $$
 CN_k=\sum_{t=0}^{n} F_{k,t},
-$$
-donde $(CN_k)$ representa el costo nominal esperado del beneficio $(k)$, $(F_{k,t})$ es el flujo esperado del beneficio en el año $(t)$, y $(n)$ es el horizonte de proyección.
+$$ donde $(CN_k)$ representa el costo nominal esperado del beneficio $(k)$, $(F_{k,t})$ es el flujo esperado del beneficio en el año $(t)$, y $(n)$ es el horizonte de proyección.
 
 Sin embargo, el costo nominal no considera el valor del dinero en el tiempo. Por esta razón, se calculó también el costo actuarial en valor presente. Sea $(i)$ la tasa efectiva anual de descuento y
 
@@ -558,17 +556,17 @@ La componente del VPA de los costos ya ha sido abordada previamente; lo único a
 
 Para la componente del denominador se aplicó la siguiente metodología:
 
-1. Del salario mensual actual de cada persona se obtuvo el salario anual actual multiplicando por 13 (incluyendo el aguinaldo).  
-2. A partir del cálculo anual a la fecha de corte, se proyecta el salario anual esperado por grupo para el año $2025+k$:
+1.  Del salario mensual actual de cada persona se obtuvo el salario anual actual multiplicando por 13 (incluyendo el aguinaldo).\
+2.  A partir del cálculo anual a la fecha de corte, se proyecta el salario anual esperado por grupo para el año $2025+k$:
 
 $$
 S_{2025+k} = S_{\text{corte}} \cdot (1+g)^k \cdot {}_k p_x
 $$
 
-donde:  
-$S_{2025+k}$: salario anual esperado del grupo en el año $2025+k$.  
-$S_{\text{corte}}$: salario anual del grupo a la fecha de corte.  
-$g = (1+\text{inflación})(1+\text{incremento real}) - 1$: crecimiento nominal del salario por año.  
+donde:\
+$S_{2025+k}$: salario anual esperado del grupo en el año $2025+k$.\
+$S_{\text{corte}}$: salario anual del grupo a la fecha de corte.\
+$g = (1+\text{inflación})(1+\text{incremento real}) - 1$: crecimiento nominal del salario por año.\
 ${}_k p_x$: probabilidad de sobrevivencia del grupo hasta el año $2025+k$.
 
 ### Valor presente de la masa salarial
@@ -579,9 +577,9 @@ $$
 VP\left(\text{Masa salarial}\right) = \sum_{k=0}^{T-1} v^k \cdot S_{2025+k}
 $$
 
-donde:  
-$T$: número de años faltantes para la jubilación del grupo.  
-$v = \frac{1}{1+i}$: factor de descuento anual, con $i$ la tasa de interés.  
+donde:\
+$T$: número de años faltantes para la jubilación del grupo.\
+$v = \frac{1}{1+i}$: factor de descuento anual, con $i$ la tasa de interés.
 
 Esta metodología para la masa salarial es análoga al cálculo de una anualidad.
 
@@ -593,7 +591,7 @@ $$
 \text{Prima media nivelada} = \frac{VPA\left(\text{Costos Actuariales totales}\right)}{VP\left(\text{Masa salarial total}\right)}
 $$
 
-Para la obtención del valor presente de la masa salarial se sumaron las masas salariales de todos los grupos de empleados activos.  
+Para la obtención del valor presente de la masa salarial se sumaron las masas salariales de todos los grupos de empleados activos.\
 En cuanto a los costos, se tomó en cuenta el VPA total del plan de beneficios para toda la población (activos y pensionados).
 
 # Resultados obtenidos
@@ -632,67 +630,68 @@ Finalmente, al integrar todos los beneficios analizados, se obtuvo un costo nomi
 
 Para el análisis de sensibilidad de las tasas, se calcularon los costos totales nominales (i.e., la suma de los flujos anuales esperados brutos) y el valor presente actuarial de los costos (i.e., la suma de los flujos anuales esperados traídos a valor presente) al reducir y aumentar en un punto porcentual la tasa de incremento salarial (2% anual originalmente) y la tasa de descuento (6,5% anual) para cada beneficio en el plan. El objetivo fue observar la tendencia general, cuantificar las diferencias y ofrecer un razonamiento que justifique los resultados.
 
-
 ## Costos Nominales
 
-| Incremento real | Lump Sum             | Beneficio por Muerte | Anualidades             |
-|----------------:|---------------------:|---------------------:|------------------------:|
-| 0,01            | ₡2 091 179 011,97    | ₡1 649 102 590,89    | ₡319 820 252 421,33     |
-| 0,02            | ₡2 736 349 062,19    | ₡1 649 102 590,89    | ₡430 796 400 185,61     |
-| 0,03            | ₡3 585 210 177,90    | ₡1 649 102 590,89    | ₡582 165 036 205,87     |
+| Incremento real |          Lump Sum | Beneficio por Muerte |         Anualidades |
+|-----------------:|-----------------:|-----------------:|-----------------:|
+|            0,01 | ₡2 091 179 011,97 |    ₡1 649 102 590,89 | ₡319 820 252 421,33 |
+|            0,02 | ₡2 736 349 062,19 |    ₡1 649 102 590,89 | ₡430 796 400 185,61 |
+|            0,03 | ₡3 585 210 177,90 |    ₡1 649 102 590,89 | ₡582 165 036 205,87 |
 
 : Costo Total Nominal por tasa de incremento salarial
 
 | Incremento real | Lump Sum | Beneficio por Muerte | Anualidades |
 |----------------:|---------:|---------------------:|------------:|
-| 0,01            | 23,6%    | 0%                   | 25,8%       |
-| 0,02            | 0%       | 0%                   | 0%          |
-| 0,03            | 23,7%    | 0%                   | 26,0%       |
+|            0,01 |    23,6% |                   0% |       25,8% |
+|            0,02 |       0% |                   0% |          0% |
+|            0,03 |    23,7% |                   0% |       26,0% |
 
 : Diferencias porcentuales respecto a la tasa original (0,02)
 
 En cuanto a los costos nominales, lo primero que se observa es que los beneficios por muerte son idénticos para toda tasa de incremento salarial. Esto se debe a que dicho beneficio no depende de los salarios, sino únicamente de la edad y el sexo del trabajador o pensionado. Por lo tanto, el análisis se centra en los otros dos beneficios.
 
-En el caso del **Lump Sum**, los costos son menores cuando la tasa de incremento salarial es más baja, con una diferencia negativa de aproximadamente 23,6% respecto al valor original. Al aumentar un punto porcentual la tasa, la diferencia es cercana al 23,7%. De aquí se desprenden dos conclusiones:  
-1. Un incremento salarial real más alto implica mayor poder adquisitivo, mientras que uno más bajo implica menor poder adquisitivo. Bajo el supuesto de tasas constantes, esto se traduce en salarios proyectados más altos o más bajos que los de la tasa original.  
+En el caso del **Lump Sum**, los costos son menores cuando la tasa de incremento salarial es más baja, con una diferencia negativa de aproximadamente 23,6% respecto al valor original. Al aumentar un punto porcentual la tasa, la diferencia es cercana al 23,7%. De aquí se desprenden dos conclusiones:\
+1. Un incremento salarial real más alto implica mayor poder adquisitivo, mientras que uno más bajo implica menor poder adquisitivo. Bajo el supuesto de tasas constantes, esto se traduce en salarios proyectados más altos o más bajos que los de la tasa original.\
 2. Las diferencias porcentuales son bastante simétricas en magnitud, independientemente de si la tasa aumenta o disminuye.
 
 En el caso de las **Anualidades**, el análisis es similar, aunque con diferencias más amplias. Cabe señalar que el cambio en el incremento salarial solo afecta a los trabajadores activos, ya que las pensiones se ajustan únicamente por inflación. Al reducir la tasa en un punto porcentual, la diferencia es de aproximadamente -25,8%, mientras que al aumentarla es de +26%. Una explicación plausible es que, al tratarse de pagos mensuales recurrentes, el efecto del cambio se acumula a lo largo de los años, amplificado por el hecho de que la pensión depende del último salario, que es mayor que el considerado en el Lump Sum. En consecuencia, el impacto es más significativo.
 
-
 ## Cambios en el valor presente de los Costos Actuariales
 
 | Incremento real | Tasa de descuento 0,055 | Tasa de descuento 0,065 | Tasa de descuento 0,075 |
-|----------------:|------------------------:|------------------------:|------------------------:|
-| **Lump Sum**    |                         |                         |                         |
-| 0,01            | ₡523 747 903,46         | ₡416 494 393,98         | ₡333 510 789,82         |
-| 0,02            | ₡668 687 467,62         | ₡529 153 943,49         | ₡421 597 633,70         |
-| 0,03            | ₡855 851 552,72         | ₡674 107 218,11         | ₡534 516 210,04         |
-| **Beneficio por Muerte** |                |                         |                         |
-| 0,01            | ₡348 291 949,35         | ₡291 109 345,41         | ₡248 632 523,80         |
-| 0,02            | ₡348 291 949,35         | ₡291 109 345,41         | ₡248 632 523,80         |
-| 0,03            | ₡348 291 949,35         | ₡291 109 345,41         | ₡248 632 523,80         |
-| **Anualidades** |                         |                         |                         |
-| 0,01            | ₡32 449 412 579,06      | ₡23 284 360 686,74      | ₡17 168 098 907,41      |
-| 0,02            | ₡41 245 598 095,43      | ₡29 139 619 674,00      | ₡21 123 731 917,53      |
-| 0,03            | ₡53 003 012 052,02      | ₡36 935 165 986,30      | ₡26 368 938 489,19      |
+|-----------------:|-----------------:|-----------------:|-----------------:|
+| **Lump Sum** |  |  |  |
+| 0,01 | ₡523 747 903,46 | ₡416 494 393,98 | ₡333 510 789,82 |
+| 0,02 | ₡668 687 467,62 | ₡529 153 943,49 | ₡421 597 633,70 |
+| 0,03 | ₡855 851 552,72 | ₡674 107 218,11 | ₡534 516 210,04 |
+| **Beneficio por Muerte** |  |  |  |
+| 0,01 | ₡348 291 949,35 | ₡291 109 345,41 | ₡248 632 523,80 |
+| 0,02 | ₡348 291 949,35 | ₡291 109 345,41 | ₡248 632 523,80 |
+| 0,03 | ₡348 291 949,35 | ₡291 109 345,41 | ₡248 632 523,80 |
+| **Anualidades** |  |  |  |
+| 0,01 | ₡32 449 412 579,06 | ₡23 284 360 686,74 | ₡17 168 098 907,41 |
+| 0,02 | ₡41 245 598 095,43 | ₡29 139 619 674,00 | ₡21 123 731 917,53 |
+| 0,03 | ₡53 003 012 052,02 | ₡36 935 165 986,30 | ₡26 368 938 489,19 |
 
 : Valor presente del Costo Total Actuarial para cada combinación de tasas
 
 ### Lump Sum
-Manteniendo la tasa de incremento original y variando la tasa de descuento en un punto porcentual, la tendencia es la esperada: a mayor tasa de interés, menor es el valor presente de los flujos, y viceversa.  
+
+Manteniendo la tasa de incremento original y variando la tasa de descuento en un punto porcentual, la tendencia es la esperada: a mayor tasa de interés, menor es el valor presente de los flujos, y viceversa.
 
 Un comportamiento interesante se observa al movernos en diagonal en el análisis: cuando ambas tasas aumentan simultáneamente, sus efectos se contrarrestan (el mayor descuento reduce los costos, mientras que el mayor incremento salarial los eleva), generando un efecto compensatorio que mantiene los valores relativamente estables. En cambio, en la diagonal opuesta, las tasas se mueven en direcciones contrarias y ambos efectos se suman, produciendo costos más alejados del valor original.
 
 ### Beneficio por Muerte
+
 El análisis es más sencillo: como se explicó antes, los costos no dependen de los salarios. El único factor que los afecta es la tasa de descuento, y la tendencia es siempre a la baja conforme esta aumenta, ya que el dinero pierde más valor anualmente.
 
 ### Anualidades de pensión
-La tendencia frente a cambios en la tasa de descuento es análoga a la del Lump Sum. Sin embargo, las variaciones son mucho mayores debido a que se trata de un flujo recurrente acumulado a lo largo de los años y que representa el mayor porcentaje de los costos totales del plan.  
 
-En diagonal, los razonamientos son los mismos que para el Lump Sum, pero las diferencias son más amplias:  
-De izquierda a derecha, las variaciones son menores en magnitud, aunque proporcionalmente más altas que en el Lump Sum.  
-De derecha a izquierda, las diferencias son más significativas y se alejan más del valor original.  
+La tendencia frente a cambios en la tasa de descuento es análoga a la del Lump Sum. Sin embargo, las variaciones son mucho mayores debido a que se trata de un flujo recurrente acumulado a lo largo de los años y que representa el mayor porcentaje de los costos totales del plan.
+
+En diagonal, los razonamientos son los mismos que para el Lump Sum, pero las diferencias son más amplias:\
+De izquierda a derecha, las variaciones son menores en magnitud, aunque proporcionalmente más altas que en el Lump Sum.\
+De derecha a izquierda, las diferencias son más significativas y se alejan más del valor original.
 
 Esto se explica porque en el Lump Sum el descuento se aplica una sola vez, mientras que en las anualidades se aplica cada año sobre cada flujo, amplificando el efecto.
 
@@ -719,15 +718,15 @@ En primera instancia, previo a definir el conjunto de medidas por aplicar, es pr
 | **Beneficio** | **Costo actuarial** | **Porcentaje sobre el costo total** |
 | Seguro de vida para empleados activos | ₡57 946 601.36 | 0.19% |
 | **Beneficio** | **Costo actuarial** | **Porcentaje sobre el costo total** |
-| Seguro de vida para empleados pensionados | ₡233 162 744.05 | 0.77% |
+| Seguro de vida para empleados pensionados | ₡233 162 744.05 | 0.78% |
 | **Beneficio** | **Costo actuarial** | **Porcentaje sobre el costo total** |
-| Anualidades de las pensiones por vejez | ₡29 634 349 842.37 | 97.31% |
+| Anualidades de las pensiones por vejez | ₡29 143 634 218.50 | 97.26% |
 | **Beneficio** | **Costo actuarial** | **Porcentaje sobre el costo total** |
-| Suma única de reconocimiento | ₡529 153 943.49 | 1.74% |
+| Suma única de reconocimiento | ₡529 153 943.49 | 1.77% |
 | **Beneficio** | **Costo actuarial** | **Porcentaje sobre el costo total** |
-| *Total reportado* | *₡*30 454 613 131.27 | *100%* |
+| *Total reportado* | *₡*29 963 897 507.40 | *100%* |
 
-En vista de que el costo actuarial de los beneficios otorgados a empleados representa un monto de ₡30 454 613 131.27, la reducción que se pretende efectuar tiene un valor de ₡3 045 461 313. Además, se identifica que los tres rubros con mayor participación en el costo total son las anualidades de las pensiones por vejez con un 97.31%, la suma única de reconocimiento con un 1.74% y el seguro de vida para empleados pensionados con un 0.77%. Es posible percatarse de que un porcentaje cercano a la totalidad del costo reportado se concentra en las anualidades de las pensiones por vejez, los demás beneficios solo reúnen un 2.69% del costo total, de manera que el mayor porcentaje de reducción deberá aplicarse al primer ámbito mencionado.
+En vista de que el costo actuarial de los beneficios otorgados a empleados representa un monto de *₡*29 963 897 507.40, la reducción que se pretende efectuar tiene un valor de ₡2 996 389 751. Además, se identifica que los tres rubros con mayor participación en el costo total son las anualidades de las pensiones por vejez con un 97.26%, la suma única de reconocimiento con un 1.77% y el seguro de vida para empleados pensionados con un 0.78%. Es posible percatarse de que un porcentaje cercano a la totalidad del costo reportado se concentra en las anualidades de las pensiones por vejez, los demás beneficios solo reúnen un 2.74% del costo total, de manera que el mayor porcentaje de reducción deberá aplicarse al primer ámbito mencionado.
 
 Posterior a la consideración del escenario anterior, se decidió emprender reducciones en dos beneficios particulares: las pensiones por vejez y la suma única de reconocimiento. Se excluyó el seguro de vida puesto que el costo actuarial derivado de su extensión es considerablemente bajo, de manera que no resulta esencial disminuir dicho monto con tal de alcanzar el porcentaje objetivo. Las metodología detrás del proceso de reducción en cada rubro responde a consideraciones distintas; se procede a detallar a continuación el procedimiento trazado.
 
@@ -735,30 +734,9 @@ Posterior a la consideración del escenario anterior, se decidió emprender redu
 
 La reducción del costo actuarial de las pensiones por vejez constituye un elemento sumamente delicado, puesto que dicho proceso involucra aspectos relacionados de manera directa con la calidad de vida de las personas durante su tercera edad. En consideración de esto, se procuró aplicar medidas reductivas con el menor impacto posible sobre el bienestar de la mayoría de la población cubierta.
 
-Los mecanismos aplicados repercuten en dos elementos: el periodo por el que las pensiones están garantizadas y el porcentaje del salario sobre el cual se calculan las pensiones. En primer lugar, se determinó que la reducción del tiempo en el que se garantizan las pensiones corresponde a una solución viable, dado que el efecto asociado a su práctica se concentra en una población reducida. Las estimaciones desarrolladas mostraron que la esperanza de vida de los pensionados es de aproximadamente 15.94 años, por lo que en general, las personas viven más de cinco años tras pensionarse. La disminución se efectuó por dos años, así, las pensiones pasaron de garantizarse por cinco años a garantizarse por solo tres años.
+Los mecanismos aplicados repercuten en dos elementos: el periodo por el que las pensiones están garantizadas y el porcentaje del salario sobre el cual se calculan las pensiones. En primer lugar, se determinó que la reducción del tiempo en el que se garantizan las pensiones corresponde a una solución viable, dado que el efecto asociado a su práctica se concentra en una población reducida. Las estimaciones desarrolladas mostraron que la esperanza de vida de los pensionados es de aproximadamente 16 años, por lo que en general, las personas viven más de cinco años tras pensionarse. La disminución se efectuó por tres años, así, las pensiones pasaron de garantizarse por cinco años a garantizarse por solo dos años.
 
-```{=latex}
-\begin{center}
-```
-
-**Tabla**
-
-*Esperanza de vida de la población bajo estudio*
-
-```{=latex}
-\end{center}
-```
-
-|                       |                       |                           |
-|:---------------------:|:---------------------:|:-------------------------:|
-| **Esperanza de vida** | **Empleados activos** | **Empleados pensionados** |
-|       *Mujeres*       |         51.81         |           15.71           |
-| **Esperanza de vida** | **Empleados activos** | **Empleados pensionados** |
-|       *Hombres*       |         48.17         |           16.22           |
-| **Esperanza de vida** | **Empleados activos** | **Empleados pensionados** |
-|       *General*       |         50.04         |           15.94           |
-
-En segundo lugar, se optó por una rebaja de 1.5 puntos porcentuales del porcentaje salarial sobre el cual se calculan las pensiones por vejez, aplicada a cada tramo de antigüedad. Si bien, tal medida impacta de forma negativa los ingresos percibidos por las personas pensionadas para satisfacer sus necesidades, se procuró que la reducción se hiciera por el menor porcentaje posible. Además, la decisión de reducir el porcentaje de los tramos en igual medida, no solo responde a un sentido de igualdad, sino que también procura preservar el incentivo para que los empleados permanezcan en condición de activos por periodos más extensos; lo cual representa el escenario contrario al caso en que se decidiera aplicar una reducción regida por la equidad, disminuyendo en mayor medida los porcentajes más altos y en menor medida los porcentajes más pequeños: los sujetos tras percibir que las pensiones con porcentajes elevados reciben los mayores impactos de las medidas reduccionistas, abandonarían la motivación de mantenerse como empleados activos por lapsos más prolongados, con el objetivo de acceder a pensiones con un mejor pago. La tabla extendida a continuación muestra los porcentajes actualizados posterior a la aplicación de la alternativa planteada.
+En segundo lugar, se optó por una rebaja del porcentaje salarial sobre el cual se calculan las pensiones por vejez, aplicada a cada tramo de antigüedad. En primera instancia se definió un nuevo porcentaje máximo: los empleados que acumulan más de 40 años de antigüedad accederán a un porcentaje de 87.53149%, a partir de esta cifra, se definen los porcentajes de los demás tramos de antigüedad, multiplicando su porcentaje inicial por el nuevo máximo, por ejemplo, en el caso de los empleados que acumulan entre 10 y 20 años de antigüedad el porcentaje del salario sobre el cual se calcula su pensión está determinado por: 45 \* 0.8753149, lo cual es equivalente a 39.3891705%. Si bien, tal medida impacta de forma negativa los ingresos percibidos por las personas pensionadas para satisfacer sus necesidades, se procuró que la reducción se hiciera por el menor porcentaje posible. Además, la decisión de reducir el porcentaje de los tramos conservando la relación inicial, no solo responde a un sentido de igualdad, sino que también procura preservar el incentivo para que los empleados permanezcan en condición de activos por periodos más extensos; lo cual representa el escenario contrario al caso en que se decidiera aplicar una reducción regida por la equidad, disminuyendo en mayor medida los porcentajes más altos y en menor medida los porcentajes más pequeños: los sujetos tras percibir que las pensiones con porcentajes elevados reciben los mayores impactos de las medidas reduccionistas, abandonarían la motivación de mantenerse como empleados activos por lapsos más prolongados, con el objetivo de acceder a pensiones con un mejor pago. La tabla extendida a continuación muestra los porcentajes actualizados posterior a la aplicación de la alternativa planteada.
 
 ```{=latex}
 \begin{center}
@@ -773,17 +751,17 @@ En segundo lugar, se optó por una rebaja de 1.5 puntos porcentuales del porcent
 ```
 
 |                        |                         |                            |
-|:----------------------:|:----------------------:|:----------------------:|
+|:---------------------:|:---------------------:|:------------------------:|
 | **Años de antigüedad** | **Porcentaje anterior** | **Porcentaje actualizado** |
-|         0 - 10         |           0%            |             0%             |
+|         1 - 10         |           0%            |             0%             |
 | **Años de antigüedad** | **Porcentaje anterior** | **Porcentaje actualizado** |
-|        10 - 20         |           45%           |           43.5%            |
+|        10 - 20         |           45%           |        39.3891705%         |
 | **Años de antigüedad** | **Porcentaje anterior** | **Porcentaje actualizado** |
-|        20 - 30         |           65%           |           63.5%            |
+|        20 - 30         |           65%           |        56.8954685%         |
 | **Años de antigüedad** | **Porcentaje anterior** | **Porcentaje actualizado** |
-|        30 - 40         |           85%           |           83.5%            |
+|        30 - 40         |           85%           |        74.4017665%         |
 | **Años de antigüedad** | **Porcentaje anterior** | **Porcentaje actualizado** |
-|       Más de 40        |          100%           |           98.5%            |
+|       Más de 40        |          100%           |         87.53149%          |
 
 De acuerdo con la Organización Internacional del Trabajo (OIT), en enero de 2024 el salario mínimo de Costa Rica se fijó en ₡358 609.5. Al emplear dicha cifra para calcular los nuevos montos asociados a la pensión por vejez se obtiene lo siguiente:
 
@@ -802,23 +780,50 @@ De acuerdo con la Organización Internacional del Trabajo (OIT), en enero de 202
 |                        |                    |                       |
 |:----------------------:|:------------------:|:---------------------:|
 | **Años de antigüedad** | **Monto anterior** | **Monto actualizado** |
-|         0 - 10         |         ₡0         |          ₡0           |
+|         1 - 10         |         ₡0         |          ₡0           |
 | **Años de antigüedad** | **Monto anterior** | **Monto actualizado** |
-|        10 - 20         |    ₡161 374.28     |      ₡155 995.13      |
+|        10 - 20         |    ₡161 374.28     |      ₡141 253.31      |
 | **Años de antigüedad** | **Monto anterior** | **Monto actualizado** |
-|        20 - 30         |    ₡233 096.18     |      ₡227 717.03      |
+|        20 - 30         |    ₡233 096.18     |      ₡204 032.56      |
 | **Años de antigüedad** | **Monto anterior** | **Monto actualizado** |
-|        30 - 40         |    ₡304 818.08     |      ₡299 438.93      |
+|        30 - 40         |    ₡304 818.08     |      ₡266 811.80      |
 | **Años de antigüedad** | **Monto anterior** | **Monto actualizado** |
-|       Más de 40        |     ₡358 609.5     |      ₡353 230.36      |
-
-Un empleado cuyo último salario reportado fue el salario mínimo del país, es decir ₡358 609.5, enfrenta una reducción de ₡5 379.1425 en cada tramo de antigüedad. Si bien, la práctica de esta estrategia implica la percepción de un menor ingreso por parte de los pensionados, sus efectos financieros adversos no poseen un impacto considerable.
+|       Más de 40        |     ₡358 609.5     |      ₡313 896.23      |
 
 ## Reducción del costo actuarial de la suma única de reconocimiento
 
 Dado que la suma única de reconocimiento constituye una bonificación otorgada a los empleados a la edad de 60 años, la cual se paga sobre el último salario reportado y un factor de multiplicación determinado según los años laborados, representa un beneficio cuya extensión produce efectos financieros temporales, ya que se otorga en una única ocasión.
 
-La medida aplicada en este rubro, consistió en una reducción del porcentaje salarial por el cual se multiplica el factor derivado de la antigüedad. Inicialmente el porcentaje se encontraba en 100%, así tras la aplicación de la estrategia, se fijó en 86.6838%, lo que representa una caída de 13.3162 puntos porcentuales. A pesar de que el cambio pueda parecer abrupto, lo cierto es que una reducción del ingreso obtenido bajo el presente beneficio posee menores repercusiones en la vida de los asegurados, pues como se mencionó al inicio, sus efectos financieros son temporales. Lo anterior constituye el caso contrario a las modificaciones efectuadas en el porcentaje salarial mediante el cual se calculan las pensiones, puesto que las pensiones al ser anualidades vitalicias garantizadas durante tres años, tienen un efecto financiero de largo plazo en la realidad de los sujetos.
+Las medidas aplicadas en este rubro, consistieron en una reducción del porcentaje salarial por el cual se multiplica el factor derivado de la antigüedad. Inicialmente el porcentaje se encontraba en 100%, así tras la aplicación de la estrategia, se fijó en 80%, lo que representa una caída de 20 puntos porcentuales. Además, se modificó la tabla de factores derivados de la antigüedad, haciendo las siguientes reducciones:
+
+```{=latex}
+\begin{center}
+```
+
+**Tabla**
+
+*Reducción de la tabla de factores derivados de la antigüedad*
+
+```{=latex}
+\end{center}
+```
+
+|                        |                     |                        |
+|:----------------------:|:-------------------:|:----------------------:|
+| **Años de antigüedad** | **Factor anterior** | **Factor actualizado** |
+|         1 – 10         |          1          |          0.5           |
+| **Años de antigüedad** | **Factor anterior** | **Factor actualizado** |
+|        10 - 20         |          2          |           1            |
+| **Años de antigüedad** | **Factor anterior** | **Factor actualizado** |
+|        20 - 30         |          3          |           2            |
+| **Años de antigüedad** | **Factor anterior** | **Factor actualizado** |
+|        30 - 40         |          4          |           3            |
+| **Años de antigüedad** | **Factor anterior** | **Factor actualizado** |
+|       Más de 40        |          5          |           4            |
+
+Note que en la mayoría de los tramos el factor asociado se redujo en una unidad, a excepción del primer tramo, donde la reducción se realizó por media unidad con el objetivo de que los empleados situados en dicho intervalo percibieran al menos una parte del beneficio.
+
+A pesar de que el cambio pueda parecer abrupto, lo cierto es que una reducción del ingreso obtenido bajo el presente beneficio posee menores repercusiones en la vida de los asegurados, pues como se mencionó al inicio, sus efectos financieros son temporales. Lo anterior constituye el caso contrario a las modificaciones efectuadas en el porcentaje salarial mediante el cual se calculan las pensiones, puesto que las pensiones al ser anualidades vitalicias garantizadas durante dos años, tienen un efecto financiero de largo plazo en la realidad de los sujetos.
 
 La tabla a continuación detalla, a través del salario mínimo, la suma única de reconocimiento actualizada posterior a la aplicación de la alternativa descrita.
 
@@ -834,18 +839,18 @@ La tabla a continuación detalla, a través del salario mínimo, la suma única 
 \end{center}
 ```
 
-|  |  |  |  |
-|:----------------:|:-----------------:|:----------------:|:----------------:|
-| **Años de antigüedad** | **Factor de multiplicación** | **Monto anterior** | **Monto actualizado** |
-| 0 - 10 | 1 | ₡358 609.5 | ₡310 856.34 |
-| **Años de antigüedad** | **Factor de multiplicación** | **Monto anterior** | **Monto actualizado** |
-| 10 - 20 | 2 | ₡717 219 | ₡621 712.68 |
-| **Años de antigüedad** | **Factor de multiplicación** | **Monto anterior** | **Monto actualizado** |
-| 20 - 30 | 3 | ₡1 075 828.5 | ₡932 569.03 |
-| **Años de antigüedad** | **Factor de multiplicación** | **Monto anterior** | **Monto actualizado** |
-| 30 - 40 | 4 | ₡1 434 438 | ₡1 243 425.37 |
-| **Años de antigüedad** | **Factor de multiplicación** | **Monto anterior** | **Monto actualizado** |
-| Más de 40 | 5 | ₡1 793 047.5 | ₡1 554 281.71 |
+|                        |                    |                       |
+|:----------------------:|:------------------:|:---------------------:|
+| **Años de antigüedad** | **Monto anterior** | **Monto actualizado** |
+|         1 - 10         |     ₡358 609.5     |      ₡143 443.8       |
+| **Años de antigüedad** | **Monto anterior** | **Monto actualizado** |
+|        10 - 20         |      ₡717 219      |      ₡286 887.6       |
+| **Años de antigüedad** | **Monto anterior** | **Monto actualizado** |
+|        20 - 30         |    ₡1 075 828.5    |      ₡573 775.2       |
+| **Años de antigüedad** | **Monto anterior** | **Monto actualizado** |
+|        30 - 40         |     ₡1 434 438     |      ₡860 662.8       |
+| **Años de antigüedad** | **Monto anterior** | **Monto actualizado** |
+|       Más de 40        |    ₡1 793 047.5    |     ₡1 147 550.4      |
 
 ## Resultado de las medidas reductivas
 
@@ -866,13 +871,13 @@ La disminuciones planteadas en los apartados arriba, constituyeron una estrategi
 |  |  |  |
 |:----------------------:|:----------------------:|:----------------------:|
 | **Beneficio** | **Costo actuarial inicial** | **Costo actuarial actualizado** |
-| Anualidades de las pensiones por vejez | ₡15 293 673 250.90 | ₡13 757 676 922.12 |
+| Anualidades de las pensiones por vejez | ₡29 143 634 218.50 | ₡26 378 590 023.33 |
 | **Beneficio** | **Costo actuarial inicial** | **Costo actuarial actualizado** |
-| Suma única de reconocimiento | ₡529 153 943.49 | ₡458 690 746.07 |
+| Suma única de reconocimiento | ₡529 153 943.49 | ₡297 806 765.36 |
 | **Beneficio** | **Costo actuarial inicial** | **Costo actuarial actualizado** |
-| *Total* | ₡15 822 827 194.39 | ₡14 216 367 668.19 |
+| *Total* | ₡29 672 788 161.99 | ₡26 676 396 788.69 |
 
-De la tabla se determina que la diferencia entre los costos actuariales reportados antes y después de las medidas de reducción equivale a ₡1 606 459 526.2, superando el monto previsto inicialmente: ₡1 606 459 025.66, por un total de ₡500.54.
+De la tabla se determina que la diferencia entre los costos actuariales reportados antes y después de las medidas de reducción equivale a ₡2 996 391 373.3, superando el monto previsto inicialmente: ₡2 996 389 751, por un total de ₡1 622.3.
 
 # Análisis comparativo (Alexandra)
 
