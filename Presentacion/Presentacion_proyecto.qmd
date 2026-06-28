@@ -513,3 +513,20 @@ El comportamiento de los costos actuariales está determinado en su mayoría por
 
 - El análisis de sensibilidad confirma la importancia de las anualidades dentro del plan, ya que este beneficio es el que experimenta las mayores variaciones cuando cambian los supuestos financieros. \vspace{0.4cm}
  
+## Conclusiones
+
+- La base se compone de empleados activos y pensionados.
+- Los activos predominan y la distribución por sexo es equilibrada.
+- Las mujeres presentan mayor esperanza de vida en ambos grupos.
+- Las anualidades de pensión representan el mayor costo actuarial.
+- La reducción de costos debe evaluarse con cautela por su impacto en los beneficios.
+
+## Recomendaciones
+
+- Segmentar la población por características demográficas y actuariales.
+- Tratar activos y pensionados con metodologías diferenciadas.
+- Mantener equilibrio entre sostenibilidad financiera y protección de beneficios.
+- Evaluar sensibilidad ante cambios en tasa de descuento, mortalidad, inflación y crecimiento salarial.
+- Identificar variables que puedan aumentar significativamente el costo del plan.
+
+
