@@ -717,12 +717,17 @@ De acuerdo con lo expuesto en la sección de metodología, apartado "Cálculo de
 | 62           | 0,04    | 0,00    |
 
 Viendo los resultados de las primas podemos señalar varios aspectos:
+
 Lo primero que se observa es una tendencia al crecimiento conforme aumenta la edad del grupo. Esto no debe sorprender, ya que a mayor edad se integran menos salarios anuales a la masa salarial; en consecuencia, el denominador de la fracción decrece. Existen algunas excepciones, como el grupo masculino conformado por un hombre de 62 años y el femenino por una mujer de 58 años. Estas primas son de hecho las más bajas, pues ambos presentan una edad elevada y una antigüedad muy baja (menor a 10 años), lo que los deja sin derecho a pensión.
+
 También se aprecia que, en general, las mujeres de la misma edad que los hombres tienen una prima más alta. Esto puede deberse a varios factores: por un lado, al tener una edad de jubilación más temprana, reciben en promedio más beneficios de pensión durante su vida jubilada. Además, según la tabla SP‑2015, la mortalidad femenina es menor que la masculina, lo que implica que los beneficios de pensión o el Lump Sum pesan más en proporción, ya que las mujeres tienen mayor probabilidad de alcanzar edades avanzadas. Asimismo, factores externos al sexo, como la antigüedad promedio, el número de miembros y los niveles salariales, pueden generar variaciones en los costos y en la masa salarial, y por ende en las primas.
+
 Las brechas en las primas se hacen más notorias a partir de los 41 años. Al analizar detalladamente los números, se observa una tendencia a un mayor cambio negativo en la masa salarial que en los costos. Esto significa que, en las mujeres, los costos cambian menos en proporción que la masa salarial, lo que provoca que la razón de la prima se incremente proporcionalmente más. La explicación radica en que en las mujeres la edad de jubilación es más temprana (63 años frente a 65 en los hombres). Al retirarse antes, la masa salarial esperada de las mujeres suman menos años de aportes, lo que reduce el denominador, que hace que en edades más avanzadas, al disponer de menos años restantes de trabajo, el diferimiento en los salarios recibidos tenga un mayor efecto en la prima resultante en comparación con la de los hombres.
+
 Finalmente, al analizar los valores extremos de las primas encontramos dos situaciones:
-En el mínimo, el valor 0,0 corresponde a grupos de personas de un sexo y edad en los que no existen trabajadores activos. Excluyendo este caso trivial, los valores más bajos para grupos existentes son 0,03 y 0,04, correspondientes a las personas mencionadas en el primer párrafo.
-En el extremo superior aparecen valores pico como 1,50 y 1,45. Estos corresponden a casos especiales de grupos de una sola persona, mujeres de 54 y 56 años respectivamente, que están próximas al retiro y cuentan con una antigüedad elevada a pocos años de la fecha de corte. En estos casos, el factor de descuento aplicado a los primeros años de pensión o al pago del Lump Sum no reduce tanto el valor al traerlo a presente, lo que explica las primas tan altas.
+
+1) En el mínimo, el valor 0,0 corresponde a grupos de personas de un sexo y edad en los que no existen trabajadores activos. Excluyendo este caso trivial, los valores más bajos para grupos existentes son 0,03 y 0,04, correspondientes a las personas mencionadas en el primer párrafo.
+2) En el extremo superior aparecen valores pico como 1,50 y 1,45. Estos corresponden a casos especiales de grupos de una sola persona, mujeres de 54 y 56 años respectivamente, que están próximas al retiro y cuentan con una antigüedad elevada a pocos años de la fecha de corte. En estos casos, el factor de descuento aplicado a los primeros años de pensión o al pago del Lump Sum no reduce tanto el valor al traerlo a presente, lo que explica las primas tan altas.
 
 
 ### Prima media nivelada
@@ -847,9 +852,7 @@ El análisis es más sencillo: como se explicó antes, los costos no dependen de
 
 La tendencia frente a cambios en la tasa de descuento es análoga a la del Lump Sum. Sin embargo, las variaciones son mucho mayores debido a que se trata de un flujo recurrente acumulado a lo largo de los años y que representa el mayor porcentaje de los costos totales del plan.
 
-En diagonal, los razonamientos son los mismos que para el Lump Sum, pero las diferencias son más amplias: de izquierda a derecha, las variaciones son menores en magnitud, aunque proporcionalmente más altas que en el Lump Sum; mientras que de derecha a izquierda, las diferencias son más significativas y se alejan más del valor original.
-
-Esto se explica porque en el Lump Sum el descuento se aplica una sola vez, mientras que en las anualidades se aplica cada año sobre cada flujo, amplificando el efecto.
+En diagonal, los razonamientos son los mismos que para el Lump Sum, pero las diferencias son más amplias: de izquierda a derecha, las variaciones son menores en magnitud, aunque proporcionalmente más altas que en el Lump Sum; mientras que de derecha a izquierda, las diferencias son más significativas y se alejan más del valor original. Esto se explica porque en el Lump Sum el descuento se aplica una sola vez, mientras que en las anualidades se aplica cada año sobre cada flujo, amplificando el efecto.
 
 # Proceso de reducción del costo
 
