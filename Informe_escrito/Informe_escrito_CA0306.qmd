@@ -36,44 +36,44 @@ format:
 
 # Análisis estadístico de la población de empleados activos y pensionados
 
-El análisis estadístico inicial permite describir las principales características demográficas y financieras de la población considerada en el modelo. Para este proyecto se trabajó con dos grupos principales: empleados activos y pensionados. En ambos casos se analizaron variables como sexo, edad, salario mensual, pensión mensual, mortalidad y esperanza de vida. Esta caracterización es necesaria porque los resultados actuariales dependen directamente de la edad, el sexo, la permanencia esperada, la mortalidad y los beneficios asociados a cada grupo.
+El análisis estadístico inicial permite describir las principales características demográficas y financieras de la población considerada en el modelo. Para este proyecto se trabajó con dos grupos principales: empleados activos y empleados pensionados. En ambos casos se analizaron variables como el sexo, la edad, el salario mensual, la pensión mensual, la mortalidad y la esperanza de vida. Esta caracterización es necesaria porque los resultados actuariales dependen directamente de la edad, el sexo, la permanencia esperada, la mortalidad y los beneficios asociados a cada grupo.
 
 ## Empleados activos
 
-La población de empleados activos está compuesta por 224 personas. De este total, 115 son mujeres y 109 son hombres. Esto representa una distribución relativamente equilibrada por sexo, con una participación femenina de aproximadamente 51,34 % y una participación masculina de 48,66 %. Esta separación es importante porque el modelo considera edades de jubilación distintas para mujeres y hombres.
+La población de empleados activos está compuesta por 224 personas. De este total, 115 son mujeres y 109 son hombres. Esto representa una distribución relativamente equilibrada por sexo, con una participación femenina de aproximadamente 51,34 % y una participación masculina de 48,66 %. La separación es importante porque el modelo considera edades de jubilación distintas para mujeres y hombres.
 
-En términos de edad, los empleados activos presentan una edad promedio total de 36,82 años. Las mujeres tienen una edad promedio de 37,29 años, mientras que los hombres tienen una edad promedio de 36,33 años. La edad mínima observada en la población activa es de 22 años y la edad máxima es de 62 años. Esto muestra que la población activa es relativamente joven, aunque existen algunos empleados cercanos a la edad de jubilación.
+En términos de edad, los empleados activos presentan una edad promedio total de 36,82 años. Las mujeres tienen una edad promedio de 37,29 años, mientras que los hombres tienen una edad promedio de 36,33 años. La edad mínima observada en la población activa es de 22 años y la edad máxima es de 62 años. Lo anterior muestra que la población activa es relativamente joven, aunque existen algunos empleados cercanos a la edad de jubilación.
 
-La antigüedad promedio total de los empleados activos es de 5,36 años. Las mujeres presentan una antigüedad promedio de 5,97 años y los hombres de 4,72 años. Esta variable es relevante porque puede influir en beneficios futuros, especialmente en cálculos relacionados con jubilación, beneficios por muerte o pagos acumulados.
+La antigüedad promedio total de los empleados activos es de 5,36 años. Las mujeres presentan una antigüedad promedio de 5,97 años y los hombres de 4,72 años. Tal variable es relevante porque puede influir en beneficios futuros, especialmente en cálculos relacionados con la jubilación, los beneficios por muerte o los pagos acumulados.
 
-Desde el punto de vista salarial, el salario mensual promedio total es de aproximadamente ₡1.026.165,85. Al separar por sexo, el salario mensual promedio de las mujeres es de aproximadamente ₡1.088.808,49, mientras que el de los hombres es de aproximadamente ₡960.074,99. La masa salarial anual estimada asciende a ₡2.758.333.800,00. Este monto corresponde al salario mensual anualizado según la base actual del modelo.
+Desde el punto de vista salarial, el salario mensual promedio total es de aproximadamente ₡1.026.165,85. Al separar por sexo, el salario mensual promedio de las mujeres es cercano a ₡1.088.808,49, mientras que el de los hombres es de alrededor ₡960.074,99. La masa salarial anual estimada asciende a ₡2.758.333.800,00. Este monto corresponde al salario mensual anualizado según la base actual del modelo.
 
-La esperanza de vida promedio de los empleados activos es de 50,14 años adicionales. Las mujeres presentan una esperanza de vida promedio de 51,92 años y los hombres de 48,28 años. Este resultado es coherente con el comportamiento esperado de mortalidad, donde usualmente las mujeres presentan mayor supervivencia esperada que los hombres. Esta variable es fundamental para la proyección demográfica, ya que permite estimar el horizonte de exposición a eventos como muerte, permanencia activa y jubilación.
+La esperanza de vida promedio de los empleados activos es de 50,14 años adicionales. Las mujeres presentan una esperanza de vida promedio de 51,92 años y los hombres de 48,28 años. El resultado es coherente con el comportamiento esperado de mortalidad, donde usualmente las mujeres presentan mayor supervivencia esperada que los hombres. Dicha variable es fundamental para la proyección demográfica, ya que permite estimar el horizonte de exposición a eventos como la muerte, la permanencia activa y la jubilación.
 
 ```{=latex}
 \begin{center}
 ```
 
-**Tabla \#**
+**Tabla 1**
 
-*Resumen estadístico de empleados activos*
+*Resumen estadístico de los empleados activos*
 
 ```{=latex}
 \end{center}
 ```
 
 | Indicador | Femenino | Masculino | Total |
-|------------------|-----------------:|-----------------:|-----------------:|
+|:--:|:--:|:--:|:--:|
 | Cantidad | 115 | 109 | 224 |
-| Edad promedio | 37,29 | 36,33 | 36,82 |
-| Edad mínima | 24 | 22 | 22 |
-| Edad máxima | 58 | 62 | 62 |
-| Antigüedad promedio | 5,97 | 4,72 | 5,36 |
-| Salario mensual promedio | ₡1.088.808,49 | ₡960.074,99 | ₡1.026.165,85 |
-| Masa salarial anual estimada | ₡1.502.555.717,40 | ₡1.255.778.082,60 | ₡2.758.333.800,00 |
-| Esperanza de vida promedio | 51,92 | 48,28 | 50,14 |
+| *Edad promedio* | 37,29 | 36,33 | 36,82 |
+| *Edad mínima* | 24 | 22 | 22 |
+| *Edad máxima* | 58 | 62 | 62 |
+| *Antigüedad promedio* | 5,97 | 4,72 | 5,36 |
+| *Salario mensual promedio* | ₡1.088.808,49 | ₡960.074,99 | ₡1.026.165,85 |
+| *Masa salarial anual estimada* | ₡1.502.555.717,40 | ₡1.255.778.082,60 | ₡2.758.333.800,00 |
+| *Esperanza de vida promedio* | 51,92 | 48,28 | 50,14 |
 
-## Pensionados
+## Empleados pensionados
 
 La población de pensionados está conformada por 165 personas. De este total, 91 son mujeres y 74 son hombres. Las mujeres representan aproximadamente 55,15 % de la población pensionada, mientras que los hombres representan 44,85 %. En comparación con la población activa, los pensionados presentan una mayor proporción relativa de mujeres, lo cual es coherente con una mayor supervivencia esperada.
 
@@ -81,77 +81,76 @@ La edad promedio total de los pensionados es de 72,85 años. Las mujeres pension
 
 En cuanto a los montos de pensión, la pensión mensual promedio total es de aproximadamente ₡195.965,58. Las mujeres presentan una pensión mensual promedio de ₡187.979,87 y los hombres de ₡205.785,84. Esto indica que, en promedio, los hombres pensionados reciben una pensión mensual superior a la de las mujeres. La pensión anual total estimada asciende a ₡420.346.166,50.
 
-La esperanza de vida promedio de los pensionados es de 16,01 años adicionales. Al separar por sexo, las mujeres presentan una esperanza de vida promedio de 16,87 años y los hombres de 14,94 años. Este resultado es consistente con la estructura demográfica esperada, ya que las mujeres pensionadas presentan una supervivencia promedio mayor que los hombres pensionados. En este grupo, la esperanza de vida debe interpretarse junto con la edad actual de cada pensionado y con la duración esperada de los pagos futuros.
+La esperanza de vida promedio de los pensionados es de 16,01 años adicionales. Al separar por sexo, las mujeres presentan una esperanza de vida promedio de 16,87 años y los hombres de 14,94 años. El resultado es consistente con la estructura demográfica esperada, ya que las mujeres pensionadas presentan una supervivencia promedio mayor que los hombres pensionados. En este grupo, la esperanza de vida debe interpretarse junto con la edad actual de cada pensionado y con la duración esperada de los pagos futuros.
 
 ```{=latex}
 \begin{center}
 ```
 
-**Tabla \#**
+**Tabla 2**
 
-*Resumen estadístico de pensionados*
+*Resumen estadístico de los empleados pensionados*
 
 ```{=latex}
 \end{center}
 ```
 
 | Indicador | Femenino | Masculino | Total |
-|------------------|-----------------:|-----------------:|-----------------:|
-| Cantidad | 91 | 74 | 165 |
-| Edad promedio | 72,92 | 72,76 | 72,85 |
-| Edad mínima | 57 | 61 | 57 |
-| Edad máxima | 92 | 97 | 97 |
-| Pensión mensual promedio | ₡187.979,87 | ₡205.785,84 | ₡195.965,58 |
-| Pensión anual total estimada | ₡222.380.185,95 | ₡197.965.980,55 | ₡420.346.166,50 |
-| Esperanza de vida promedio | 16,87 | 14,94 | 16,01 |
+|:--:|:--:|:--:|:--:|
+| *Cantidad* | 91 | 74 | 165 |
+| *Edad promedio* | 72,92 | 72,76 | 72,85 |
+| *Edad mínima* | 57 | 61 | 57 |
+| *Edad máxima* | 92 | 97 | 97 |
+| *Pensión mensual promedio* | ₡187.979,87 | ₡205.785,84 | ₡195.965,58 |
+| *Pensión anual total estimada* | ₡222.380.185,95 | ₡197.965.980,55 | ₡420.346.166,50 |
+| *Esperanza de vida promedio* | 16,87 | 14,94 | 16,01 |
 
-## Comparación entre empleados activos y pensionados
+## Comparación entre los empleados activos y los empleados pensionados
 
-Al comparar ambas poblaciones, se observa una diferencia clara en la estructura demográfica. Los empleados activos tienen una edad promedio de 36,82 años, mientras que los pensionados presentan una edad promedio de 72,85 años. Esta diferencia es esperada, ya que los empleados activos aún se encuentran dentro de la etapa laboral, mientras que los pensionados ya se encuentran en la etapa de pago de beneficios.
+Al comparar ambas poblaciones, se observa una diferencia clara en la estructura demográfica. Los empleados activos tienen una edad promedio de 36,82 años, mientras que los pensionados presentan una edad promedio de 72,85 años. Esta diferencia es esperada, ya que los empleados activos aún se encuentran dentro de la etapa laboral, mientras que los empleados pensionados ya se encuentran en la etapa de pago de beneficios.
 
-También se observa una diferencia importante en la esperanza de vida. Los empleados activos tienen una esperanza de vida promedio de 50,14 años adicionales, mientras que los pensionados tienen una esperanza de vida promedio de 16,01 años adicionales. Esto no significa que los activos tengan menor riesgo, sino que tienen un horizonte de exposición más largo. En cambio, los pensionados tienen una edad más avanzada, por lo que su análisis se concentra principalmente en la supervivencia y en la duración esperada de los pagos.
+También se observa una diferencia importante en la esperanza de vida. Los empleados activos tienen una esperanza de vida promedio de 50,14 años adicionales, mientras que los pensionados tienen una esperanza de vida promedio de 16,01 años adicionales. Lo anterior no significa que los activos tengan un menor riesgo, sino que tienen un horizonte de exposición más largo. En cambio, los pensionados tienen una edad más avanzada, por lo que su análisis se concentra principalmente en la supervivencia y en la duración esperada de los pagos.
 
-Desde el punto de vista financiero, los empleados activos están asociados principalmente con salarios, masa salarial y beneficios futuros. En cambio, los pensionados representan obligaciones actuales de pago que deben proyectarse en el tiempo. Por esta razón, el modelo trata ambos grupos de forma diferenciada: para los activos se modela la transición entre sobrevivencia, muerte y jubilación, mientras que para los pensionados se proyectan pagos condicionados a supervivencia.
+Desde el punto de vista financiero, los empleados activos están asociados principalmente con los salarios, la masa salarial y los beneficios futuros. En cambio, los empleados pensionados representan obligaciones actuales de pago que deben proyectarse en el tiempo. Por esta razón, el modelo trata ambos grupos de forma diferenciada: para los empleados activos se modela la transición entre la sobrevivencia, la muerte y la jubilación, mientras que para los empleados pensionados se proyectan los pagos condicionados a la supervivencia.
 
 ```{=latex}
 \begin{center}
 ```
 
-**Tabla \#**
+**Tabla 3**
 
-*Comparación general entre empleados activos y pensionados*
+*Comparación general entre los empleados activos y los empleados pensionados*
 
 ```{=latex}
 \end{center}
 ```
 
-| Indicador                     | Empleados activos |     Pensionados |
-|-------------------------------|------------------:|----------------:|
-| Cantidad total                |               224 |             165 |
-| Mujeres                       |               115 |              91 |
-| Hombres                       |               109 |              74 |
-| Edad promedio total           |             36,82 |           72,85 |
-| Esperanza de vida promedio    |             50,14 |           16,01 |
-| Variable financiera principal |   Salario mensual | Pensión mensual |
-| Flujo anual total estimado    | ₡2.758.333.800,00 | ₡420.346.166,50 |
+|           Indicador           | Empleados activos |   Pensionados   |
+|:-----------------------------:|:-----------------:|:---------------:|
+|        Cantidad total         |        224        |       165       |
+|            Mujeres            |        115        |       91        |
+|            Hombres            |        109        |       74        |
+|      Edad promedio total      |       36,82       |      72,85      |
+|  Esperanza de vida promedio   |       50,14       |      16,01      |
+| Variable financiera principal |  Salario mensual  | Pensión mensual |
+|  Flujo anual total estimado   | ₡2.758.333.800,00 | ₡420.346.166,50 |
 
-En síntesis, la población activa es más joven, tiene mayor esperanza de vida adicional y requiere una proyección de transición entre estados laborales y actuariales. Por su parte, la población pensionada es de mayor edad y su análisis se concentra en la continuidad esperada de los pagos de pensión. Esta diferencia justifica que el modelo utilice tratamientos separados para activos y pensionados dentro del cálculo determinístico de contingencias de vida.
+En síntesis, la población activa es más joven y tiene una mayor esperanza de vida adicional. Por su parte, la población pensionada es de mayor edad y su análisis se concentra en la continuidad esperada de los pagos de la pensión. Dicha diferencia justifica que el modelo utilice tratamientos separados para los empleados activos y los empleados pensionados dentro del cálculo determinístico de contingencias de vida.
 
 # Sección metodológica
 
-## Proyección demográfica de empleados activos
+## Proyección demográfica de los empleados activos
 
-La proyección demográfica de empleados activos se realizó a partir de la base depurada de trabajadores vigentes al inicio del periodo de valoración. Para cada empleado se utilizaron las variables de sexo, fecha de nacimiento, fecha de ingreso, salario mensual, edad al corte, antigüedad, edad de jubilación y probabilidad inicial de muerte. La fecha de corte utilizada fue el 31 de diciembre de 2025.
+La proyección demográfica de los empleados activos se realizó a partir de la base depurada de trabajadores vigentes al inicio del periodo de valoración. Para cada empleado se utilizaron las variables del sexo, la fecha de nacimiento, la fecha de ingreso, el salario mensual, la edad al corte, la antigüedad, la edad de jubilación y la probabilidad inicial de muerte. La fecha de corte utilizada fue el 31 de diciembre de 2025.
 
-En primer lugar, se organizó y limpió la base de empleados activos. Se verificó la existencia de identificadores, fechas válidas, sexo correctamente clasificado y salarios positivos. Luego, se calcularon variables derivadas necesarias para el modelo, como la edad al corte, la antigüedad laboral, la edad normal de jubilación y los años restantes hasta la jubilación.
+En primer lugar, se organizó y se limpió la base de los empleados activos. Se verificó la existencia de identificadores, fechas válidas, sexo correctamente clasificado y salarios positivos. Luego, se calcularon variables derivadas necesarias para el modelo, como la edad al corte, la antigüedad laboral, la edad normal de jubilación y los años restantes hasta la jubilación.
 
 La edad normal de jubilación se definió según el sexo del empleado:
 
-$$
-R_s =
+$$ R_s =
 \begin{cases}
-65, & \text{si } s=\text{hombre},\
-63, & \text{si } s=\text{mujer}.
+65, & \text{si } s=\text{hombre};\
+63, & \text{si } s=\text{mujer}
 \end{cases}
 $$
 
@@ -165,7 +164,7 @@ $$
 
 Donde (D\_{i,t}) representa las muertes esperadas del empleado (i) en el año (t), (L\_{i,t}) representa la probabilidad de que el empleado permanezca activo al inicio del año y (q\_{x_i}) corresponde a la probabilidad inicial de muerte obtenida de la tabla SP-2015.
 
-La cantidad esperada de sobrevivientes se calculó como
+La cantidad esperada de sobrevivientes se calculó como:
 
 $$
 S_{i,t}=L_{i,t}-D_{i,t}.
@@ -177,13 +176,13 @@ $$
 L_{i,t+1}=S_{i,t}-J_{i,t}.
 $$
 
-Donde (J\_{i,t}) representa la salida esperada por jubilación. De esta forma, la transición anual de empleados activos se resumió mediante la relación entre activos al inicio, muertes esperadas, jubilaciones esperadas y activos al cierre.
+Donde (J\_{i,t}) representa la salida esperada por jubilación. De esta forma, la transición anual de los empleados activos se resumió mediante la relación entre los empleados activos al inicio, las muertes esperadas, las jubilaciones esperadas y los empleados activos al cierre.
 
-Finalmente, los resultados individuales se agregaron por año y sexo. Para cada año proyectado se obtuvo la cantidad esperada de activos al inicio, muertes esperadas, jubilaciones esperadas y activos al cierre, separados entre mujeres, hombres y total. Esta estructura permitió analizar la evolución demográfica de la población activa y generar las tablas y gráficos correspondientes del modelo.
+Finalmente, los resultados individuales se agregaron por año y sexo. Para cada año proyectado se obtuvo la cantidad esperada de los empleados activos al inicio, las muertes esperadas, las jubilaciones esperadas y los empleados activos al cierre, haciendo una diferenciación entre las mujeres, los hombres y el total. Tal estructura permitió analizar la evolución demográfica de la población activa y generar las tablas y los gráficos correspondientes del modelo.
 
-## Proyección demográfica y proyección de muertes de pensionados
+## Proyección demográfica y proyección de muertes de los empleados pensionados
 
-La proyección demográfica de pensionados se desarrolló a partir del enfoque actuarial clásico de supervivencia presentado por Bowers et al. (1997). Bajo este enfoque, se considera una vida de edad $(x)$ y se modela su tiempo de vida futuro mediante la variable aleatoria $(T_x)$. En el caso discreto, se utiliza la vida futura acotada $(K_x)$, lo que permite expresar probabilidades de supervivencia y fallecimiento en años enteros.
+La proyección demográfica de los empleados pensionados se desarrolló a partir del enfoque actuarial clásico de supervivencia presentado por Bowers et al. (1997). Bajo este enfoque, se considera una vida de edad $(x)$ y se modela su tiempo de vida futuro mediante la variable aleatoria $(T_x)$. En el caso discreto, se utiliza la vida futura acotada $(K_x)$, lo que permite expresar probabilidades de supervivencia y fallecimiento en años enteros.
 
 La probabilidad de que una vida de edad $(x)$ sobreviva $(k)$ años se denota como
 
@@ -200,10 +199,10 @@ $$
 Por tanto, la probabilidad de sobrevivir $(k)$ años y fallecer durante el año siguiente se expresa como
 
 $$
-{}*k p_x q*{x+k}.
+{}k p_x q_{x+k}.
 $$
 
-En este proyecto se mantuvo esta lógica de supervivencia anual discreta, pero adaptada a la tabla de mortalidad dinámica SP-2015 de SUPEN. Esta tabla permite que la probabilidad de muerte varíe según la edad, el sexo y el año calendario. Por ello, la probabilidad anual de muerte se representó como
+En el presente proyecto se mantuvo la lógica de supervivencia anual discreta, pero adaptada a la tabla de mortalidad dinámica SP-2015 de la SUPEN. Esta tabla permite que la probabilidad de muerte varíe según la edad, el sexo y el año calendario. Por ello, la probabilidad anual de muerte se representó como
 
 $$
 q_x^{(s,y)},
@@ -220,7 +219,7 @@ $$
 
 Esta expresión conserva la estructura de $({}_k p_x)$ de Bowers et al. (1997), pero incorpora la mortalidad dinámica de la tabla SP-2015.
 
-La población pensionada proyectada se dividió en dos componentes: los pensionados existentes al inicio del periodo de valoración y los empleados activos que alcanzan la edad de jubilación durante el horizonte de proyección. Por tanto, la cantidad esperada de pensionados vivos al inicio del año $(k)$ se definió como
+La población pensionada proyectada se dividió en dos componentes: los empleados pensionados existentes al inicio del periodo de valoración y los empleados activos que alcanzan la edad de jubilación durante el horizonte de proyección. Por tanto, la cantidad esperada de pensionados vivos al inicio del año $(k)$ se definió como
 
 $$
 L_k^{P_0}
@@ -230,7 +229,7 @@ $$
 
 donde $(L_k^{P_0})$ representa los pensionados iniciales sobrevivientes y $(L_k^{A\to P})$ los empleados activos que se incorporan como pensionados.
 
-Para los pensionados iniciales, la cantidad esperada de vivos al inicio del año $(k)$ se calculó como
+Para los empleados pensionados iniciales, la cantidad esperada de vivos al inicio del año $(k)$ se calculó como:
 
 $$
 \sum_{i\in P_0}
@@ -243,18 +242,18 @@ Las muertes esperadas de estos pensionados durante el año $(k)$ se obtuvieron m
 
 $$
 \sum_{i\in P_0}
-{}*k p*{x_i}^{(s_i,y_0)}
+{}kp_{x_i}^{(s_i,y_0)}
 q_{x_i+k}^{(s_i,y_0+k)}.
 $$
 
-Esta expresión corresponde a la forma discreta usual $({}*k p_x q*{x+k})$, adaptada a una tabla dinámica de mortalidad.
+Esta expresión corresponde a la forma discreta usual $({}kp_x q_{x+k})$, adaptada a una tabla dinámica de mortalidad.
 
-Para incorporar a los empleados activos que se convierten en pensionados, se utilizó la edad normal de jubilación definida en el proyecto: 65 años para hombres y 63 años para mujeres. Esta condición se expresó como
+Para incorporar a los empleados activos que se convierten en pensionados, se utilizó la edad normal de jubilación definida en el proyecto: 65 años para los hombres y 63 años para las mujeres. Dicha condición se expresó como:
 
 $$
 R_s =
 \begin{cases}
-65, & \text{si } s=\text{hombre},\
+65, & \text{si } s=\text{hombre};\
 63, & \text{si } s=\text{mujer}.
 \end{cases}
 $$
@@ -266,17 +265,17 @@ $$
 \left(1-q_{x_i+j}^{(s_i,y_0+j)}\right).
 $$
 
-Una vez alcanzada la jubilación, el individuo se incorpora a la población pensionada proyectada. Para $(k\geq k_i^R)$, su contribución esperada a los pensionados vivos al inicio del año $(k)$ se representó como
+Una vez alcanzada la jubilación, el individuo se incorpora a la población pensionada proyectada. Para $(k\geq k_i^R)$, su contribución esperada a los pensionados vivos al inicio del año $(k)$ se representó como:
 
 $$
-{}*{k_i^R}p*{x_i}^{(s_i,y_0)}
+{}{k_i^R}p{x_i}^{(s_i,y_0)}
 \prod_{j=k_i^R}^{k-1}
 \left(1-q_{R_{s_i}+j-k_i^R}^{(s_i,y_0+j)}\right).
 $$
 
 En cambio, si $(k<k_i^R)$, el empleado activo todavía no forma parte de la población pensionada.
 
-Las muertes esperadas de los activos que ya se incorporaron como pensionados se calcularon como
+Las muertes esperadas de los activos que ya se incorporaron como pensionados se calcularon como:
 
 $$
 L_{i,k}^{A\to P}
@@ -284,7 +283,7 @@ q_{R_{s_i}+k-k_i^R}^{(s_i,y_0+k)},
 \qquad k\geq k_i^R.
 $$
 
-Finalmente, las muertes esperadas totales de pensionados para cada año se obtuvieron mediante
+Finalmente, las muertes esperadas totales de pensionados para cada año se obtuvieron mediante:
 
 $$
 D_k^{P_0}
@@ -628,12 +627,12 @@ Finalmente, al integrar todos los beneficios analizados, se obtuvo un costo nomi
 
 # Resultados del análisis de sensibilidad
 
-Para el análisis de sensibilidad de las tasas, se calcularon los costos totales nominales (i.e., la suma de los flujos anuales esperados brutos) y el valor presente actuarial de los costos (i.e., la suma de los flujos anuales esperados traídos a valor presente) al reducir y aumentar en un punto porcentual la tasa de incremento salarial (2% anual originalmente) y la tasa de descuento (6,5% anual) para cada beneficio en el plan. El objetivo fue observar la tendencia general, cuantificar las diferencias y ofrecer un razonamiento que justifique los resultados.
+Para el análisis de sensibilidad de las tasas, se calcularon los costos totales nominales (i.e., la suma de los flujos anuales esperados brutos) y el valor presente actuarial de los costos (i.e., la suma de los flujos anuales esperados traídos a valor presente). Se redujeron y aumentaron en un punto porcentual la tasa de incremento salarial, que era de 2% anual originalmente, y la tasa de descuento, que era de 6,5% anual, para cada beneficio en el plan. El objetivo era observar la tendencia general, cuantificar las diferencias y ofrecer un razonamiento que justifique los resultados.
 
 ## Costos Nominales
 
 | Incremento real |          Lump Sum | Beneficio por Muerte |         Anualidades |
-|-----------------:|-----------------:|-----------------:|-----------------:|
+|----------------:|------------------:|---------------------:|--------------------:|
 |            0,01 | ₡2 091 179 011,97 |    ₡1 649 102 590,89 | ₡319 820 252 421,33 |
 |            0,02 | ₡2 736 349 062,19 |    ₡1 649 102 590,89 | ₡430 796 400 185,61 |
 |            0,03 | ₡3 585 210 177,90 |    ₡1 649 102 590,89 | ₡582 165 036 205,87 |
@@ -650,16 +649,16 @@ Para el análisis de sensibilidad de las tasas, se calcularon los costos totales
 
 En cuanto a los costos nominales, lo primero que se observa es que los beneficios por muerte son idénticos para toda tasa de incremento salarial. Esto se debe a que dicho beneficio no depende de los salarios, sino únicamente de la edad y el sexo del trabajador o pensionado. Por lo tanto, el análisis se centra en los otros dos beneficios.
 
-En el caso del **Lump Sum**, los costos son menores cuando la tasa de incremento salarial es más baja, con una diferencia negativa de aproximadamente 23,6% respecto al valor original. Al aumentar un punto porcentual la tasa, la diferencia es cercana al 23,7%. De aquí se desprenden dos conclusiones:\
+En el caso del Lump Sum, los costos son menores cuando la tasa de incremento salarial es más baja, con una diferencia negativa de aproximadamente 23,6% respecto al valor original. Al aumentar un punto porcentual la tasa, la diferencia es cercana al 23,7%. De aquí se desprenden dos conclusiones:\
 1. Un incremento salarial real más alto implica mayor poder adquisitivo, mientras que uno más bajo implica menor poder adquisitivo. Bajo el supuesto de tasas constantes, esto se traduce en salarios proyectados más altos o más bajos que los de la tasa original.\
 2. Las diferencias porcentuales son bastante simétricas en magnitud, independientemente de si la tasa aumenta o disminuye.
 
-En el caso de las **Anualidades**, el análisis es similar, aunque con diferencias más amplias. Cabe señalar que el cambio en el incremento salarial solo afecta a los trabajadores activos, ya que las pensiones se ajustan únicamente por inflación. Al reducir la tasa en un punto porcentual, la diferencia es de aproximadamente -25,8%, mientras que al aumentarla es de +26%. Una explicación plausible es que, al tratarse de pagos mensuales recurrentes, el efecto del cambio se acumula a lo largo de los años, amplificado por el hecho de que la pensión depende del último salario, que es mayor que el considerado en el Lump Sum. En consecuencia, el impacto es más significativo.
+En el caso de las anualidades de la pensión por vejez, el análisis es similar, aunque con diferencias más amplias. Cabe señalar que el cambio en el incremento salarial solo afecta a los trabajadores activos, ya que las pensiones se ajustan únicamente por inflación. Al reducir la tasa en un punto porcentual, la diferencia es de aproximadamente -25,8%, mientras que al aumentarla es de +26%. Una explicación plausible es que, al tratarse de pagos mensuales recurrentes, el efecto del cambio se acumula a lo largo de los años, amplificado por el hecho de que la pensión depende del último salario, que es mayor que el considerado en el Lump Sum. En consecuencia, el impacto es más significativo.
 
 ## Cambios en el valor presente de los Costos Actuariales
 
 | Incremento real | Tasa de descuento 0,055 | Tasa de descuento 0,065 | Tasa de descuento 0,075 |
-|-----------------:|-----------------:|-----------------:|-----------------:|
+|---:|---:|---:|---:|
 | **Lump Sum** |  |  |  |
 | 0,01 | ₡523 747 903,46 | ₡416 494 393,98 | ₡333 510 789,82 |
 | 0,02 | ₡668 687 467,62 | ₡529 153 943,49 | ₡421 597 633,70 |
@@ -705,7 +704,7 @@ En primera instancia, previo a definir el conjunto de medidas por aplicar, es pr
 \begin{center}
 ```
 
-**Tabla \#**
+**Tabla 8**
 
 *Costo actuarial de los beneficios a empleados*
 
@@ -714,17 +713,17 @@ En primera instancia, previo a definir el conjunto de medidas por aplicar, es pr
 ```
 
 |  |  |  |
-|:----------------------:|:----------------------:|:----------------------:|
+|:--:|:--:|:--:|
 | **Beneficio** | **Costo actuarial** | **Porcentaje sobre el costo total** |
-| Seguro de vida para empleados activos | ₡57 946 601.36 | 0.19% |
+| Seguro de vida para empleados activos | ₡57.946.601,36 | 0.19% |
 | **Beneficio** | **Costo actuarial** | **Porcentaje sobre el costo total** |
-| Seguro de vida para empleados pensionados | ₡233 162 744.05 | 0.78% |
+| Seguro de vida para empleados pensionados | ₡233.162.744,05 | 0.78% |
 | **Beneficio** | **Costo actuarial** | **Porcentaje sobre el costo total** |
-| Anualidades de las pensiones por vejez | ₡29 143 634 218.50 | 97.26% |
+| Anualidades de las pensiones por vejez | ₡29.143.634.218,50 | 97.26% |
 | **Beneficio** | **Costo actuarial** | **Porcentaje sobre el costo total** |
-| Suma única de reconocimiento | ₡529 153 943.49 | 1.77% |
+| Suma única de reconocimiento | ₡529.153.943,49 | 1.77% |
 | **Beneficio** | **Costo actuarial** | **Porcentaje sobre el costo total** |
-| *Total reportado* | *₡*29 963 897 507.40 | *100%* |
+| *Total reportado* | *₡*29.963.897.507,40 | *100%* |
 
 En vista de que el costo actuarial de los beneficios otorgados a empleados representa un monto de *₡*29 963 897 507.40, la reducción que se pretende efectuar tiene un valor de ₡2 996 389 751. Además, se identifica que los tres rubros con mayor participación en el costo total son las anualidades de las pensiones por vejez con un 97.26%, la suma única de reconocimiento con un 1.77% y el seguro de vida para empleados pensionados con un 0.78%. Es posible percatarse de que un porcentaje cercano a la totalidad del costo reportado se concentra en las anualidades de las pensiones por vejez, los demás beneficios solo reúnen un 2.74% del costo total, de manera que el mayor porcentaje de reducción deberá aplicarse al primer ámbito mencionado.
 
@@ -742,7 +741,7 @@ En segundo lugar, se optó por una rebaja del porcentaje salarial sobre el cual 
 \begin{center}
 ```
 
-**Tabla**
+**Tabla 9**
 
 *Actualización de los porcentajes sobre los cuales se calcula la pensión por vejez*
 
@@ -751,7 +750,7 @@ En segundo lugar, se optó por una rebaja del porcentaje salarial sobre el cual 
 ```
 
 |                        |                         |                            |
-|:---------------------:|:---------------------:|:------------------------:|
+|:----------------------:|:-----------------------:|:--------------------------:|
 | **Años de antigüedad** | **Porcentaje anterior** | **Porcentaje actualizado** |
 |         1 - 10         |           0%            |             0%             |
 | **Años de antigüedad** | **Porcentaje anterior** | **Porcentaje actualizado** |
@@ -769,7 +768,7 @@ De acuerdo con la Organización Internacional del Trabajo (OIT), en enero de 202
 \begin{center}
 ```
 
-**Tabla**
+**Tabla 10**
 
 *Cálculo de los nuevos montos asociados a la pensión por vejez a partir del salario mínimo*
 
@@ -782,13 +781,13 @@ De acuerdo con la Organización Internacional del Trabajo (OIT), en enero de 202
 | **Años de antigüedad** | **Monto anterior** | **Monto actualizado** |
 |         1 - 10         |         ₡0         |          ₡0           |
 | **Años de antigüedad** | **Monto anterior** | **Monto actualizado** |
-|        10 - 20         |    ₡161 374.28     |      ₡141 253.31      |
+|        10 - 20         |    ₡161.374,28     |      ₡141.253,31      |
 | **Años de antigüedad** | **Monto anterior** | **Monto actualizado** |
-|        20 - 30         |    ₡233 096.18     |      ₡204 032.56      |
+|        20 - 30         |    ₡233.096,18     |      ₡204.032,56      |
 | **Años de antigüedad** | **Monto anterior** | **Monto actualizado** |
-|        30 - 40         |    ₡304 818.08     |      ₡266 811.80      |
+|        30 - 40         |    ₡304.818,08     |      ₡266.811,80      |
 | **Años de antigüedad** | **Monto anterior** | **Monto actualizado** |
-|       Más de 40        |     ₡358 609.5     |      ₡313 896.23      |
+|       Más de 40        |     ₡358.609,5     |      ₡313.896,23      |
 
 ## Reducción del costo actuarial de la suma única de reconocimiento
 
@@ -800,7 +799,7 @@ Las medidas aplicadas en este rubro, consistieron en una reducción del porcenta
 \begin{center}
 ```
 
-**Tabla**
+**Tabla 11**
 
 *Reducción de la tabla de factores derivados de la antigüedad*
 
@@ -831,7 +830,7 @@ La tabla a continuación detalla, a través del salario mínimo, la suma única 
 \begin{center}
 ```
 
-**Tabla**
+**Tabla 12**
 
 *Cálculo de los nuevos montos asociados a la suma única de reconocimiento a partir del salario mínimo*
 
@@ -842,15 +841,15 @@ La tabla a continuación detalla, a través del salario mínimo, la suma única 
 |                        |                    |                       |
 |:----------------------:|:------------------:|:---------------------:|
 | **Años de antigüedad** | **Monto anterior** | **Monto actualizado** |
-|         1 - 10         |     ₡358 609.5     |      ₡143 443.8       |
+|         1 - 10         |     ₡358.609,5     |      ₡143.443,8       |
 | **Años de antigüedad** | **Monto anterior** | **Monto actualizado** |
-|        10 - 20         |      ₡717 219      |      ₡286 887.6       |
+|        10 - 20         |      ₡717.219      |      ₡286.887,6       |
 | **Años de antigüedad** | **Monto anterior** | **Monto actualizado** |
-|        20 - 30         |    ₡1 075 828.5    |      ₡573 775.2       |
+|        20 - 30         |    ₡1.075.828,5    |      ₡573.775,2       |
 | **Años de antigüedad** | **Monto anterior** | **Monto actualizado** |
-|        30 - 40         |     ₡1 434 438     |      ₡860 662.8       |
+|        30 - 40         |     ₡1.434.438     |      ₡860.662,8       |
 | **Años de antigüedad** | **Monto anterior** | **Monto actualizado** |
-|       Más de 40        |    ₡1 793 047.5    |     ₡1 147 550.4      |
+|       Más de 40        |    ₡1.793.047,5    |     ₡1.147.550,4      |
 
 ## Resultado de las medidas reductivas
 
@@ -860,7 +859,7 @@ La disminuciones planteadas en los apartados arriba, constituyeron una estrategi
 \begin{center}
 ```
 
-**Tabla**
+**Tabla 13**
 
 *Cifras obtenidas tras el proceso de reducción de costos*
 
@@ -869,21 +868,39 @@ La disminuciones planteadas en los apartados arriba, constituyeron una estrategi
 ```
 
 |  |  |  |
-|:----------------------:|:----------------------:|:----------------------:|
+|:--:|:--:|:--:|
 | **Beneficio** | **Costo actuarial inicial** | **Costo actuarial actualizado** |
-| Anualidades de las pensiones por vejez | ₡29 143 634 218.50 | ₡26 378 590 023.33 |
+| Anualidades de las pensiones por vejez | ₡29.143.634.218,50 | ₡26.378.590.023,33 |
 | **Beneficio** | **Costo actuarial inicial** | **Costo actuarial actualizado** |
-| Suma única de reconocimiento | ₡529 153 943.49 | ₡297 806 765.36 |
+| Suma única de reconocimiento | ₡529.153.943,49 | ₡297.806.765,36 |
 | **Beneficio** | **Costo actuarial inicial** | **Costo actuarial actualizado** |
-| *Total* | ₡29 672 788 161.99 | ₡26 676 396 788.69 |
+| *Total* | ₡29.672.788.161,99 | ₡26.676.396.788,69 |
 
 De la tabla se determina que la diferencia entre los costos actuariales reportados antes y después de las medidas de reducción equivale a ₡2 996 391 373.3, superando el monto previsto inicialmente: ₡2 996 389 751, por un total de ₡1 622.3.
 
-# Análisis comparativo (Alexandra)
+# Análisis comparativo
 
-# Conclusiones (Alexandra)
+# Conclusiones
 
-# Recomendaciones (Alexandra)
+A partir de lo desarrollado en los apartados anteriores, se construye una serie de conclusiones principales. Dichas conclusiones se detallan como sigue.
+
+-   La población de la base de datos está conformada por dos grupos principales: los empleados activos y los empleados pensionados, con una predominancia de los empleados activos. En ambas agrupaciones, la segmentación de acuerdo al sexo de los sujetos es considerablemente equilibrada. Además, se encontró que la esperanza de vida promedio de los empleados activos es de 50,14 años, mientras que la esperanza de vida promedio de los empleados pensionados es de 16,01 años; en los dos grupos, las mujeres presentan una esperanza de vida mayor.
+
+-   Los grupos que conforman la base de datos requieren de un tratamiento distinto, en vista de que las agrupaciones presentan características demográficas diferenciadas y su análisis se concentra en elementos distintos: mientras que el análisis de los empleados activos se relaciona principalmente con los salarios, la masa salarial y los beneficios futuros, el análisis de los empleados pensionados se enfoca más que todo en la supervivencia y en la duración esperada del pago de los beneficios.
+
+-   Uno de los principales resultados obtenidos fueron los valores presentes de los costos actuariales de los beneficios. Se encontró que el componente de mayor peso en el valor presente total de los costos actuariales fueron las anualidades de pensión por vejez, con un monto de ₡29.634.349.842,37. Después, al beneficio anterior le sigue la suma única de reconocimiento, que tuvo un valor de ₡529.153.943,49. En último lugar, se sitúa el seguro de vida tanto para empleados activos como para empleados pensionados, un beneficio cuyo costo actuarial tuvo un valor presente de ₡291.109.345,41.
+
+-   Los procesos de reducción de costos en planes de beneficios otorgados a una determinada población beneficiaria, constituye un aspecto cuyo tratamiento requiere de una cautela considerable. En múltiples ocasiones, los beneficios abordados contemplan elementos fundamentales en la vida de los asegurados: la pensión de retiro por vejez, el seguro por concepto de fallecimiento, entre otras ejemplificaciones. En vista de lo anterior, resulta imprescindible manejar el proceso de reducción de costos con suma cautela, considerando en todo momento el impacto real que las decisiones tomadas tienen sobre la realidad de las personas correspondientes.
+
+# Recomendaciones
+
+A partir de lo desarrollado en los apartados anteriores, se construye una serie de recomendaciones principales. Dichas recomendaciones se detallan como sigue.
+
+-   Las bases de datos asociadas al área del aseguramiento y la extensión de beneficios, tienden a estar conformadas por individuos que poseen una diversidad de características. En vista de lo anterior, se recomienda efectuar un tratamiento diferenciado a partir de una segmentación de la cartera, de manera que se agrupen los asegurados de acuerdo a determinadas características compartidas. Esto con el objetivo de que las agrupaciones generadas se estudien y se analicen en concordancia con sus características, procurando así la obtención de resultados más precisos.
+
+-   Si bien se reconoce la necesidad de procurar la sostenibilidad financiera de las empresas aseguradoras, se recomienda que cualquier estrategia orientada a la reducción de costos mantenga un equilibrio entre el rubro mencionado y la protección de los derechos e intereses de la población beneficiaria. Pese a que es requerido adoptar una perspectiva empresarial que promueva el uso eficiente de los recursos, también es indispensable reconocer que las medidas de ajuste recaen sobre beneficios de gran relevancia para las personas, tales como la pensión por vejez, el seguro de vida y otros mecanismos de protección.
+
+-   Se resalta la importancia de identificar los elementos o las variables que potencialmente podrían disparar el costo de las obligaciones que las aseguradoras deben cubrir. Así, se recomienda evaluar el efecto que tienen los cambios en los principales supuestos actuariales: la tasa de descuento, la mortalidad, el crecimiento salarial y la inflación, sobre el costo actuarial de los planes de beneficio, con el objetivo de fortalecer la toma de decisiones y resguardar de esta forma la capacidad de pago de la aseguradora.
 
 # Referencias
 
