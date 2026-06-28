@@ -628,8 +628,11 @@ Para la suma única de reconocimiento o *Lump Sum*, el costo nominal esperado fu
 Finalmente, al integrar todos los beneficios analizados, se obtuvo un costo nominal esperado total de ₡435.181.851.838,70. El costo actuarial total a valor presente fue de ₡30.454.613.131,27. Este valor representa la estimación global del compromiso económico del plan, considerando los beneficios por muerte de activos, muerte de pensionados, anualidades de pensión y suma única de reconocimiento.
 
 ## Resultados Primas
+
 ### Primas por grupo de edad y sexo
-Deacuerdo con lo expuesto en la sección de metodología apartado "Primas". Se calcularon las primas por grupo de edad y sexo para empleados activos y obtuvieron los siguientes resultados:
+
+De acuerdo con lo expuesto en la sección de metodología, apartado «Primas», se calcularon las primas por grupo de edad y sexo para empleados activos y se obtuvieron los siguientes resultados:
+
  ```{=latex}
 \begin{center}
 ```
@@ -682,7 +685,8 @@ Deacuerdo con lo expuesto en la sección de metodología apartado "Primas". Se c
 | 62           | 0,04    | 0,00    |
 
 ### Prima media nivelada
-Empleando el método correpondiente, se cálculo la prima media general para toda la población y se obtuvo el siguiente resultado:
+
+Empleando el procedimiento descrito en la sección de metodología, apartado "Cálculo de Prima Media", se calculó la prima media general para toda la población y se obtuvo el siguiente resultado:
 
 ```{=latex}
 \begin{center}
@@ -701,7 +705,7 @@ Empleando el método correpondiente, se cálculo la prima media general para tod
 |--------------------------------------------------|---------------------------------------------------|-------------|
 | ₡29 730 734 763,35                               | ₡67 646 592 226,38                                | 0,44        |
 
-Donde la columna de VPA del total de los costos representa el valor actuarial de los costos totales cálculados para el plan de beneficios, mientras que el apartado de VP Esperado de la Masa Salarial usa el procedimiento descrito en la sección de metodología apartado
+La columna de VPA del total de los costos representa el valor actuarial de los costos totales calculados para el plan de beneficios. Por su parte, la columna del VP esperado de la masa salarial se obtiene aplicando el procedimiento descrito en la sección de metodología, apartado "Cálculo de primas por grupo de edad y sexo", en el inciso "Valor presente de la masa salarial".
 
 # Resultados del análisis de sensibilidad
 
