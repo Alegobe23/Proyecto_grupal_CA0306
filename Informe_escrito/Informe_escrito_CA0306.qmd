@@ -627,6 +627,82 @@ Para la suma única de reconocimiento o *Lump Sum*, el costo nominal esperado fu
 
 Finalmente, al integrar todos los beneficios analizados, se obtuvo un costo nominal esperado total de ₡435.181.851.838,70. El costo actuarial total a valor presente fue de ₡30.454.613.131,27. Este valor representa la estimación global del compromiso económico del plan, considerando los beneficios por muerte de activos, muerte de pensionados, anualidades de pensión y suma única de reconocimiento.
 
+## Resultados Primas
+### Primas por grupo de edad y sexo
+Deacuerdo con lo expuesto en la sección de metodología apartado "Primas". Se calcularon las primas por grupo de edad y sexo para empleados activos y obtuvieron los siguientes resultados:
+ ```{=latex}
+\begin{center}
+```
+
+**Tabla 4**
+
+*Primas por edad y Sexo*
+
+```{=latex}
+\end{center}
+```
+
+| Grupo Etario | Hombres | Mujeres |
+|--------------|---------|---------|
+| 22           | 0,25    | 0,00    |
+| 23           | 0,26    | 0,00    |
+| 24           | 0,26    | 0,29    |
+| 25           | 0,27    | 0,30    |
+| 26           | 0,26    | 0,30    |
+| 27           | 0,27    | 0,34    |
+| 28           | 0,29    | 0,33    |
+| 29           | 0,26    | 0,34    |
+| 30           | 0,27    | 0,35    |
+| 31           | 0,29    | 0,36    |
+| 32           | 0,31    | 0,39    |
+| 33           | 0,33    | 0,38    |
+| 34           | 0,31    | 0,37    |
+| 35           | 0,32    | 0,43    |
+| 36           | 0,33    | 0,43    |
+| 37           | 0,34    | 0,38    |
+| 38           | 0,36    | 0,48    |
+| 39           | 0,34    | 0,43    |
+| 40           | 0,40    | 0,42    |
+| 41           | 0,33    | 0,51    |
+| 42           | 0,34    | 0,54    |
+| 43           | 0,37    | 0,47    |
+| 44           | 0,40    | 0,55    |
+| 45           | 0,40    | 0,52    |
+| 46           | 0,42    | 0,61    |
+| 47           | 0,00    | 0,42    |
+| 48           | 0,48    | 0,60    |
+| 49           | 0,51    | 0,65    |
+| 50           | 0,43    | 0,68    |
+| 51           | 0,41    | 0,57    |
+| 52           | 0,44    | 0,00    |
+| 54           | 0,55    | 1,50    |
+| 56           | 0,00    | 1,45    |
+| 57           | 0,00    | 1,18    |
+| 58           | 0,00    | 0,03    |
+| 62           | 0,04    | 0,00    |
+
+### Prima media nivelada
+Empleando el método correpondiente, se cálculo la prima media general para toda la población y se obtuvo el siguiente resultado:
+
+```{=latex}
+\begin{center}
+```
+
+**Tabla 5**
+
+*Prima media nivelada*
+
+```{=latex}
+\end{center}
+```
+
+
+| Valor Presente Actuarial del total de los Costos | Valor Presente Esperado de la Masa salarial total | Prima media |
+|--------------------------------------------------|---------------------------------------------------|-------------|
+| ₡29 730 734 763,35                               | ₡67 646 592 226,38                                | 0,44        |
+
+Donde la columna de VPA del total de los costos representa el valor actuarial de los costos totales cálculados para el plan de beneficios, mientras que el apartado de VP Esperado de la Masa Salarial usa el procedimiento descrito en la sección de metodología apartado
+
 # Resultados del análisis de sensibilidad
 
 Para el análisis de sensibilidad de las tasas, se calcularon los costos totales nominales (i.e., la suma de los flujos anuales esperados brutos) y el valor presente actuarial de los costos (i.e., la suma de los flujos anuales esperados traídos a valor presente) de cada uno de los beneficios del plan. Se redujeron y se aumentaron en un punto porcentual la tasa de incremento salarial, que era de 2% anual originalmente, y la tasa de descuento, que era de 6,5% anual. El objetivo era observar la tendencia general, cuantificar las diferencias y ofrecer un razonamiento que justifique los resultados.
