@@ -387,27 +387,38 @@ Aunque la pensión mensual promedio individual de los hombres pensionados es may
 \raggedright\small
 La VPA del total de los costos representa el valor actuarial de los costos totales del plan de beneficios. El VP de la masa salarial total se obtiene calculando las proyecciones salariales segmentadas por grupo de edad y sexo.
 
+## Sensibilidad por Tipo de Beneficio
 
-## Análisis de sensibilidad a las tasas
-
-
-\vspace*{1 cm}
-
-:::: {.columns}
-
-::: {.column width="60%"}
+\vspace*{0.2 cm}
 \scriptsize
-:::: {.columns}
-::: {.column width="50%"}
+\textbf{Tabla 1: Sensibilidad por Tipo de Beneficio (₡)}
 
 | Incremento real |          Lump Sum | Beneficio por Muerte |         Anualidades |
 |-----------------:|-----------------:|-----------------:|-----------------:|
 |            0,01 | ₡2 091 179 011,97 |    ₡1 649 102 590,89 | ₡319 820 252 421,33 |
 |            0,02 | ₡2 736 349 062,19 |    ₡1 649 102 590,89 | ₡430 796 400 185,61 |
 |            0,03 | ₡3 585 210 177,90 |    ₡1 649 102 590,89 | ₡582 165 036 205,87 |
-:::
 
-::: {.column width="50%"}
+\vspace*{0.2 cm}
+
+::: {.columns}
+::: {.column width="48%"}
+\small
+* **Sensibilidad de Beneficios:** El *Beneficio por Muerte* es estable al no depender de salarios. El *Lump Sum* y las *Anualidades* varían directamente con el incremento salarial y descuento.
+:::
+::: {.column width="4%"}
+:::
+::: {.column width="48%"}
+\small
+* **Impacto de Anualidades:** Al ser pagos recurrentes a largo plazo, las pensiones son las obligaciones más sensibles ante cambios en las tasas de interés.
+:::
+:::::
+
+## Impacto Cruzado según Tasa de Descuento
+
+\vspace*{0.2 cm}
+\scriptsize
+\textbf{Tabla 2: Impacto Cruzado según Tasa de Descuento (₡)}
 
 | Incremento real | Tasa de descuento 0,055 | Tasa de descuento 0,065 | Tasa de descuento 0,075 |
 |-----------------:|-----------------:|-----------------:|-----------------:|
@@ -423,34 +434,19 @@ La VPA del total de los costos representa el valor actuarial de los costos total
 | 0,01 | ₡32 449 412 579,06 | ₡23 284 360 686,74 | ₡17 168 098 907,41 |
 | 0,02 | ₡41 245 598 095,43 | ₡29 139 619 674,00 | ₡21 123 731 917,53 |
 | 0,03 | ₡53 003 012 052,02 | ₡36 935 165 986,30 | ₡26 368 938 489,19 |
-:::
-::::
-:::
 
-::: {.column width="40%"}
+::: {.columns}
+::: {.column width="48%"}
 \small
-
-* **Sensibilidad diferenciada de los beneficios:** El beneficio de muerte se mantiene estable frente a cambios en las tasas, porque no depende de los salarios.
-En cambio, el lump sum y las anualidades sí responden directamente al incremento salarial y al descuento, mostrando variaciones claras en los costos.
-
-
-<br>
-
-* **Impacto acumulativo de las anualidades:** Las **anualidades de pensión** son las más sensibles, ya que se pagan de forma recurrente durante muchos años.
-Esto amplifica el efecto de cualquier cambio en las tasas, mucho más que en el lump sum, que es un pago único.
-
-<br>
-
-* **Efectos compensatorios y extremos:** Cuando las **tasas de incremento salarial** y de **descuento** cambian en la misma dirección, sus efectos tienden a **compensarse**.
-Cuando cambian en **direcciones opuestas**, las **variaciones se amplifican**, generando las mayores diferencias en los costos totales del plan.
+* **Efectos Compensatorios:** Las variaciones tienden a **compensarse** cuando las tasas de incremento salarial y de descuento se mueven en la misma dirección.
 :::
-
-::::
-
-
-
-
-
+::: {.column width="4%"}
+:::
+::: {.column width="48%"}
+\small
+* **Efectos Extremos:** Los costos del plan **se amplifican** significativamente si ambas tasas cambian en direcciones opuestas.
+:::
+:::::
 
 
 
