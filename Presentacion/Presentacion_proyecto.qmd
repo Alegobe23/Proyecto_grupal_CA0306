@@ -378,7 +378,7 @@ Aunque la pensión mensual promedio individual de los hombres pensionados es may
 
 <br>
 
-* **Valores extremos:** Los ceros (**0,00**) indican ausencia de personal activo en esa edad, mientras que los picos (ej. mujeres de 54 y 56 años con **1,50** y **1,45**) reflejan el alto costo actuarial por la cercanía del retiro.
+* **Valores extremos:** Los ceros (**0,00**) indican ausencia de personal activo en esa edad, mientras que los picos (ej. mujeres de 54 y 56 años con **1,50** y **1,45**) son casos especiales de grupos de una sola persona cercana a la pensión y con una antiguedad elevada.
 :::
 
 ::::
