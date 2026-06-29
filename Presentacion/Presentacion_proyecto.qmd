@@ -54,6 +54,27 @@ format:
 - Por eso su análisis se concentra en **supervivencia y continuidad de pagos**.
 - Esta caracterización define la base demográfica y financiera del modelo actuarial.
 
+## Proyección demográfica y muertes de activos
+
+* La mortalidad se obtuvo de la tabla SP-2015 según sexo, edad y año.
+* Cada activo puede permanecer activo, fallecer o jubilarse.
+* La jubilación se definió en **63 años para mujeres** y **65 años para hombres**.
+
+$$
+D_{i,t}=L_{i,t}q_{x_i,t}
+$$
+
+$$
+S_{i,t}=L_{i,t}-D_{i,t}
+$$
+
+$$
+L_{i,t+1}=S_{i,t}-J_{i,t}
+$$
+
+* Donde $L_{i,t}$ es la exposición activa al inicio del año, $D_{i,t}$ son las muertes esperadas, $S_{i,t}$ los sobrevivientes y $J_{i,t}$ las salidas por jubilación.
+
+
 ## Proyección demográfica y muertes de pensionados
 
 -   Se usó un enfoque actuarial discreto de supervivencia.
